@@ -1,7 +1,10 @@
-; Astroflux - Godot 4 Rewrite
-; Ported from Flash/ActionScript 3
-
-[configuration]
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
 
@@ -10,7 +13,7 @@ config_version=5
 config/name="Astroflux"
 config/description="Space MMO - Godot 4 Rewrite"
 run/main_scene="res://scenes/game/game.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
@@ -19,6 +22,10 @@ GameConstants="*res://autoload/game_constants.gd"
 NetworkManager="*res://autoload/network_manager.gd"
 LocalServer="*res://autoload/local_server.gd"
 
+[configuration]
+
+config_version=5
+
 [display]
 
 window/size/viewport_width=1920
@@ -26,11 +33,6 @@ window/size/viewport_height=1080
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
-
-[physics]
-
-common/physics_ticks_per_second=30
-common/physics_jitter_fix=0.5
 
 [input]
 
@@ -70,8 +72,11 @@ fire={
 ]
 }
 
+[physics]
+
+common/physics_ticks_per_second=30
+
 [rendering]
 
-renderer/rendering_method="forward_plus"
 textures/canvas_textures/default_texture_filter=0
 anti_aliasing/quality/msaa_2d=1

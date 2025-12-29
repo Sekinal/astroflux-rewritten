@@ -54,7 +54,8 @@ var _pending_commands: Array[Dictionary] = []
 # NODES
 # =============================================================================
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var ship_body: Polygon2D = $ShipBody
+@onready var engine_glow: Polygon2D = $EngineGlow
 @onready var collision: CollisionShape2D = $CollisionShape2D
 
 # =============================================================================
@@ -82,6 +83,10 @@ func _physics_process(delta: float) -> void:
 	# Apply converger state to node
 	global_position = converger.course.pos
 	rotation = converger.course.rotation
+
+	# Update engine glow visibility
+	if engine_glow:
+		engine_glow.visible = converger.course.accelerate
 
 	# Regenerate shield
 	_regenerate_shield(delta)

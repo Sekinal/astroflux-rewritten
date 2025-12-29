@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxn1rj4kax6pl"]
+[gd_scene load_steps=3 format=3]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_game"]
-[ext_resource type="PackedScene" uid="uid://bvx8qjqx6yxka" path="res://scenes/entities/ships/player_ship.tscn" id="2_player"]
+[ext_resource type="PackedScene" path="res://scenes/entities/ships/player_ship.tscn" id="2_player"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_game")
@@ -18,10 +18,6 @@ offset_top = -540.0
 offset_right = 960.0
 offset_bottom = 540.0
 color = Color(0.02, 0.02, 0.08, 1)
-
-[node name="Stars2" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2(0.3, 0.3)
-motion_mirroring = Vector2(1920, 1080)
 
 [node name="PlayerShip" parent="." instance=ExtResource("2_player")]
 
