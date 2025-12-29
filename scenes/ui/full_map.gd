@@ -14,10 +14,13 @@ signal closed
 # =============================================================================
 
 var SCALE: float = 0.1  ## Dynamic scale based on orbit sizes
-const WIDTH: float = 698.0
-const HEIGHT: float = 538.0
-const CORNER: float = 10.0
+
+# Background texture is 760x600, inner drawing area is padded
+const BG_WIDTH: float = 760.0
+const BG_HEIGHT: float = 600.0
 const PADDING: float = 31.0
+const WIDTH: float = 698.0   # BG_WIDTH - PADDING*2
+const HEIGHT: float = 538.0  # BG_HEIGHT - PADDING*2
 
 # =============================================================================
 # COLORS (from Style.as)
@@ -154,22 +157,23 @@ func _draw() -> void:
 		return
 
 	var screen_center := size / 2
-	var map_rect := Rect2(
-		screen_center - Vector2(WIDTH, HEIGHT) / 2,
-		Vector2(WIDTH, HEIGHT)
-	)
-	var map_center := screen_center
 
-	# Draw dark background
+	# Draw dark overlay behind everything
 	draw_rect(Rect2(Vector2.ZERO, size), Color(0, 0, 0, 0.9))
 
-	# Draw map background texture or fallback
+	# Calculate background position (centered on screen)
+	var bg_pos := screen_center - Vector2(BG_WIDTH, BG_HEIGHT) / 2
+
+	# Draw map background texture
 	if _tex_background != null:
-		var bg_pos := map_center - Vector2(_tex_background.get_width(), _tex_background.get_height()) / 2
 		draw_texture(_tex_background, bg_pos)
 	else:
-		draw_rect(map_rect, Color(0.02, 0.04, 0.08, 0.95))
-		draw_rect(map_rect, Color(0.2, 0.3, 0.4, 0.5), false, 2.0)
+		# Fallback rectangle
+		draw_rect(Rect2(bg_pos, Vector2(BG_WIDTH, BG_HEIGHT)), Color(0.02, 0.04, 0.08, 0.95))
+		draw_rect(Rect2(bg_pos, Vector2(BG_WIDTH, BG_HEIGHT)), Color(0.2, 0.3, 0.4, 0.5), false, 2.0)
+
+	# The map center is the center of the background
+	var map_center := screen_center
 
 	# Get player world position
 	var player_world_pos := Vector2.ZERO
@@ -179,10 +183,10 @@ func _draw() -> void:
 	# Calculate map offset to center on player (like original: mapContainer.x = WIDTH/2 - player.x)
 	_map_offset = map_center - player_world_pos * SCALE
 
-	# Create clipping rect
+	# Create clipping rect (inner area of background, excluding padding)
 	var clip_rect := Rect2(
-		map_center - Vector2(WIDTH, HEIGHT) / 2 + Vector2(PADDING, PADDING),
-		Vector2(WIDTH, HEIGHT) - Vector2(PADDING * 2, PADDING * 2)
+		bg_pos + Vector2(PADDING, PADDING),
+		Vector2(WIDTH, HEIGHT)
 	)
 
 	# Draw orbit rings first (suns draw their children's orbits)
@@ -206,8 +210,10 @@ func _draw() -> void:
 func _world_to_map(world_pos: Vector2) -> Vector2:
 	return _map_offset + world_pos * SCALE
 
-func _is_in_clip_rect(pos: Vector2, clip_rect: Rect2, margin: float = 50.0) -> bool:
-	var expanded := clip_rect.grow(margin)
+func _is_in_clip_rect(pos: Vector2, clip_rect: Rect2, tex_size: float = 0.0) -> bool:
+	## Check if position is inside clip rect, accounting for texture size
+	## Allows textures whose center is near the edge but partially visible
+	var expanded := clip_rect.grow(tex_size / 2)
 	return expanded.has_point(pos)
 
 func _draw_orbits(clip_rect: Rect2) -> void:
@@ -240,7 +246,8 @@ func _draw_suns(clip_rect: Rect2) -> void:
 			continue
 
 		var map_pos := _world_to_map(body.global_position)
-		if not _is_in_clip_rect(map_pos, clip_rect):
+		var tex_size_check := 44.0 if _tex_sun != null else 40.0  # map_sun is 44x44
+		if not _is_in_clip_rect(map_pos, clip_rect, tex_size_check):
 			continue
 
 		if _tex_sun != null:
@@ -264,7 +271,7 @@ func _draw_stations(clip_rect: Rect2) -> void:
 			continue
 
 		var map_pos := _world_to_map(body.global_position)
-		if not _is_in_clip_rect(map_pos, clip_rect):
+		if not _is_in_clip_rect(map_pos, clip_rect, 20.0):  # Station textures are 20x20
 			continue
 
 		var tex: AtlasTexture = null
@@ -303,13 +310,13 @@ func _draw_planets(clip_rect: Rect2) -> void:
 		if body.body_type != 1:  # Not PLANET
 			continue
 
-		var map_pos := _world_to_map(body.global_position)
-		if not _is_in_clip_rect(map_pos, clip_rect):
-			continue
-
 		# Draw planet as colored circle (scaled from original texture)
 		var planet_scale: float = SCALE * 1.5
 		var radius: float = max(4.0, body.radius * planet_scale * 0.5)
+
+		var map_pos := _world_to_map(body.global_position)
+		if not _is_in_clip_rect(map_pos, clip_rect, radius * 2 + 6):  # Planet size + glow
+			continue
 
 		# Planet color
 		var color := Color.from_string("#FF6663", Color.RED)
@@ -336,7 +343,7 @@ func _draw_spawners(clip_rect: Rect2) -> void:
 				continue
 
 			var map_pos := _world_to_map(spawner.global_position)
-			if not _is_in_clip_rect(map_pos, clip_rect):
+			if not _is_in_clip_rect(map_pos, clip_rect, 4.0):  # Spawner texture is 4x4
 				continue
 
 			# Color: orange for hostile spawners
