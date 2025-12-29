@@ -1,0 +1,5424 @@
+{
+  "solarSystem": {
+    "musicStandard": "d_UvKVpELECadlEBTdV7jA",
+    "x": 420,
+    "table": "SolarSystems",
+    "y": 200,
+    "galaxy": "Antor System",
+    "pvpLvlCap": 7,
+    "size": 8,
+    "name": "Hyperion",
+    "thumbnail": "H3Nxgj16D0atSkwXpkwGjg",
+    "invasionText": "Slavers Incoming!",
+    "background": "0iTVMuP1AUya67UbmwdunA",
+    "nebulaTint": 1055231,
+    "uberMinLevel": 1,
+    "musicAction": "hY2aQdSqdEq_RXVX5sc8UQ",
+    "pvpDisabled": false,
+    "invasionOffset": 4,
+    "key": "HrAjOBivt0SHPYtxKyiB_Q",
+    "musicQuiet": "d_UvKVpELECadlEBTdV7jA",
+    "backgroundColor": 51,
+    "dev": false,
+    "type": "regular",
+    "uberMaxLevel": 110,
+    "color": 7310275,
+    "deathLines": []
+  },
+  "bodies": {
+    "oFryHqwA-0-_rwKhqFdiCA": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "level": 1,
+      "collisionRadius": 80,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "shop",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 200,
+      "x": 3100,
+      "canTriggerMission": false,
+      "payVaultItem": "Weapon Hyperion",
+      "y": 2600,
+      "orbitRadius": 200,
+      "elite": false,
+      "name": "AF Armoury",
+      "waypoints": [],
+      "key": "oFryHqwA-0-_rwKhqFdiCA",
+      "shopItems": [
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "item": "36zNgerYkEyhUVB0kPGS7Q",
+          "payVaultItem": "Weapon Hyperion",
+          "available": false,
+          "name": "Missile Launcher"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Lightning Gun",
+          "item": "AfpNM3XTbE2CIYNeWnOxrQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Plasma Gun",
+          "item": "gR_dfj1apkunOtbNpcZ4Ug"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Mine Launcher",
+          "item": "vhdlyLrJAk6s_7fy3iVj2w"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Piercing Gun",
+          "item": "wE4rKVed5kqu3Hg4u9qXTg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Acid Spray",
+          "item": "by-9mh1gt0WFFygKJjfqWA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Heavy Cannon",
+          "item": "UaL-47lZ9U-jp9iHI4oV8A"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": true,
+          "name": "Beamer",
+          "item": "bob4DnmRb0mt24Pb8gNycA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": true,
+          "name": "Energy Nova",
+          "item": "MGsnkmQPJUCv4sT-ZCa-0Q"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Nuke Launcher",
+          "item": "tYDz7OhTd0y4GE5iYlRnNA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Sticky Bombs",
+          "item": "3vTQQ8KpUESpliXfdGASYg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": true,
+          "name": "Acid Blaster",
+          "item": "qpWjj65R3U6Lb0MULiknNA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": true,
+          "name": "Blaster",
+          "item": "oYL3d-yX5k2tl33jaB25sg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Flamethrower",
+          "item": "5aPC1xQS9kC1be2z56Z6eQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Plankton Siphon Gland",
+          "item": "7kEmyTJywU61ei7qbNHJvg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Moth Queen Spit Gland",
+          "item": "O8hefLyssEeQPyDTNAYvbg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Cluster Missiles",
+          "item": "v2fGmef7YEKFhf9JS1qqlA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Moth Zero Gland",
+          "item": "VU_9kHJKEE-58cF6TUU41g"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Broadside",
+          "item": "V_E6Jh_KJ0KkxfpmNNTnZw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Gatling Gun",
+          "item": "wVhdBk9kKUikW7AhNLOnCg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Repair-Nanobot Launcher",
+          "item": "Yi4-fvgTbUyheJoebrUwvQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Blood-Claw S28 Smart Gun",
+          "item": "P6XvSQpMr0q7kQUsjeHvwQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "X27-S Smart Gun",
+          "item": "w3-ZtQ-y_kiefCpnvFo88A"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Flame Trail",
+          "item": "z2lW_0_JmEagzFPNVKchDg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Hell Fire",
+          "item": "bbhTz2fDuUm9aY7GklMwvg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Locust Hatchery",
+          "item": "EbAa-Nt2tEuuM70r0txFqA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "M2 Launcher",
+          "item": "eSdFRP2jdUqRUd2h5orNAw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Piraya",
+          "item": "iQis4FtiYECE7CWjUmexhg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Razor",
+          "item": "ixCpU_pYIUSRVTcpaRdXbA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Golden Gun: Flak Shell",
+          "item": "iz0BfTeUgU6QvxZoxCZLKg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Chrono Beam",
+          "item": "mG64bGPqEUaJHvf2sadUHg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "C-4",
+          "item": "ogZHQsvEakqBrtf8esDP6g"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Eagle Needle",
+          "item": "oI0YOkiSMke6wDXLZ3jHWA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Plasma Torpedos",
+          "item": "QTnppBLp6Um_I1n_oYsc2w"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Astro Lance",
+          "item": "WOpq0j5DM0OjtAw9dE-ZKA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Skeletor Lightning",
+          "item": "YXzpvPGTU0e6oO6GqafTfw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Sonic Launcher",
+          "item": "-gio6BLfHky85vQ5PRYFHw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Concussion Sphere",
+          "item": "4rJMW6ID_Umh_YIN_hNzow"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Railgun",
+          "item": "9oxG9iGQ5kSvTGV3h0VXcA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Death Cloud",
+          "item": "b1SNarfJmkmMewba8yEbjg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Gatling Laser",
+          "item": "dzmNj9Yzr0CFxvZSBSaEeg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Acid Spore",
+          "item": "JYj8LiTqwEixlkvCl-n55Q"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Infested Missiles",
+          "item": "psmh2tj1rUuuLK3WGpIHbA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Boomerang",
+          "item": "rW3IwoavW0idTjzs_ogwaQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Prismatic Crystal",
+          "item": "TOaofFTM20KGHYtjQlqDfw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Repair-Nanobot Spray",
+          "item": "YmwsyoCIsUC_3cQZZteX8A"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Particle Gun",
+          "item": "z5Kl-eXMmkaYAcboQHL9ng"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Twin Launcher",
+          "item": "-92wjJXgJ0WcEGE-H1OOLA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Void Tentacles",
+          "item": "-l-o9K_yMUaeaBydO1_xXw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Aureus Corrosive Manipulator",
+          "item": "4uoJyvPOEUup6qCH53Ethg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Teleport Device",
+          "item": "5L1fnjaQhUK2bK4Osu83RA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Golden Gun: Scatter Shell",
+          "item": "6yiTGgBx7kyA-36DKh2qUw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Aureus Kinetic Manipulator",
+          "item": "8bYpzP2SBkig_Y0RJRf15w"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Aureus Energy Manipulator",
+          "item": "8UQFwHFLOUyJBnzzia_xSA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Bionic Teleport",
+          "item": "9laJbyu5D0yq5x9s8G_4aQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Wasp Bait",
+          "item": "a9FIWFhatE2LpFS-nMegRw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Horror Nuke",
+          "item": "c17t5WVpcU24byiMGeji6g"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Aureus Beam",
+          "item": "CE3uLdcWiU2DBQB_3-ES9A"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Plasma Blaster",
+          "item": "F-Sxt4t05kyrLQtsBD8V0g"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Cloaking Device",
+          "item": "gk4_ALd28k6i71xDlMbHaw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Snow Cannon",
+          "item": "KmbYvh1mT0SucS8VOJfzeQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Horror Seeds",
+          "item": "lEGmZRDnbU21uJN3VMZpdg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Larva Lightning",
+          "item": "Ll08fpGjzUWSempC4EYevw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Jaws",
+          "item": "mwbme_qrd0SG_AFbgTHoVw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Auerus Drone Controller",
+          "item": "N9gvkhkgS0OAprh5n_GdwQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Spore 83-X Smart Gun",
+          "item": "nRRv5U5g30adeYN9X2C78Q"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "X-32 Constructor",
+          "item": "nyESCdT8vUiQ5Qv400qGlw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Hunter-killer Launcher",
+          "item": "oNg_pJWmD0yhOVILCDsZWw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Teeth",
+          "item": "OU-YTdEF4Em3GR8TZFNaOg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "X-73 Constructor",
+          "item": "PsYyhEznMkmXuS62VZiuIw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "X-42 Constructor",
+          "item": "s2giIoDnX0y8wKB9gNTorQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Target Painter",
+          "item": "sJJTPHeSrkWfSo2yBhtQ7Q"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Photonic Blaster",
+          "item": "ST_L_M-bTUKiGoj6RPYQPw"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Shadowflame",
+          "item": "uIx11wVzCk6Qp9_2oiJGiA"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Aureus Lightning",
+          "item": "X8royBY-30WIWx9yhHwymQ"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": false,
+          "name": "Algea Nova Gland",
+          "item": "XHdm9PPMckOrNVJa08mGlg"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 250
+            }
+          ],
+          "table": "Weapons",
+          "available": true,
+          "name": "Pixi Launcher",
+          "item": "Y9-oc29EskqHt1TRf-RL8w"
+        }
+      ],
+      "explorable": false,
+      "orbitAngle": 0,
+      "bitmap": "BoksBedsQU--Hwbu7DAbJg",
+      "table": "Bodies",
+      "rotationSpeed": -0.2
+    },
+    "yyh6RendfUusFC6rRYVvyg": {
+      "bitmap": "Ps-E47_5Rkmgf6vKw8Swag",
+      "x": 0,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 1500,
+      "orbitRadius": 10,
+      "collisionRadius": 40,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "AF Military Satellite",
+      "controlZoneCompleteRewardFactor": 0.2,
+      "key": "yyh6RendfUusFC6rRYVvyg",
+      "rotationSpeed": -0.2,
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "orbitAngle": 0,
+      "parent": "",
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "table": "Bodies",
+      "population": 0,
+      "type": "shop",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 0
+    },
+    "Yy5Xu1GjZU6fxe8yqNjEFQ": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "level": 1,
+      "collisionRadius": 80,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "elite": false,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "research",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 200,
+      "x": -3500,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "y": 400,
+      "orbitRadius": 200,
+      "orbitSpeed": -200,
+      "name": "AF Research Station",
+      "key": "Yy5Xu1GjZU6fxe8yqNjEFQ",
+      "explorable": false,
+      "orbitAngle": 0,
+      "bitmap": "sf86oalQ9ES4qnb4O9w6Yw",
+      "table": "Bodies",
+      "rotationSpeed": -0.2
+    },
+    "aRJ7Qhctpkyq1FyiXQ8uSQ": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "collisionRadius": 80,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "junk yard",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 200,
+      "x": 2200,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "y": -3000,
+      "orbitRadius": 200,
+      "elite": false,
+      "name": "AF Smelting Plant",
+      "bitmap": "2S4Pzkjz0U2JaGzqTcvyXA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "key": "aRJ7Qhctpkyq1FyiXQ8uSQ",
+      "explorable": false,
+      "rotationSpeed": -0.2
+    },
+    "JDZ3bkWdbkOl_h_N-p2tpA": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "collisionRadius": 60,
+      "controlZoneTimeFactor": 0.35000000000000003,
+      "parent": "",
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.49,
+      "extraAreas": 4,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -250,
+      "exploreAreas": [
+        "QqISWnsLKE-zZsTh_qXwCg",
+        "g2FTQ3lR30u_eYrXkQjRDA"
+      ],
+      "population": 0,
+      "type": "planet",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 0,
+      "x": 48000,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "y": 30000,
+      "orbitRadius": 10,
+      "elite": false,
+      "name": "Asteroid L34",
+      "key": "JDZ3bkWdbkOl_h_N-p2tpA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "bitmap": "vDgrS0FbcE26Gxfpw7_UHA",
+      "explorable": true,
+      "seed": 0.974685,
+      "rotationSpeed": -0.2
+    },
+    "Pw5F4eqlckyGNH1jsWaByA": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "collisionRadius": 1,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": false,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "randomSpawnPoint": true,
+      "population": 0,
+      "type": "boss",
+      "atmosphereColor": 0,
+      "x": 10000,
+      "canTriggerMission": false,
+      "active": true,
+      "y": 10000,
+      "orbitRadius": 10,
+      "name": "Boss Tefat",
+      "boss": "SaYG9kU3KUOod0oKO2j11A",
+      "key": "Pw5F4eqlckyGNH1jsWaByA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "waypoints": [
+        {
+          "id": -363857845,
+          "xpos": 6000,
+          "body": null,
+          "ypos": 2000
+        },
+        {
+          "id": -363792745,
+          "xpos": 4000,
+          "body": null,
+          "ypos": -4000
+        },
+        {
+          "id": -363773505,
+          "xpos": -1000,
+          "body": null,
+          "ypos": -5000
+        },
+        {
+          "id": -363749010,
+          "xpos": -4000,
+          "body": null,
+          "ypos": -1000
+        },
+        {
+          "id": -363728296,
+          "xpos": -3000,
+          "body": null,
+          "ypos": 4000
+        }
+      ],
+      "spawnTime": 1,
+      "rotationSpeed": -0.2
+    },
+    "boBBtzOhzkerhB-s4Yv-XQ": {
+      "x": 0,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": 0,
+      "orbitRadius": 3000,
+      "collisionRadius": 35,
+      "landable": false,
+      "name": "Comet",
+      "parent": "n4lRLcxb6k6-E8AnK_o22w",
+      "key": "boBBtzOhzkerhB-s4Yv-XQ",
+      "table": "Bodies",
+      "effect": "1dwTLxIJv068HtaERq2Svw",
+      "orbitAngle": 0,
+      "orbitSpeed": -168.625,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "comet",
+      "waypoints": [],
+      "rotationSpeed": -0.035
+    },
+    "RNKGNBFF-kqfQkIvYzVMGg": {
+      "bitmap": "iCAE6zDmLEWXU6mPRhuDLw",
+      "x": 0,
+      "canTriggerMission": false,
+      "seed": 0.051853,
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 2640,
+      "collisionRadius": 100,
+      "landable": true,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "name": "Daren",
+      "parent": "5t7vISQdPkCdZOX7zbWjhw",
+      "key": "RNKGNBFF-kqfQkIvYzVMGg",
+      "rotationSpeed": -0.13,
+      "explorable": true,
+      "orbitAngle": 5.275,
+      "extraAreas": 3,
+      "elite": true,
+      "exploreAreas": [
+        "Yex034H1lUC-MvUwql3JgA",
+        "Q-STBmtd3keZ_H_emRzIQg"
+      ],
+      "table": "Bodies",
+      "population": 0,
+      "type": "planet",
+      "atmosphereColor": 16760319,
+      "orbitSpeed": 4.9
+    },
+    "BtjWldxNSE-2Erp2CDRgrg": {
+      "inhabitants": "friendly",
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "seed": 0.363346,
+      "level": 1,
+      "mission": "5j9nrqBw3U2P24e_-mTAjA",
+      "collisionRadius": 150,
+      "description": "A friendly planet with vast empty space. The inhabitants are friendly and are happy to get visits from strangers. Mostly in order to increase their already huge database of knowledge of the galaxy.",
+      "controlZoneCompleteRewardFactor": 0.2,
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.07,
+      "extraAreas": 1,
+      "parent": "n4lRLcxb6k6-E8AnK_o22w",
+      "elite": false,
+      "exploreAreas": [
+        "mTI_ADidh0-HlDMozmskzQ",
+        "dXHqN06ghUyWaEzP9yokdw",
+        "HCQ06BEiCkGwBE9bZEhSEw"
+      ],
+      "controlZoneTimeFactor": 0.2,
+      "population": 0,
+      "type": "planet",
+      "waypoints": [],
+      "orbitSpeed": -19.61,
+      "x": 0,
+      "canTriggerMission": true,
+      "atmosphereColor": 15095808,
+      "y": 0,
+      "orbitRadius": 4500,
+      "size": "average",
+      "orbitAngle": 4.49,
+      "key": "BtjWldxNSE-2Erp2CDRgrg",
+      "defence": "none",
+      "table": "Bodies",
+      "name": "Endarion",
+      "bitmap": "T8p98QrUr0i5XL0_BhQFFg",
+      "time": 1,
+      "explorable": true,
+      "rewardTechPoints": 0,
+      "slots": 1,
+      "reward": "HtgNcxVoGU69feLu0dc6vQ",
+      "rotationSpeed": -0.115
+    },
+    "fkytuRMpyUSciHkBfVXLYw": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "seed": 0.324902,
+      "level": 1,
+      "collisionRadius": 90,
+      "landable": true,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.06,
+      "extraAreas": 2,
+      "parent": "n4lRLcxb6k6-E8AnK_o22w",
+      "elite": false,
+      "exploreAreas": [
+        "81Kdhn7DjUCU3TVnYl83JA",
+        "3o23zFRkrUC0CohKz3-PWA",
+        "AR64bMp4vUmYKvIPTOPM2w"
+      ],
+      "population": 0,
+      "type": "planet",
+      "atmosphereColor": 5758719,
+      "orbitSpeed": -0.49,
+      "x": 0,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 2000,
+      "name": "Erath",
+      "key": "fkytuRMpyUSciHkBfVXLYw",
+      "explorable": true,
+      "orbitAngle": 5.485,
+      "bitmap": "yjaX-AxEfUipmW0CaLkpmw",
+      "time": 1,
+      "table": "Bodies",
+      "rewardTechPoints": 0,
+      "slots": 1,
+      "reward": "HtgNcxVoGU69feLu0dc6vQ",
+      "rotationSpeed": 0.125
+    },
+    "OaxQyK53I0uXrlQbE8S0Ag": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "mission": "Yh_x4t3Jgkm7l6WxFQveFQ",
+      "collisionRadius": 100,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": true,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "elite": false,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hangar",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 200,
+      "x": -800,
+      "canTriggerMission": true,
+      "waypoints": [],
+      "y": 3800,
+      "orbitRadius": 10,
+      "orbitSpeed": -250,
+      "name": "Hangar",
+      "key": "OaxQyK53I0uXrlQbE8S0Ag",
+      "shopItems": [
+        {
+          "available": false,
+          "name": "Agent B1",
+          "item": "VAs_W3nacU2YKzbYuUaURg"
+        },
+        {
+          "available": false,
+          "name": "Chrono",
+          "item": "XMZGEeLn4EO4bAqD6LY6bw"
+        },
+        {
+          "available": false,
+          "name": "Creampuff",
+          "item": "bg8rdztQTkGh5AtW2xbFHQ"
+        },
+        {
+          "available": false,
+          "name": "Eagle Eye",
+          "item": "K7JVdmT-I0qxhe2VKWsUgA"
+        },
+        {
+          "available": true,
+          "name": "Golden Heart",
+          "item": "bMlvTi7PW06mp0kP-LFoug"
+        },
+        {
+          "available": false,
+          "name": "Juggernaut",
+          "item": "G8w1B5UeNUir6Wj7ohpriw"
+        },
+        {
+          "available": false,
+          "name": "Nyan",
+          "item": "L5oPUmjDE0267q5r8lOtWA"
+        },
+        {
+          "available": false,
+          "name": "P1 Patrol",
+          "item": "rjv4nT7lsUOMj9eXuThPhw"
+        },
+        {
+          "available": true,
+          "name": "P1 Pirate ",
+          "item": "di3rSghfGUSVNYX8HFHcvA"
+        },
+        {
+          "available": false,
+          "name": "Police",
+          "item": "H1XyZ2LoLUKkzwAA4ivQnQ"
+        },
+        {
+          "available": false,
+          "name": "Police Pursuit P1",
+          "item": "_QQ1_tOoNkmAKVo2b8tYuA"
+        },
+        {
+          "available": false,
+          "name": "Prophecy",
+          "item": "Bm4TmiT-DEmHH0niIcDVrw"
+        },
+        {
+          "available": true,
+          "name": "Sail Fish",
+          "item": "vL4prvOTS0OtlIEEv5psvw"
+        },
+        {
+          "available": false,
+          "name": "Scartrow",
+          "item": "QJTrP7Mqdk2x6kv1taVBmQ"
+        },
+        {
+          "available": true,
+          "name": "Skeletor",
+          "item": "LWluPiIoTUq6t2CH6ijSLg"
+        },
+        {
+          "available": false,
+          "name": "T1 Winger",
+          "item": "RrC8OlOp80KZthu_xpCxxg"
+        },
+        {
+          "available": false,
+          "name": "Collector",
+          "item": "MjFWoGWfv0C42KsfbvgUYQ"
+        },
+        {
+          "available": false,
+          "name": "Explorer 062",
+          "item": "cxL32k_l1E2wgnnhJ8RhMQ"
+        },
+        {
+          "available": false,
+          "name": "Traveller",
+          "item": "nGQoNJZcy0iFFnEFLWdkVw"
+        },
+        {
+          "available": false,
+          "name": "Aurora V2",
+          "item": "Cjph5JLVY0O_9xtDhoLMbA"
+        },
+        {
+          "available": false,
+          "name": "Crystal",
+          "item": "qR4l2lErdUugZRSToo10fw"
+        },
+        {
+          "available": false,
+          "name": "DMAT-90",
+          "item": "twg3qNyXyke2nA6-13d9tg"
+        },
+        {
+          "available": false,
+          "name": "Medic C2",
+          "item": "xxGYahwdREakkrJusV0zHA"
+        },
+        {
+          "available": false,
+          "name": "Neutron X",
+          "item": "kBGo5xJkZUivH1h4MCxIkA"
+        },
+        {
+          "available": false,
+          "name": "Spacetrick",
+          "item": "3rIgXUs-60-PZB3aUqI_Ug"
+        },
+        {
+          "available": false,
+          "name": "Spy-1",
+          "item": "Yi1b1RUsP0urj_pXl4LD2g"
+        },
+        {
+          "available": false,
+          "name": "Supporter V1",
+          "item": "RJMvDe02uk-711-HEgskZA"
+        },
+        {
+          "available": false,
+          "name": "Tanker A1",
+          "item": "GOUN-DLB8k6x3dliHEX0XQ"
+        },
+        {
+          "available": false,
+          "name": "Bionic Daemon",
+          "item": "keqvQhU2h0SMlynePKTR_Q"
+        },
+        {
+          "available": false,
+          "name": "Bionic Larva",
+          "item": "z1X7x6F6E0iSVVf_U5iu5Q"
+        },
+        {
+          "available": false,
+          "name": "Bionic Queen",
+          "item": "Lzpw8_QrGkq7gbQZxq1c7g"
+        },
+        {
+          "available": false,
+          "name": "Portal",
+          "item": "YwqkRwJHAkehvPeRacsSTQ"
+        },
+        {
+          "available": true,
+          "name": "Retro",
+          "item": "bXUzVqF2P024i7_EadA2Ug"
+        },
+        {
+          "available": false,
+          "name": "Judicator Prototype",
+          "item": "lQLbLoLreE6Mu9m10puBRQ"
+        },
+        {
+          "available": true,
+          "name": "X-32 Carrier",
+          "item": "07rY1lCHKEGfKZ7WnVV4fA"
+        },
+        {
+          "available": true,
+          "name": "X-121 Carrier",
+          "item": "-1FFDUg0CEmaCTjjI195Sg"
+        },
+        {
+          "available": true,
+          "name": "Aerodeck",
+          "item": "hiTDnI9Ex0iLeFAktBnX0w"
+        },
+        {
+          "available": false,
+          "name": "Assassin-T29",
+          "item": "alfVOmk4jUmkabgc2q_-Sw"
+        },
+        {
+          "available": false,
+          "name": "Horror Pumpkin",
+          "item": "7w762dHumkSyDgNKrGMjzg"
+        },
+        {
+          "available": false,
+          "name": "Jupiter",
+          "item": "CLVKoihg1EyY_jK5D8mWWA"
+        },
+        {
+          "available": true,
+          "name": "Pixi",
+          "item": "tx2VGh3l-U2Krrb4jmasjw"
+        },
+        {
+          "available": false,
+          "name": "Snowformer",
+          "item": "8MF0AISMwUiETtnF1GJO6g"
+        },
+        {
+          "available": true,
+          "name": "Tramsnitter",
+          "item": "Ijt0GhS0hkS09bixHLNEYg"
+        },
+        {
+          "available": false,
+          "name": "C8 Noxium",
+          "item": "QMisF58IfU-4pN8B8p3idg"
+        },
+        {
+          "available": false,
+          "name": "Nexar Blade",
+          "item": "L_ATA6ePFkaSe3pShVMTeQ"
+        },
+        {
+          "available": false,
+          "name": "Nexar Fighter",
+          "item": "CqzP6sv5E0u_cpufgboXWw"
+        },
+        {
+          "available": false,
+          "name": "Nexar Shadow",
+          "item": "SlYgUghEoUG1fq56de0bjw"
+        },
+        {
+          "available": false,
+          "name": "Vanquisher",
+          "item": "1uFzXM6o2kWSX0LO8_KTMQ"
+        },
+        {
+          "available": true,
+          "name": "Venom V-30",
+          "item": "wHuii5seLEO7hIxEhg5l2Q"
+        },
+        {
+          "available": false,
+          "name": "Xhargregs Mutated Chicken",
+          "item": "cdpN-eB2DEykc3sOOClIHQ"
+        }
+      ],
+      "explorable": false,
+      "orbitAngle": 0,
+      "bitmap": "zyw4JsesgUCiLV51q8ZNjg",
+      "table": "Bodies",
+      "rotationSpeed": -0.2
+    },
+    "3EE241AF-BF73-A4C3-0826-A52B4394746A": {
+      "x": 0,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 2800,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Hattur",
+      "controlZoneCompleteRewardFactor": 0.2,
+      "key": "3EE241AF-BF73-A4C3-0826-A52B4394746A",
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "orbitAngle": 2.6,
+      "parent": "n4lRLcxb6k6-E8AnK_o22w",
+      "orbitSpeed": -29.41,
+      "exploreAreas": [],
+      "table": "Bodies",
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "HFQeomvTCUmHvPZirhZqiA": {
+      "x": 900,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 1200,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Spawner",
+      "parent": "",
+      "key": "HFQeomvTCUmHvPZirhZqiA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "aILKS6Bcbkie7BcqivQWDQ": {
+      "x": 0,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": -3421,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 10",
+      "parent": "",
+      "key": "aILKS6Bcbkie7BcqivQWDQ",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "VawgUIM5WkK6tRK8cNHFsg": {
+      "x": 1543,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": -4521,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 11",
+      "parent": "",
+      "key": "VawgUIM5WkK6tRK8cNHFsg",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "_aCoEu2F3Umetwv1Bfj15g": {
+      "x": -2521,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": 3223,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 12",
+      "parent": "",
+      "key": "_aCoEu2F3Umetwv1Bfj15g",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "CbLZzFzKiEKMNbIecoVa5A": {
+      "x": -532,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": -453,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 13",
+      "parent": "",
+      "key": "CbLZzFzKiEKMNbIecoVa5A",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "0stFHB6h50-tuPc1xHKYMw": {
+      "x": 4852,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": -2341,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 14",
+      "parent": "",
+      "key": "0stFHB6h50-tuPc1xHKYMw",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "-GznQcR2502v22jEeKXHiw": {
+      "x": -2000,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 6000,
+      "orbitRadius": 10,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 15",
+      "parent": "",
+      "key": "-GznQcR2502v22jEeKXHiw",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "CmRvKo_lAkewzWNSDqo4Bg": {
+      "x": 2623,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 1323,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 15",
+      "parent": "",
+      "key": "CmRvKo_lAkewzWNSDqo4Bg",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "hYL_61xpQkyB7IEHsR9CFw": {
+      "x": 4352,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 16",
+      "parent": "",
+      "key": "hYL_61xpQkyB7IEHsR9CFw",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "Y_mryPmew0-K2RLRyTRUmg": {
+      "x": 2232,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 3922,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 17",
+      "parent": "",
+      "key": "Y_mryPmew0-K2RLRyTRUmg",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "NIm5SkvCtUG5HH-GUAd4XQ": {
+      "x": -1342,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": -4942,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 18",
+      "parent": "",
+      "key": "NIm5SkvCtUG5HH-GUAd4XQ",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "8aHGjeTEZ0CODbyvSROyFA": {
+      "x": -2300,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "y": -1800,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 2",
+      "parent": "",
+      "key": "8aHGjeTEZ0CODbyvSROyFA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "waypoints": [],
+      "rotationSpeed": -1
+    },
+    "kBcZhh3qzEGIC1nTr36tRQ": {
+      "x": 2300,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": -1500,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 3",
+      "parent": "",
+      "key": "kBcZhh3qzEGIC1nTr36tRQ",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "Qc_OeYKqX0yuWkFXaNsCgQ": {
+      "x": -2050,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 500,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 4",
+      "parent": "",
+      "key": "Qc_OeYKqX0yuWkFXaNsCgQ",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "TLYpHghGOU6FaZtxDiVXBA": {
+      "x": -800,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 1100,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Spawner 5",
+      "parent": "",
+      "key": "TLYpHghGOU6FaZtxDiVXBA",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "SWqDETtcD0i6Wc3s81yccQ": {
+      "x": 1200,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 1932,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Spawner 6",
+      "parent": "",
+      "key": "SWqDETtcD0i6Wc3s81yccQ",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "toV45z8E60qZzI2RyZK7hw": {
+      "x": 211,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 2845,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Spawner 8",
+      "parent": "",
+      "key": "toV45z8E60qZzI2RyZK7hw",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "U8PYtFoC5U6c2A_gar9j2A": {
+      "x": -1500,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 2000,
+      "orbitRadius": 200,
+      "collisionRadius": 1,
+      "landable": false,
+      "name": "Hidden Spawner 8",
+      "parent": "",
+      "key": "U8PYtFoC5U6c2A_gar9j2A",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "o-MHCWvXwkiRaX1uGGndjg": {
+      "x": -341,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": -2044,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Hidden Spawner 9",
+      "controlZoneCompleteRewardFactor": 0.2,
+      "key": "o-MHCWvXwkiRaX1uGGndjg",
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "orbitAngle": 0,
+      "parent": "",
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "table": "Bodies",
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "GKNUHoGoEUq8NuM3TzNRMw": {
+      "x": 8000,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 8000,
+      "collisionRadius": 1,
+      "landable": false,
+      "canTriggerMission": false,
+      "name": "Slave Invasion",
+      "controlZoneCompleteRewardFactor": 0.2,
+      "key": "GKNUHoGoEUq8NuM3TzNRMw",
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "orbitAngle": 0,
+      "parent": "n4lRLcxb6k6-E8AnK_o22w",
+      "orbitSpeed": -181.375,
+      "exploreAreas": [],
+      "table": "Bodies",
+      "population": 0,
+      "type": "hidden",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "n4lRLcxb6k6-E8AnK_o22w": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "destination": "lf99t42bhEGsBmY0etltVw",
+      "level": 1,
+      "collisionRadius": 80,
+      "controlZoneTimeFactor": 0.2,
+      "parent": "",
+      "landable": false,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "sun",
+      "waypoints": [],
+      "safeZoneRadius": 0,
+      "effect": "gPFAj3fiIkmSZNmfBnJvmg",
+      "canTriggerMission": false,
+      "gravityMin": 30,
+      "y": 400,
+      "orbitRadius": 200,
+      "x": 400,
+      "gravityDistance": 800,
+      "name": "Sun",
+      "atmosphereColor": 0,
+      "key": "n4lRLcxb6k6-E8AnK_o22w",
+      "shopItems": [
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 200
+            }
+          ],
+          "table": "Weapons",
+          "item": "36zNgerYkEyhUVB0kPGS7Q",
+          "name": "Missile Launcher"
+        },
+        {
+          "priceItems": [
+            {
+              "item": "flpbTKautkC1QzjWT28gkw",
+              "amount": 200
+            }
+          ],
+          "table": "Weapons",
+          "item": "AfpNM3XTbE2CIYNeWnOxrQ",
+          "name": "Lightning Gun"
+        }
+      ],
+      "explorable": false,
+      "orbitAngle": 0,
+      "gravityForce": 5000,
+      "bitmap": null,
+      "time": 0,
+      "table": "Bodies",
+      "rewardTechPoints": 0,
+      "slots": 1,
+      "rotationSpeed": -0.2
+    },
+    "5t7vISQdPkCdZOX7zbWjhw": {
+      "x": -1433,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "atmosphereColor": 0,
+      "y": -12334,
+      "orbitRadius": 50,
+      "collisionRadius": 80,
+      "landable": false,
+      "gravityDistance": 800,
+      "name": "Sun",
+      "parent": "",
+      "key": "5t7vISQdPkCdZOX7zbWjhw",
+      "table": "Bodies",
+      "effect": "B0P0pbgGZE65Pejdzt3DQg",
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "orbitAngle": 0,
+      "gravityForce": 5000,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "sun",
+      "gravityMin": 30,
+      "rotationSpeed": -0.2
+    },
+    "8vKzPUmTbU-tQyZAO-d5SA": {
+      "bitmap": "sf86oalQ9ES4qnb4O9w6Yw",
+      "x": -4543,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "atmosphereColor": 0,
+      "y": -9342,
+      "orbitRadius": 50,
+      "collisionRadius": 80,
+      "landable": true,
+      "canTriggerMission": false,
+      "name": "Upgrade Shack",
+      "parent": "",
+      "key": "8vKzPUmTbU-tQyZAO-d5SA",
+      "rotationSpeed": -0.2,
+      "explorable": false,
+      "elite": false,
+      "orbitAngle": 0,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "table": "Bodies",
+      "population": 0,
+      "type": "research",
+      "waypoints": [],
+      "safeZoneRadius": 200
+    },
+    "53Ti3Rv-q0WCNXu6pZ-ZTw": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "collisionRadius": 100,
+      "landable": true,
+      "parent": "5t7vISQdPkCdZOX7zbWjhw",
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "extraAreas": 3,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "elite": true,
+      "exploreAreas": [
+        "9MmDyf2-_UCzSkWfnEv4EA",
+        "fm6xnXGnpUeSYQAtBwyS2Q"
+      ],
+      "population": 0,
+      "type": "planet",
+      "atmosphereColor": 6725119,
+      "orbitSpeed": 4.9,
+      "x": 0,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "y": 0,
+      "orbitRadius": 2640,
+      "name": "Vargen",
+      "key": "53Ti3Rv-q0WCNXu6pZ-ZTw",
+      "explorable": true,
+      "orbitAngle": 2.13,
+      "bitmap": "25VlGmLUj0maUizAv40qKA",
+      "table": "Bodies",
+      "seed": 0.946952,
+      "rotationSpeed": 0.13
+    },
+    "LMQPnZqyMkWHE2RVd_TXug": {
+      "x": -1433,
+      "canTriggerMission": false,
+      "waypoints": [],
+      "labelOffset": 0,
+      "y": -12334,
+      "orbitRadius": 50,
+      "collisionRadius": 1,
+      "landable": false,
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "name": "Warning",
+      "parent": "",
+      "key": "LMQPnZqyMkWHE2RVd_TXug",
+      "table": "Bodies",
+      "orbitAngle": 0,
+      "warningRadius": 5000,
+      "orbitSpeed": -250,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "warning",
+      "atmosphereColor": 0,
+      "rotationSpeed": -0.2
+    },
+    "tsKIlfSL9EG0CgVY3A5f_A": {
+      "solarSystem": "HrAjOBivt0SHPYtxKyiB_Q",
+      "level": 1,
+      "mission": null,
+      "collisionRadius": 100,
+      "landable": true,
+      "parent": "",
+      "controlZoneTimeFactor": 0.2,
+      "controlZoneGrabRewardFactor": 0.2,
+      "controlZoneCompleteRewardFactor": 0.2,
+      "orbitSpeed": -200,
+      "exploreAreas": [],
+      "population": 0,
+      "type": "warpGate",
+      "atmosphereColor": 0,
+      "safeZoneRadius": 200,
+      "x": 6431,
+      "canTriggerMission": false,
+      "start": true,
+      "waypoints": [],
+      "y": -3400,
+      "orbitRadius": 200,
+      "elite": false,
+      "orbitAngle": 0,
+      "key": "tsKIlfSL9EG0CgVY3A5f_A",
+      "table": "Bodies",
+      "name": "Warp Gate",
+      "bitmap": "AU1AhPIIOUKNtu2vano7_g",
+      "explorable": false,
+      "rotationSpeed": -0.2
+    }
+  },
+  "spawners": {
+    "UZceCdsXU02lnXShM3gCDw": {
+      "xp": 232,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "BtjWldxNSE-2Erp2CDRgrg",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "hp": 2000,
+      "outerRadius": 500,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 1,
+      "resetTime2": 1,
+      "orbitRadius": 200,
+      "bossSpawner": false,
+      "enemy": "gAYaku7WzkmHvODKQLnSAg",
+      "bossSpawner2": false,
+      "name": "Hyperion lvl 1",
+      "key": "UZceCdsXU02lnXShM3gCDw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "rebuildTime": 1,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1.33,
+      "resetTime": 2,
+      "turrets": [],
+      "shieldHp": 500,
+      "nrOfEnemies2": 10
+    },
+    "UTaNNYuH1EqaEhkXOAay8w": {
+      "key": "UTaNNYuH1EqaEhkXOAay8w",
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "fkytuRMpyUSciHkBfVXLYw",
+      "AIFaction1": "Slavers",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "outerRadius2": 200,
+      "outerRadius": 500,
+      "innerRadius": 150,
+      "maxActiveEnemies": 6,
+      "bonusEnemies": 0.5,
+      "xp": 232,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": false,
+      "hp": 1500,
+      "nrOfEnemies": 15,
+      "explosionSound": "5psyX2Y9e0m39q43L_uEGg",
+      "resetTime2": 1,
+      "orbitRadius": 200,
+      "bossSpawner": false,
+      "enemy": "E9Loua8gsEK8v8fX3aPy4w",
+      "bossSpawner2": false,
+      "name": "Hyperion lvl 1",
+      "innerRadius2": 0,
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "turrets": [],
+      "rebuildTime": 2,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "bonusEnemies2": 1,
+      "resetTime": 1,
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "shieldHp": 500,
+      "nrOfEnemies2": 14
+    },
+    "BTXaor3iAkuKqCmGaC_VtQ": {
+      "hidden": true,
+      "resetTime": 1,
+      "level": 0,
+      "innerRadius": 110,
+      "collisionRadius": 0,
+      "drops": [],
+      "hp": 100,
+      "outerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 1,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 1,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "cGNhqRrrK0KUSeWr6S8J6g",
+      "bossSpawner2": false,
+      "name": "Hyperion, AF Lieutenant John",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "turrets": [],
+      "rebuildTime": 1,
+      "triggeredByTimer": false,
+      "key": "BTXaor3iAkuKqCmGaC_VtQ",
+      "bonusEnemies2": 0,
+      "spawnOnDeath2": false,
+      "body": "OaxQyK53I0uXrlQbE8S0Ag",
+      "shieldHp": 0,
+      "nrOfEnemies2": 1
+    },
+    "zYlO1ZZ6hkSQmh2Lr3jxcQ": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "yyh6RendfUusFC6rRYVvyg",
+      "collisionRadius": 0,
+      "drops": [],
+      "hp": 100,
+      "outerRadius": 150,
+      "innerRadius": 110,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0,
+      "triggeredByMission": false,
+      "hasSecondSpawn": true,
+      "maxActiveEnemies2": 2,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 1,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "oOeZgFj_B0u2WjU2ImZSNQ",
+      "bossSpawner2": false,
+      "name": "Hyperion, AF Lieutenant Kreiger",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "enemy2": "jbrbznI3CUC2Iam1pXjaKw",
+      "rebuildTime": 1,
+      "triggeredByTimer": false,
+      "key": "zYlO1ZZ6hkSQmh2Lr3jxcQ",
+      "bonusEnemies2": 0,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 4
+    },
+    "zEtr87rWDU64pMctFBVmdA": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "aRJ7Qhctpkyq1FyiXQ8uSQ",
+      "collisionRadius": 0,
+      "drops": [],
+      "hp": 100,
+      "outerRadius": 150,
+      "innerRadius": 110,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 1,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 2,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "jbrbznI3CUC2Iam1pXjaKw",
+      "bossSpawner2": false,
+      "name": "Hyperion, AF Peacekeeper",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "enemy2": "jbrbznI3CUC2Iam1pXjaKw",
+      "rebuildTime": 1,
+      "triggeredByTimer": false,
+      "key": "zEtr87rWDU64pMctFBVmdA",
+      "bonusEnemies2": 0,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 1
+    },
+    "GHeSKGvoa0uu9nWoJVtaqQ": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "oFryHqwA-0-_rwKhqFdiCA",
+      "collisionRadius": 0,
+      "drops": [],
+      "hp": 100,
+      "outerRadius": 150,
+      "innerRadius": 110,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 1,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 3,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "jbrbznI3CUC2Iam1pXjaKw",
+      "bossSpawner2": false,
+      "name": "Hyperion, AF Peacekeeper",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "enemy2": "jbrbznI3CUC2Iam1pXjaKw",
+      "rebuildTime": 1,
+      "triggeredByTimer": false,
+      "key": "GHeSKGvoa0uu9nWoJVtaqQ",
+      "bonusEnemies2": 0,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 1
+    },
+    "_xToz-yvA0alA7-s_np-Eg": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "Yy5Xu1GjZU6fxe8yqNjEFQ",
+      "collisionRadius": 0,
+      "drops": [],
+      "hp": 100,
+      "outerRadius": 150,
+      "innerRadius": 100,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 1,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 2,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "jbrbznI3CUC2Iam1pXjaKw",
+      "bossSpawner2": false,
+      "name": "Hyperion, AF Peacekeeper",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "enemy2": "jbrbznI3CUC2Iam1pXjaKw",
+      "rebuildTime": 1,
+      "triggeredByTimer": false,
+      "key": "_xToz-yvA0alA7-s_np-Eg",
+      "bonusEnemies2": 0,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 1
+    },
+    "Fr-m4SJ2aEaZlPJYMXx-nw": {
+      "hp": 100,
+      "level": 0,
+      "innerRadius": 100,
+      "collisionRadius": 0,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        }
+      ],
+      "outerRadius": 130,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0,
+      "triggeredByMission": true,
+      "hasSecondSpawn": false,
+      "spawnOnDeath": false,
+      "bossSpawner": false,
+      "orbitRadius": 0,
+      "nrOfEnemies": 1,
+      "enemy": "g-Yca6Wv_Ei8DmONE0IVQg",
+      "turrets": [],
+      "name": "Hyperion, Abraham",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "body": "JDZ3bkWdbkOl_h_N-p2tpA",
+      "triggeredByTimer": false,
+      "key": "Fr-m4SJ2aEaZlPJYMXx-nw",
+      "hidden": true,
+      "resetTime": 1,
+      "rebuildTime": 1,
+      "shieldHp": 0
+    },
+    "HEBQaczOfEOR5Hu1OZjwDw": {
+      "hp": 100,
+      "level": 0,
+      "innerRadius": 100,
+      "collisionRadius": 0,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Big Metal Scrap",
+          "max": 3,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        }
+      ],
+      "outerRadius": 200,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0,
+      "triggeredByMission": true,
+      "hasSecondSpawn": false,
+      "spawnOnDeath": false,
+      "bossSpawner": false,
+      "orbitRadius": 100,
+      "nrOfEnemies": 2,
+      "enemy": "jp7GFXtDD06H65x-IDAtkA",
+      "turrets": [],
+      "name": "Hyperion, Cult Mission",
+      "xp": 0,
+      "drops2": [],
+      "table": "Spawners",
+      "body": "BtjWldxNSE-2Erp2CDRgrg",
+      "triggeredByTimer": false,
+      "key": "HEBQaczOfEOR5Hu1OZjwDw",
+      "hidden": true,
+      "resetTime": 1,
+      "rebuildTime": 1,
+      "shieldHp": 0
+    },
+    "L1dx0ZXtkkGnCy-yVNdn_g": {
+      "key": "L1dx0ZXtkkGnCy-yVNdn_g",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.54
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 200,
+      "innerRadius": 50,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.17,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 5,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 250,
+      "bossSpawner": false,
+      "enemy": "TW7U5ci5tUe6tzwaboStug",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite , lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "RNKGNBFF-kqfQkIvYzVMGg",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [
+        {
+          "id": -360406565,
+          "angle": 90,
+          "tmp_id": 0,
+          "xpos": 0,
+          "turret": "Y_NInt28nEWfI5bYH4wQ2A",
+          "name": "Elite Cannon Turret lvl 4",
+          "ypos": 0
+        }
+      ],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "ujC1CQMoLE2yrZJnHSxhrw": {
+      "key": "ujC1CQMoLE2yrZJnHSxhrw",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 200,
+      "innerRadius": 50,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0.17,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 5,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 250,
+      "bossSpawner": false,
+      "enemy": "TW7U5ci5tUe6tzwaboStug",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite , lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "RNKGNBFF-kqfQkIvYzVMGg",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [
+        {
+          "id": -360406565,
+          "angle": 90,
+          "tmp_id": 0,
+          "xpos": 0,
+          "turret": "Y_NInt28nEWfI5bYH4wQ2A",
+          "name": "Elite Cannon Turret lvl 4",
+          "ypos": 0
+        }
+      ],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "5WEyHrzZ4keO5AkVX2FBtA": {
+      "key": "5WEyHrzZ4keO5AkVX2FBtA",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.48
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 200,
+      "innerRadius": 50,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.17,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 5,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 250,
+      "bossSpawner": false,
+      "enemy": "TW7U5ci5tUe6tzwaboStug",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite , lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "RNKGNBFF-kqfQkIvYzVMGg",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [
+        {
+          "id": -360406565,
+          "angle": 90,
+          "tmp_id": 0,
+          "xpos": 0,
+          "turret": "Y_NInt28nEWfI5bYH4wQ2A",
+          "name": "Elite Cannon Turret lvl 4",
+          "ypos": 0
+        }
+      ],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "0wKq1dKEVUmlwNlyBjDDvA": {
+      "key": "0wKq1dKEVUmlwNlyBjDDvA",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.48
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 750,
+      "innerRadius": 300,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.5,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "8BO2XZpqBEKq19yHq0pGmw",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite 2, lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "53Ti3Rv-q0WCNXu6pZ-ZTw",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "IGcfj7URMkO1DaUcH2c2Yg": {
+      "key": "IGcfj7URMkO1DaUcH2c2Yg",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.48
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 750,
+      "innerRadius": 300,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.5,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "8BO2XZpqBEKq19yHq0pGmw",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite 2, lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "53Ti3Rv-q0WCNXu6pZ-ZTw",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "RigaKw-cZk67w-DqoTnkPw": {
+      "key": "RigaKw-cZk67w-DqoTnkPw",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.48
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 750,
+      "innerRadius": 300,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.17,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "8BO2XZpqBEKq19yHq0pGmw",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite 2, lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "53Ti3Rv-q0WCNXu6pZ-ZTw",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "yEOhuebtGU-1x-hxVoU94g": {
+      "key": "yEOhuebtGU-1x-hxVoU94g",
+      "hp": 5200,
+      "resetTime": 1,
+      "level": 4,
+      "rebuildTime": 10,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 5,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Engine Part",
+          "max": 1,
+          "drop": "mXH0I3iK_0Sv05bpO0qomQ",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Fusion Core",
+          "max": 1,
+          "drop": "6YzWnfS3AESpKCq8nKaNtQ",
+          "chance": 0.08
+        },
+        {
+          "min": 0,
+          "name": "Hydrogen Spill",
+          "max": 2,
+          "drop": "ZhiKr_lV5ka9I-Fio7APMg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 30%",
+          "max": 1,
+          "drop": "7jwWzUsrgUK9bwk26A2UdA",
+          "chance": 0.48
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 750,
+      "innerRadius": 300,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0.5,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 100,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "8BO2XZpqBEKq19yHq0pGmw",
+      "bossSpawner2": false,
+      "name": "Hyperion, Elite 2, lvl 4",
+      "bitmap": "omAGbpA9R0mF2tCLdKaRVg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "0URpiBf4OE-M1TkHM816ZA",
+      "body": "53Ti3Rv-q0WCNXu6pZ-ZTw",
+      "xp": 750,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 4800,
+      "nrOfEnemies2": 100
+    },
+    "65536230-A456-8A0F-D89C-36A7E9C6CBA7": {
+      "xp": 300,
+      "hp": 2000,
+      "level": 4,
+      "innerRadius": 75,
+      "collisionRadius": 40,
+      "drops": [
+        {
+          "min": 3,
+          "name": "Big Metal Scrap",
+          "max": 5,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 100%",
+          "max": 1,
+          "drop": "C6pxFT2jrkCOcl-1QfoEUw",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Crate Beamer",
+          "max": 1,
+          "drop": "epFZvZfNv0KPbNw0Z18C1w",
+          "chance": 0.54
+        },
+        {
+          "min": 4,
+          "name": "Crate Steel 50-100",
+          "max": 5,
+          "drop": "C8AD8202-C22E-B653-C3A9-35A136734332",
+          "chance": 1
+        }
+      ],
+      "outerRadius": 100,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0,
+      "hasSecondSpawn": false,
+      "initTime": 1,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "bossSpawner": false,
+      "enemies": [
+        {
+          "probability": 100,
+          "name": "Hattur lvl 4",
+          "key": "F99A127D-7295-B4ED-F03A-EB9530B7A665"
+        }
+      ],
+      "enemies2": [],
+      "orbitRadius": 0,
+      "nrOfEnemies": 1,
+      "turrets": [
+        {
+          "id": -37055044,
+          "angle": 0,
+          "tmp_id": 1,
+          "xpos": 0,
+          "turret": "zWFevM_lL0eocb9OitYrww",
+          "name": "Blaster 360 arc Turret lvl 4",
+          "ypos": 0
+        }
+      ],
+      "name": "Hyperion, Hattur",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [],
+      "table": "Spawners",
+      "rebuildTime": 1,
+      "key": "65536230-A456-8A0F-D89C-36A7E9C6CBA7",
+      "hidden": false,
+      "resetTime": 1,
+      "body": "3EE241AF-BF73-A4C3-0826-A52B4394746A",
+      "shieldHp": 2000
+    },
+    "xO7fio1PykunPQ9bt3FWtA": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "GKNUHoGoEUq8NuM3TzNRMw",
+      "collisionRadius": 0,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 4,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 0.68
+        }
+      ],
+      "hp": 100,
+      "outerRadius": 400,
+      "innerRadius": 50,
+      "maxActiveEnemies": 10,
+      "bonusEnemies": 0.33,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 2,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 10,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "KbN1_MQPH02Pf8BaUDskWQ",
+      "bossSpawner2": false,
+      "name": "Hyperion, Slaver invasion 1",
+      "xp": 0,
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "dHCT_zuWPk6Ja-hVZh5M_g",
+      "rebuildTime": 1,
+      "triggeredByTimer": true,
+      "key": "xO7fio1PykunPQ9bt3FWtA",
+      "bonusEnemies2": 0.16,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 2
+    },
+    "695F-f7XnE22e6gUM0ISAw": {
+      "hidden": true,
+      "spawnOnDeath2": false,
+      "level": 0,
+      "body": "GKNUHoGoEUq8NuM3TzNRMw",
+      "collisionRadius": 0,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 4,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 0.68
+        }
+      ],
+      "hp": 100,
+      "outerRadius": 400,
+      "innerRadius": 50,
+      "maxActiveEnemies": 8,
+      "bonusEnemies": 0.33,
+      "triggeredByMission": false,
+      "hasSecondSpawn": false,
+      "maxActiveEnemies2": 2,
+      "spawnOnDeath": false,
+      "nrOfEnemies": 8,
+      "resetTime2": 1,
+      "orbitRadius": 400,
+      "bossSpawner": false,
+      "enemy": "KbN1_MQPH02Pf8BaUDskWQ",
+      "bossSpawner2": false,
+      "name": "Hyperion, Slaver invasion 2",
+      "xp": 0,
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Big Metal Scrap",
+          "max": 1,
+          "drop": "W0zAU-AFikq_tTOFbPAsXg",
+          "chance": 1
+        },
+        {
+          "min": 1,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "dHCT_zuWPk6Ja-hVZh5M_g",
+      "rebuildTime": 1,
+      "triggeredByTimer": true,
+      "key": "695F-f7XnE22e6gUM0ISAw",
+      "bonusEnemies2": 0.16,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 0,
+      "nrOfEnemies2": 2
+    },
+    "DQEUUu2c1EmgW0iEgD3zHQ": {
+      "key": "DQEUUu2c1EmgW0iEgD3zHQ",
+      "hp": 800,
+      "resetTime": 1,
+      "level": 2,
+      "rebuildTime": 2,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 10,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 5,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "gAYaku7WzkmHvODKQLnSAg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 10, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "aILKS6Bcbkie7BcqivQWDQ",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 31
+    },
+    "LQQ3s54jWUSP7nYrgcTiwg": {
+      "key": "LQQ3s54jWUSP7nYrgcTiwg",
+      "hp": 800,
+      "resetTime": 2,
+      "level": 2,
+      "rebuildTime": 4,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 10,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 11, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "VawgUIM5WkK6tRK8cNHFsg",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 31
+    },
+    "a17NAs7Yr02Thv-UJeAx1A": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "_aCoEu2F3Umetwv1Bfj15g",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 650,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 7,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 12,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 12, lvl 1",
+      "key": "a17NAs7Yr02Thv-UJeAx1A",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.38
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 3,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1,
+      "resetTime": 2,
+      "turrets": [
+        {
+          "id": -556685409,
+          "angle": 45,
+          "xpos": 35,
+          "turret": "68HJeleFrUqLD-xXT5pEBg",
+          "name": "Blaster 280 arc Turret lvl 3",
+          "ypos": 35
+        }
+      ],
+      "shieldHp": 400,
+      "nrOfEnemies2": 18
+    },
+    "opRAAr8iykmJxJVLoWHiHg": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "CbLZzFzKiEKMNbIecoVa5A",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 13,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 13, lvl 1",
+      "key": "opRAAr8iykmJxJVLoWHiHg",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.38
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 3,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1,
+      "resetTime": 2,
+      "turrets": [],
+      "shieldHp": 400,
+      "nrOfEnemies2": 18
+    },
+    "rkmM4gNglkqi_AgX-UO8xg": {
+      "key": "rkmM4gNglkqi_AgX-UO8xg",
+      "hp": 800,
+      "resetTime": 2,
+      "level": 2,
+      "rebuildTime": 4,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 5,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "gAYaku7WzkmHvODKQLnSAg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 14, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "0stFHB6h50-tuPc1xHKYMw",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 21
+    },
+    "T2h4ClrLi0WLLv4WVjqzMg": {
+      "xp": 150,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 2,
+      "body": "CmRvKo_lAkewzWNSDqo4Bg",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 1,
+      "explosionSound": "0mUSjgqN10WYKFS2aMffqw",
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "gAYaku7WzkmHvODKQLnSAg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 15, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 1,
+      "key": "T2h4ClrLi0WLLv4WVjqzMg",
+      "bonusEnemies2": 0.49,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 22
+    },
+    "u6qwZo0ZJ0SHJA10aFfSYw": {
+      "key": "u6qwZo0ZJ0SHJA10aFfSYw",
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "hYL_61xpQkyB7IEHsR9CFw",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 12,
+      "explosionSound": "0mUSjgqN10WYKFS2aMffqw",
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 16, lvl 1",
+      "innerRadius2": 0,
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.38
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "turrets": [
+        {
+          "id": -556685409,
+          "angle": 45,
+          "xpos": 35,
+          "turret": "68HJeleFrUqLD-xXT5pEBg",
+          "name": "Blaster 280 arc Turret lvl 3",
+          "ypos": 35
+        }
+      ],
+      "rebuildTime": 2,
+      "xp": 115,
+      "bonusEnemies2": 1,
+      "resetTime": 1,
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "shieldHp": 400,
+      "nrOfEnemies2": 28
+    },
+    "Q6eQwk_7-UWwCaklMiYm1g": {
+      "key": "Q6eQwk_7-UWwCaklMiYm1g",
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 2,
+      "body": "Y_mryPmew0-K2RLRyTRUmg",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Iridium  5-25",
+          "max": 1,
+          "drop": "NIEUQO4JGUS3ncvsJpb-Cg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 11,
+      "explosionSound": "0mUSjgqN10WYKFS2aMffqw",
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 17, lvl 2",
+      "innerRadius2": 0,
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "turrets": [
+        {
+          "id": 0,
+          "angle": 90,
+          "xpos": 0,
+          "turret": "68HJeleFrUqLD-xXT5pEBg",
+          "name": "Station Turret lvl 3 (1)",
+          "ypos": 0
+        }
+      ],
+      "rebuildTime": 2,
+      "xp": 150,
+      "bonusEnemies2": 0.8300000000000001,
+      "resetTime": 1,
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "shieldHp": 400,
+      "nrOfEnemies2": 29
+    },
+    "mZWMVIhN7EGCbRKj5jh9nw": {
+      "key": "mZWMVIhN7EGCbRKj5jh9nw",
+      "hp": 800,
+      "resetTime": 2,
+      "level": 2,
+      "rebuildTime": 4,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 9,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 18, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "NIm5SkvCtUG5HH-GUAd4XQ",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 21
+    },
+    "tpO7mGJiMkeQHlCB_bBqbA": {
+      "key": "tpO7mGJiMkeQHlCB_bBqbA",
+      "hp": 800,
+      "resetTime": 2,
+      "level": 2,
+      "rebuildTime": 4,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 500,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 1,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "gAYaku7WzkmHvODKQLnSAg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 19, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "body": "-GznQcR2502v22jEeKXHiw",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 11
+    },
+    "64t4dhnF20aIRIHUt32vng": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "8aHGjeTEZ0CODbyvSROyFA",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 4,
+      "resetTime2": 2,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 2, lvl 1",
+      "key": "64t4dhnF20aIRIHUt32vng",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.27
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 3,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1,
+      "resetTime": 2,
+      "turrets": [],
+      "shieldHp": 400,
+      "nrOfEnemies2": 18
+    },
+    "eykqOnB8LEqKyJds3p2P8Q": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "kBcZhh3qzEGIC1nTr36tRQ",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 8,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 3, lvl 1",
+      "key": "eykqOnB8LEqKyJds3p2P8Q",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.38
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 1,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 400,
+      "nrOfEnemies2": 25
+    },
+    "RGnLO_EmdEehFVZ-21yqAQ": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "Qc_OeYKqX0yuWkFXaNsCgQ",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.37
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 2,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 7,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 4, lvl 1",
+      "key": "RGnLO_EmdEehFVZ-21yqAQ",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.38
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "A6KSA7NQH0uqFVLFoM_NFQ",
+      "rebuildTime": 1,
+      "innerRadius2": 0,
+      "bonusEnemies2": 1,
+      "resetTime": 1,
+      "turrets": [
+        {
+          "id": -556685409,
+          "angle": 45,
+          "xpos": 35,
+          "turret": "68HJeleFrUqLD-xXT5pEBg",
+          "name": "Blaster 280 arc Turret lvl 3",
+          "ypos": 35
+        }
+      ],
+      "shieldHp": 400,
+      "nrOfEnemies2": 18
+    },
+    "aqJ7ay6up0WQP4V39bEgqA": {
+      "key": "aqJ7ay6up0WQP4V39bEgqA",
+      "hp": 800,
+      "resetTime": 1,
+      "level": 2,
+      "rebuildTime": 1,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Iridium  5-25",
+          "max": 1,
+          "drop": "NIEUQO4JGUS3ncvsJpb-Cg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 650,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.5,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 8,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 5, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "TLYpHghGOU6FaZtxDiVXBA",
+      "xp": 150,
+      "bonusEnemies2": 0.8300000000000001,
+      "spawnOnDeath2": false,
+      "turrets": [
+        {
+          "id": 0,
+          "angle": 90,
+          "xpos": 0,
+          "turret": "68HJeleFrUqLD-xXT5pEBg",
+          "name": "Station Turret lvl 3 (1)",
+          "ypos": 0
+        }
+      ],
+      "shieldHp": 400,
+      "nrOfEnemies2": 46
+    },
+    "5Ef6N2BQt0SIzTCQtG_1cw": {
+      "xp": 115,
+      "hidden": false,
+      "spawnOnDeath2": false,
+      "level": 1,
+      "body": "HFQeomvTCUmHvPZirhZqiA",
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.42
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "hp": 800,
+      "outerRadius": 650,
+      "innerRadius": 150,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.5,
+      "outerRadius2": 200,
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 9,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "hasSecondSpawn": true,
+      "nrOfEnemies": 10,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "-J9CmeyrFUm_V9sxrsvaHg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 6, lvl 1",
+      "key": "5Ef6N2BQt0SIzTCQtG_1cw",
+      "drops2": [
+        {
+          "min": 1,
+          "name": "Metal Scrap",
+          "max": 1,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 0.48
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-50",
+          "max": 1,
+          "drop": "51nJdwRYWkCaHyqDk_rKCg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "rebuildTime": 2,
+      "innerRadius2": 0,
+      "bonusEnemies2": 0.67,
+      "resetTime": 1,
+      "turrets": [],
+      "shieldHp": 400,
+      "nrOfEnemies2": 45
+    },
+    "Cno5nRch0EeWp1TqgvUrmQ": {
+      "key": "Cno5nRch0EeWp1TqgvUrmQ",
+      "hp": 896,
+      "resetTime": 1,
+      "level": 2,
+      "rebuildTime": 1,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 650,
+      "innerRadius": 150,
+      "maxActiveEnemies": 5,
+      "bonusEnemies": 0.67,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 10,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 11,
+      "resetTime2": 1,
+      "orbitRadius": 100,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 7, lvl 2",
+      "bitmap": "yfH0ZA7ByU2G_O9raTZ47A",
+      "drops2": [
+        {
+          "min": 2,
+          "name": "Metal Scrap",
+          "max": 6,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "toV45z8E60qZzI2RyZK7hw",
+      "xp": 333,
+      "bonusEnemies2": 0.67,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 400,
+      "nrOfEnemies2": 43
+    },
+    "GPE9FX7HaUWtvq9RU9rxcA": {
+      "key": "GPE9FX7HaUWtvq9RU9rxcA",
+      "hp": 800,
+      "resetTime": 1,
+      "level": 2,
+      "rebuildTime": 1,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 1,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 6,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 2,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 8, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "body": "U8PYtFoC5U6c2A_gar9j2A",
+      "xp": 150,
+      "bonusEnemies2": 0.49,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 800,
+      "nrOfEnemies2": 21
+    },
+    "Bm5kXuglQ0WM-oJ3cyWUkg": {
+      "xp": 150,
+      "hp": 800,
+      "spawnOnDeath2": false,
+      "level": 2,
+      "rebuildTime": 2,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 600,
+      "innerRadius": 150,
+      "maxActiveEnemies": 3,
+      "bonusEnemies": 0.49,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 8,
+      "initTime": 0,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "initTime2": 0,
+      "nrOfEnemies": 4,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Hyperion, visible 9, lvl 2",
+      "key": "Bm5kXuglQ0WM-oJ3cyWUkg",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "turrets": [],
+      "body": "o-MHCWvXwkiRaX1uGGndjg",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "bonusEnemies2": 0.49,
+      "resetTime": 1,
+      "enemy2": "MyUrzxaGMk2GqGZOKOqdcQ",
+      "shieldHp": 800,
+      "nrOfEnemies2": 21
+    },
+    "mPOgvZbu8ki-BCnknd7mLQ": {
+      "key": "mPOgvZbu8ki-BCnknd7mLQ",
+      "hp": 1200,
+      "resetTime": 1,
+      "level": 2,
+      "rebuildTime": 1,
+      "collisionRadius": 20,
+      "drops": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        }
+      ],
+      "hidden": false,
+      "outerRadius": 650,
+      "innerRadius": 200,
+      "maxActiveEnemies": 4,
+      "bonusEnemies": 0.33,
+      "hasSecondSpawn": true,
+      "explosionEffect": "Vk5Hgk-n2UqelveFMqdCfw",
+      "maxActiveEnemies2": 10,
+      "type": "mech",
+      "spawnOnDeath": false,
+      "nrOfEnemies": 8,
+      "resetTime2": 1,
+      "orbitRadius": 0,
+      "bossSpawner": false,
+      "enemy": "BoxQVLD3a0iuaWqPCpbGXg",
+      "bossSpawner2": false,
+      "name": "Kapello, visible 1, lvl 2",
+      "bitmap": "MSpsdfGpTU2S9DE5B393Tw",
+      "drops2": [
+        {
+          "min": 0,
+          "name": "Metal Scrap",
+          "max": 2,
+          "drop": "I3kIFNSZAUiOQv_Us6gX8w",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Artifact 1%",
+          "max": 1,
+          "drop": "JvYR0d_4f0uslOwK_Mrhgg",
+          "chance": 1
+        },
+        {
+          "min": 0,
+          "name": "Crate 1%, Steel 10-100",
+          "max": 1,
+          "drop": "9bLjCkQ48kStTkKdGX2yDg",
+          "chance": 1
+        }
+      ],
+      "table": "Spawners",
+      "enemy2": "-J9CmeyrFUm_V9sxrsvaHg",
+      "body": "SWqDETtcD0i6Wc3s81yccQ",
+      "xp": 150,
+      "bonusEnemies2": 0.5,
+      "spawnOnDeath2": false,
+      "turrets": [],
+      "shieldHp": 1000,
+      "nrOfEnemies2": 10
+    }
+  },
+  "enemies": {
+    "E9Loua8gsEK8v8fX3aPy4w": {
+      "name": "Slaver lvl 2",
+      "level": 2,
+      "hp": 200,
+      "shieldHp": 122,
+      "collisionRadius": 15,
+      "spriteName": "enemy_slaver",
+      "spriteFile": "enemy_slaver.png",
+      "animate": false,
+      "animationDelay": 3,
+      "aggroRange": 300,
+      "chaseRange": 400,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 2,
+      "energyResist": 2,
+      "corrosiveResist": 0
+    },
+    "oOeZgFj_B0u2WjU2ImZSNQ": {
+      "name": "AF Lieutenant Kreiger",
+      "level": 100,
+      "hp": 600,
+      "shieldHp": 600,
+      "collisionRadius": 15,
+      "spriteName": "player_eagle",
+      "spriteFile": "player_eagle.png",
+      "animate": true,
+      "animationDelay": 3,
+      "aggroRange": 400,
+      "chaseRange": 450,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "TW7U5ci5tUe6tzwaboStug": {
+      "name": "Elite Triad lvl 4",
+      "level": 4,
+      "hp": 1200,
+      "shieldHp": 800,
+      "collisionRadius": 15,
+      "spriteName": "enemy_triad_3",
+      "spriteFile": "enemy_triad_3.png",
+      "animate": true,
+      "animationDelay": 22,
+      "aggroRange": 250,
+      "chaseRange": 400,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "jp7GFXtDD06H65x-IDAtkA": {
+      "name": "Fanatic Purifier lvl 6",
+      "level": 6,
+      "hp": 3800,
+      "shieldHp": 1250,
+      "collisionRadius": 15,
+      "spriteName": "enemy_blaster_5",
+      "spriteFile": "enemy_blaster_51.png",
+      "animate": true,
+      "animationDelay": 4,
+      "aggroRange": 10000,
+      "chaseRange": 10000,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 10,
+      "energyResist": 10,
+      "corrosiveResist": 0
+    },
+    "-J9CmeyrFUm_V9sxrsvaHg": {
+      "name": "Seeker Lvl 1",
+      "level": 1,
+      "hp": 200,
+      "shieldHp": 50,
+      "collisionRadius": 10,
+      "spriteName": "enemy_slug_2",
+      "spriteFile": "enemy_slug_2.png",
+      "animate": true,
+      "animationDelay": 4,
+      "aggroRange": 275,
+      "chaseRange": 400,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "8BO2XZpqBEKq19yHq0pGmw": {
+      "name": "Elite Stalker lvl 4",
+      "level": 4,
+      "hp": 1278,
+      "shieldHp": 1222,
+      "collisionRadius": 15,
+      "spriteName": "enemy_stalker_3",
+      "spriteFile": "enemy_stalker_3.png",
+      "animate": true,
+      "animationDelay": 4,
+      "aggroRange": 450,
+      "chaseRange": 1000,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "MyUrzxaGMk2GqGZOKOqdcQ": {
+      "name": "Seeker Lvl 0",
+      "level": 1,
+      "hp": 25,
+      "shieldHp": 25,
+      "collisionRadius": 10,
+      "spriteName": "enemy_slug_1",
+      "spriteFile": "enemy_slug_1.png",
+      "animate": true,
+      "animationDelay": 4,
+      "aggroRange": 250,
+      "chaseRange": 450,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "jbrbznI3CUC2Iam1pXjaKw": {
+      "name": "AF Peacekeeper",
+      "level": 16,
+      "hp": 600,
+      "shieldHp": 280,
+      "collisionRadius": 15,
+      "spriteName": "player_police_elite",
+      "spriteFile": "player_police2.png",
+      "animate": true,
+      "animationDelay": 6,
+      "aggroRange": 360,
+      "chaseRange": 450,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 5,
+      "energyResist": 5,
+      "corrosiveResist": 0
+    },
+    "g-Yca6Wv_Ei8DmONE0IVQg": {
+      "name": "Fanatic Abraham lvl 72",
+      "level": 72,
+      "hp": 300,
+      "shieldHp": 1200,
+      "collisionRadius": 15,
+      "spriteName": "player_chrono",
+      "spriteFile": "player_chrono1.png",
+      "animate": true,
+      "animationDelay": 3,
+      "aggroRange": 800,
+      "chaseRange": 900,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 75,
+      "energyResist": 75,
+      "corrosiveResist": 75
+    },
+    "0URpiBf4OE-M1TkHM816ZA": {
+      "name": "Zlatte Lvl 4",
+      "level": 4,
+      "hp": 140,
+      "shieldHp": 70,
+      "collisionRadius": 4,
+      "spriteName": "enemy_zlat_3",
+      "spriteFile": "enemy_zlat_3.png",
+      "animate": true,
+      "animationDelay": 5,
+      "aggroRange": 260,
+      "chaseRange": 450,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "gAYaku7WzkmHvODKQLnSAg": {
+      "name": "Launcher lvl 3",
+      "level": 3,
+      "hp": 400,
+      "shieldHp": 222,
+      "collisionRadius": 20,
+      "spriteName": "enemy_launcher_1",
+      "spriteFile": "enemy_launcher_1.png",
+      "animate": true,
+      "animationDelay": 8,
+      "aggroRange": 400,
+      "chaseRange": 600,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "A6KSA7NQH0uqFVLFoM_NFQ": {
+      "name": "Zlatte Lvl 1",
+      "level": 1,
+      "hp": 70,
+      "shieldHp": 30,
+      "collisionRadius": 4,
+      "spriteName": "enemy_zlat_1",
+      "spriteFile": "enemy_zlat_11.png",
+      "animate": true,
+      "animationDelay": 5,
+      "aggroRange": 250,
+      "chaseRange": 350,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "cGNhqRrrK0KUSeWr6S8J6g": {
+      "name": "AF Lieutenant John",
+      "level": 100,
+      "hp": 700,
+      "shieldHp": 840,
+      "collisionRadius": 15,
+      "spriteName": "player_supporter2",
+      "spriteFile": "player_supporter21.png",
+      "animate": true,
+      "animationDelay": 0,
+      "aggroRange": 400,
+      "chaseRange": 500,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    },
+    "KbN1_MQPH02Pf8BaUDskWQ": {
+      "name": "Slaver lvl 3",
+      "level": 3,
+      "hp": 200,
+      "shieldHp": 122,
+      "collisionRadius": 15,
+      "spriteName": "enemy_slaver",
+      "spriteFile": "enemy_slaver.png",
+      "animate": false,
+      "animationDelay": 3,
+      "aggroRange": 20000,
+      "chaseRange": 21000,
+      "flee": true,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 2,
+      "energyResist": 2,
+      "corrosiveResist": 0
+    },
+    "BoxQVLD3a0iuaWqPCpbGXg": {
+      "name": "Seeker Lvl 2",
+      "level": 2,
+      "hp": 225,
+      "shieldHp": 75,
+      "collisionRadius": 10,
+      "spriteName": "enemy_slug_2",
+      "spriteFile": "enemy_slug_2.png",
+      "animate": true,
+      "animationDelay": 4,
+      "aggroRange": 300,
+      "chaseRange": 350,
+      "flee": false,
+      "melee": false,
+      "alwaysFire": false,
+      "kineticResist": 0,
+      "energyResist": 0,
+      "corrosiveResist": 0
+    }
+  }
+}

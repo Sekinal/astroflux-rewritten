@@ -1,0 +1,973 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:0ce7bd11c129859758b4e002bbae7d1d:3b08d187997e259714c84e5770af4ea8:08105fdbae0643f46474b3029fb9433f$ -->
+<TextureAtlas imagePath="texture_main_NEW.png" width="2048" height="2048">
+    <SubTexture name="a-7_01" x="1725" y="615" width="40" height="40"/>
+    <SubTexture name="a-7_02" x="1633" y="635" width="40" height="40"/>
+    <SubTexture name="a-7_03" x="1633" y="676" width="40" height="40"/>
+    <SubTexture name="a-7_04" x="1633" y="635" width="40" height="40"/>
+    <SubTexture name="a-17_melee1" x="1725" y="533" width="40" height="40"/>
+    <SubTexture name="a-17_melee2" x="1923" y="457" width="40" height="40"/>
+    <SubTexture name="a-17_melee3" x="1923" y="498" width="40" height="40"/>
+    <SubTexture name="a-17_melee4" x="1923" y="457" width="40" height="40"/>
+    <SubTexture name="a-17_normal1" x="1923" y="539" width="40" height="40"/>
+    <SubTexture name="a-18_01" x="1725" y="574" width="40" height="40"/>
+    <SubTexture name="a-18_02" x="1633" y="594" width="40" height="40"/>
+    <SubTexture name="a-18_03" x="1558" y="653" width="40" height="40"/>
+    <SubTexture name="a-18_04" x="1633" y="594" width="40" height="40"/>
+    <SubTexture name="advancedDataChip" x="1706" y="1046" width="25" height="25"/>
+    <SubTexture name="advectorian_mini" x="953" y="1315" width="80" height="70"/>
+    <SubTexture name="af_turret_platform_active" x="1237" y="1007" width="38" height="42"/>
+    <SubTexture name="af_turret_platform_dead" x="1574" y="1512" width="38" height="42"/>
+    <SubTexture name="alienAlloy" x="77" y="2025" rotated="true" width="19" height="22"/>
+    <SubTexture name="arrow" x="546" y="1961" width="140" height="26"/>
+    <SubTexture name="bionicImplant" x="97" y="2025" rotated="true" width="19" height="22"/>
+    <SubTexture name="boss_advectorion_chain1_active" x="345" y="1664" rotated="true" width="170" height="95"/>
+    <SubTexture name="boss_advectorion_chain1_dead" x="516" y="1664" rotated="true" width="170" height="95"/>
+    <SubTexture name="boss_advectorion_chain2_active" x="923" y="1386" width="170" height="170"/>
+    <SubTexture name="boss_advectorion_chain2_dead" x="939" y="1760" width="170" height="170"/>
+    <SubTexture name="boss_aureus_dead" x="670" y="311" width="125" height="152"/>
+    <SubTexture name="boss_aureus_inner" x="177" y="2009" rotated="true" width="77" height="38"/>
+    <SubTexture name="boss_aureus_outer" x="686" y="568" width="134" height="149"/>
+    <SubTexture name="boss_blob" x="872" y="1" width="126" height="129"/>
+    <SubTexture name="boss_blob_eye" x="797" y="909" width="140" height="140"/>
+    <SubTexture name="boss_blob_spawner_active" x="1249" y="1557" width="100" height="100"/>
+    <SubTexture name="boss_blob_spawner_dead" x="1545" y="985" width="64" height="64"/>
+    <SubTexture name="boss_chelonidron_body" x="173" y="1760" rotated="true" width="144" height="248"/>
+    <SubTexture name="boss_chelonidron_head_active1" x="1076" y="1931" width="100" height="107"/>
+    <SubTexture name="boss_chelonidron_head_active2" x="686" y="718" width="100" height="107"/>
+    <SubTexture name="boss_chelonidron_head_active3" x="787" y="718" width="100" height="107"/>
+    <SubTexture name="boss_chelonidron_head_active4" x="686" y="718" width="100" height="107"/>
+    <SubTexture name="boss_chelonidron_head_dead1" x="888" y="718" width="100" height="107"/>
+    <SubTexture name="boss_chelonidron_tail_active" x="654" y="1121" rotated="true" width="81" height="53"/>
+    <SubTexture name="boss_chelonidron_turret_top11" x="752" y="1601" rotated="true" width="50" height="62"/>
+    <SubTexture name="boss_chelonidron_turret_top12" x="803" y="1601" rotated="true" width="50" height="62"/>
+    <SubTexture name="boss_chelonidron_turret_top13" x="1292" y="232" width="62" height="50"/>
+    <SubTexture name="boss_chelonidron_turret_top14" x="803" y="1601" rotated="true" width="50" height="62"/>
+    <SubTexture name="boss_chelonidron_turret_top21" x="1569" y="1446" rotated="true" width="63" height="65"/>
+    <SubTexture name="boss_chelonidron_turret_top22" x="1535" y="1305" rotated="true" width="63" height="65"/>
+    <SubTexture name="boss_chelonidron_turret_top23" x="1585" y="1232" rotated="true" width="63" height="65"/>
+    <SubTexture name="boss_chelonidron_turret_top24" x="1535" y="1305" rotated="true" width="63" height="65"/>
+    <SubTexture name="boss_chelonidron_turret_top31" x="1360" y="1249" rotated="true" width="51" height="57"/>
+    <SubTexture name="boss_chelonidron_turret_top32" x="1771" y="131" width="57" height="51"/>
+    <SubTexture name="boss_chelonidron_turret_top33" x="1360" y="1249" rotated="true" width="51" height="57"/>
+    <SubTexture name="boss_chelonidron_turret_top34" x="1771" y="183" width="57" height="51"/>
+    <SubTexture name="boss_dominator_body" x="812" y="1390" width="110" height="181"/>
+    <SubTexture name="boss_dominator_missile_turret" x="1280" y="1151" width="19" height="20"/>
+    <SubTexture name="boss_dominator_saw" x="1404" y="656" width="58" height="61"/>
+    <SubTexture name="boss_dominator_turret" x="570" y="2035" rotated="true" width="19" height="11"/>
+    <SubTexture name="boss_emperor_body" x="1" y="569" width="340" height="340"/>
+    <SubTexture name="boss_mech" x="1" y="1" width="567" height="567"/>
+    <SubTexture name="boss_mech_blade" x="971" y="1931" width="104" height="116"/>
+    <SubTexture name="boss_mech_bottom" x="1" y="910" width="319" height="319"/>
+    <SubTexture name="boss_mech_disc1" x="318" y="1760" width="227" height="227"/>
+    <SubTexture name="boss_mech_disc2" x="1195" y="1385" width="129" height="129"/>
+    <SubTexture name="boss_mech_turret_blaster" x="1633" y="374" width="42" height="32"/>
+    <SubTexture name="boss_mech_turret_missile" x="1599" y="586" width="33" height="32"/>
+    <SubTexture name="boss_nexar_11" x="486" y="1603" width="60" height="60"/>
+    <SubTexture name="boss_nexar_12" x="547" y="1603" width="60" height="60"/>
+    <SubTexture name="boss_nexar_13" x="608" y="1603" width="60" height="60"/>
+    <SubTexture name="boss_nexar_14" x="1519" y="222" width="60" height="60"/>
+    <SubTexture name="boss_nexar_21" x="1580" y="222" width="60" height="60"/>
+    <SubTexture name="boss_nexar_22" x="1641" y="222" width="60" height="60"/>
+    <SubTexture name="boss_nexar_23" x="1325" y="1454" width="60" height="60"/>
+    <SubTexture name="boss_nexar_24" x="1386" y="1454" width="60" height="60"/>
+    <SubTexture name="boss_nexar_31" x="1412" y="1244" width="60" height="60"/>
+    <SubTexture name="boss_nexar_32" x="1447" y="1454" width="60" height="60"/>
+    <SubTexture name="boss_nexar_33" x="1508" y="1453" width="60" height="60"/>
+    <SubTexture name="boss_nexar_34" x="1585" y="1371" width="60" height="60"/>
+    <SubTexture name="boss_rotator_chain1_active" x="687" y="1664" rotated="true" width="112" height="95"/>
+    <SubTexture name="boss_rotator_chain1_dead" x="800" y="1664" rotated="true" width="112" height="95"/>
+    <SubTexture name="c-2-1" x="1021" y="311" width="100" height="100"/>
+    <SubTexture name="c-2-2" x="999" y="1" width="100" height="100"/>
+    <SubTexture name="c-2-3" x="1021" y="311" width="100" height="100"/>
+    <SubTexture name="c-2-4" x="1074" y="131" width="100" height="100"/>
+    <SubTexture name="c-5-1" x="1413" y="999" width="50" height="50"/>
+    <SubTexture name="c-5-2" x="1674" y="524" width="50" height="50"/>
+    <SubTexture name="c-5-3" x="1507" y="584" width="50" height="50"/>
+    <SubTexture name="c-5-4" x="1674" y="524" width="50" height="50"/>
+    <SubTexture name="c-18-1" x="872" y="131" width="100" height="100"/>
+    <SubTexture name="c-18-2" x="920" y="311" width="100" height="100"/>
+    <SubTexture name="c-18-3" x="973" y="131" width="100" height="100"/>
+    <SubTexture name="c-18-4" x="931" y="444" width="100" height="100"/>
+    <SubTexture name="c-30-1" x="1417" y="232" width="50" height="50"/>
+    <SubTexture name="c-30-2" x="1362" y="999" width="50" height="50"/>
+    <SubTexture name="c-30-3" x="1417" y="232" width="50" height="50"/>
+    <SubTexture name="c-30-4" x="1468" y="232" width="50" height="50"/>
+    <SubTexture name="chelonidron_mini" x="1169" y="1307" rotated="true" width="80" height="77"/>
+    <SubTexture name="chest" x="546" y="1760" width="200" height="200"/>
+    <SubTexture name="coreCharge" x="117" y="2025" rotated="true" width="19" height="22"/>
+    <SubTexture name="crate" x="1187" y="545" width="25" height="18"/>
+    <SubTexture name="crate_christmas" x="570" y="2009" rotated="true" width="19" height="25"/>
+    <SubTexture name="crate_easter" x="1072" y="545" width="25" height="19"/>
+    <SubTexture name="crate_halloween" x="1098" y="545" width="25" height="19"/>
+    <SubTexture name="crate_regular" x="1187" y="545" width="25" height="18"/>
+    <SubTexture name="crate_unique" x="1213" y="545" width="25" height="18"/>
+    <SubTexture name="d_2_1" x="321" y="1175" width="54" height="54"/>
+    <SubTexture name="d_2_2" x="376" y="1175" width="54" height="54"/>
+    <SubTexture name="d_2_3" x="431" y="1175" width="54" height="54"/>
+    <SubTexture name="d_2_4" x="1868" y="1" width="54" height="54"/>
+    <SubTexture name="d_2_5" x="1868" y="56" width="54" height="54"/>
+    <SubTexture name="d_2_6" x="1868" y="111" width="54" height="54"/>
+    <SubTexture name="d_2_7" x="1868" y="166" width="54" height="54"/>
+    <SubTexture name="d_2_8" x="1868" y="221" width="54" height="54"/>
+    <SubTexture name="d_2_9" x="1868" y="276" width="54" height="54"/>
+    <SubTexture name="dominator_mini" x="1266" y="665" width="80" height="52"/>
+    <SubTexture name="drop_brain" x="137" y="2025" rotated="true" width="19" height="22"/>
+    <SubTexture name="drop_heart" x="941" y="1557" rotated="true" width="12" height="13"/>
+    <SubTexture name="drop_leg" x="797" y="1098" rotated="true" width="15" height="22"/>
+    <SubTexture name="enemy_ab_block" x="1887" y="854" width="35" height="35"/>
+    <SubTexture name="enemy_ab_circle" x="1725" y="1195" width="25" height="25"/>
+    <SubTexture name="enemy_ab_square" x="422" y="1988" width="20" height="20"/>
+    <SubTexture name="enemy_ab_triad" x="443" y="1988" width="20" height="20"/>
+    <SubTexture name="enemy_aureus_abstract_circle1" x="1486" y="1556" width="70" height="70"/>
+    <SubTexture name="enemy_aureus_abstract_circle2" x="1464" y="1305" width="70" height="70"/>
+    <SubTexture name="enemy_aureus_abstract_circle3" x="1532" y="1161" width="70" height="70"/>
+    <SubTexture name="enemy_aureus_abstract_square1" x="1619" y="872" width="40" height="35"/>
+    <SubTexture name="enemy_aureus_abstract_square2" x="1887" y="772" rotated="true" width="35" height="40"/>
+    <SubTexture name="enemy_aureus_abstract_square3" x="1887" y="813" rotated="true" width="35" height="40"/>
+    <SubTexture name="enemy_aureus_abstract_star1" x="1965" y="1699" width="48" height="48"/>
+    <SubTexture name="enemy_aureus_abstract_star2" x="1932" y="1748" width="48" height="48"/>
+    <SubTexture name="enemy_aureus_abstract_star3" x="1981" y="1748" width="48" height="48"/>
+    <SubTexture name="enemy_aureus_abstract_triangle1" x="1148" y="666" rotated="true" width="58" height="51"/>
+    <SubTexture name="enemy_aureus_abstract_triangle2" x="1207" y="666" rotated="true" width="58" height="51"/>
+    <SubTexture name="enemy_aureus_abstract_triangle3" x="1766" y="712" rotated="true" width="58" height="51"/>
+    <SubTexture name="enemy_aureus_broken_star" x="823" y="283" width="40" height="27"/>
+    <SubTexture name="enemy_aureus_fighter1" x="1274" y="412" rotated="true" width="26" height="31"/>
+    <SubTexture name="enemy_aureus_fighter2" x="1497" y="1627" width="42" height="29"/>
+    <SubTexture name="enemy_aureus_leech" x="1316" y="1307" rotated="true" width="79" height="73"/>
+    <SubTexture name="enemy_aureus_spawner_active" x="569" y="466" rotated="true" width="103" height="101"/>
+    <SubTexture name="enemy_aureus_spawner_dead" x="1147" y="1557" width="101" height="103"/>
+    <SubTexture name="enemy_aureus_star" x="766" y="826" rotated="true" width="84" height="82"/>
+    <SubTexture name="enemy_battleship" x="854" y="1572" rotated="true" width="140" height="91"/>
+    <SubTexture name="enemy_beamer_11" x="946" y="669" width="49" height="48"/>
+    <SubTexture name="enemy_beamer_12" x="996" y="669" width="49" height="48"/>
+    <SubTexture name="enemy_beamer_13" x="1676" y="374" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_14" x="1828" y="367" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_21" x="1676" y="424" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_22" x="1828" y="417" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_23" x="1676" y="474" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_24" x="1509" y="534" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_31" x="1676" y="779" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_beamer_32" x="1671" y="997" width="49" height="48"/>
+    <SubTexture name="enemy_beamer_33" x="1721" y="997" width="49" height="48"/>
+    <SubTexture name="enemy_beamer_34" x="1771" y="997" width="49" height="48"/>
+    <SubTexture name="enemy_beetle_baby1" x="1507" y="635" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_baby2" x="1674" y="575" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_baby3" x="1674" y="626" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_baby4" x="1674" y="677" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_scarab1" x="1674" y="728" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_scarab2" x="1965" y="742" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_scarab3" x="1965" y="793" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_scarab4" x="1965" y="844" width="50" height="50"/>
+    <SubTexture name="enemy_beetle_spikey1" x="1100" y="1" width="100" height="100"/>
+    <SubTexture name="enemy_beetle_spikey2" x="945" y="568" width="100" height="100"/>
+    <SubTexture name="enemy_beetle_spikey3" x="1100" y="1" width="100" height="100"/>
+    <SubTexture name="enemy_beetle_spikey4" x="1032" y="444" width="100" height="100"/>
+    <SubTexture name="enemy_blaster_11" x="1673" y="1616" width="45" height="40"/>
+    <SubTexture name="enemy_blaster_12" x="1719" y="1615" width="45" height="40"/>
+    <SubTexture name="enemy_blaster_13" x="1923" y="1" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_14" x="1923" y="1" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_21" x="1923" y="47" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_22" x="1923" y="93" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_23" x="1923" y="139" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_24" x="1923" y="139" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_31" x="1296" y="102" width="30" height="28"/>
+    <SubTexture name="enemy_blaster_32" x="1327" y="102" width="30" height="28"/>
+    <SubTexture name="enemy_blaster_41" x="1923" y="185" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_42" x="1923" y="231" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_43" x="1923" y="277" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_44" x="1923" y="277" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_51" x="1923" y="323" rotated="true" width="40" height="45"/>
+    <SubTexture name="enemy_blaster_52" x="1877" y="331" width="45" height="40"/>
+    <SubTexture name="enemy_blaster_53" x="1725" y="418" width="45" height="40"/>
+    <SubTexture name="enemy_blaster_54" x="1725" y="418" width="45" height="40"/>
+    <SubTexture name="enemy_blaster_infested" x="1358" y="102" width="30" height="28"/>
+    <SubTexture name="enemy_cruiser" x="687" y="1961" rotated="true" width="105" height="86"/>
+    <SubTexture name="enemy_deamon" x="1117" y="1008" rotated="true" width="40" height="41"/>
+    <SubTexture name="enemy_destroyer" x="1114" y="819" rotated="true" width="85" height="86"/>
+    <SubTexture name="enemy_drak" x="1250" y="1307" rotated="true" width="65" height="77"/>
+    <SubTexture name="enemy_dreadnaught" x="673" y="464" rotated="true" width="124" height="103"/>
+    <SubTexture name="enemy_elite_dreadnaught" x="815" y="1050" width="103" height="124"/>
+    <SubTexture name="enemy_exp_daemon1" x="1195" y="1515" rotated="true" width="46" height="41"/>
+    <SubTexture name="enemy_exp_larva1" x="1429" y="1879" width="30" height="15"/>
+    <SubTexture name="enemy_exp_larva2" x="1653" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_exp_larva3" x="1684" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_exp_larva4" x="1715" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_fanatic_tank" x="1486" y="1050" rotated="true" width="67" height="79"/>
+    <SubTexture name="enemy_flamer_1" x="1890" y="627" width="30" height="35"/>
+    <SubTexture name="enemy_guardian_11" x="1509" y="768" width="36" height="38"/>
+    <SubTexture name="enemy_guardian_12" x="1733" y="1046" rotated="true" width="38" height="36"/>
+    <SubTexture name="enemy_guardian_13" x="1509" y="768" width="36" height="38"/>
+    <SubTexture name="enemy_guardian_14" x="1772" y="1046" rotated="true" width="38" height="36"/>
+    <SubTexture name="enemy_guardian_21" x="1883" y="1710" rotated="true" width="48" height="45"/>
+    <SubTexture name="enemy_guardian_22" x="1725" y="222" width="45" height="48"/>
+    <SubTexture name="enemy_guardian_23" x="1883" y="1710" rotated="true" width="48" height="45"/>
+    <SubTexture name="enemy_guardian_24" x="1725" y="271" width="45" height="48"/>
+    <SubTexture name="enemy_guardian_31" x="1725" y="320" width="45" height="48"/>
+    <SubTexture name="enemy_guardian_33" x="1725" y="320" width="45" height="48"/>
+    <SubTexture name="enemy_guardian_34" x="1725" y="369" width="45" height="48"/>
+    <SubTexture name="enemy_larva1" x="1746" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_larva2" x="1777" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_larva3" x="1808" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_larva4" x="1839" y="2031" width="30" height="15"/>
+    <SubTexture name="enemy_launcher_11" x="1829" y="133" rotated="true" width="38" height="39"/>
+    <SubTexture name="enemy_launcher_12" x="1829" y="173" rotated="true" width="38" height="39"/>
+    <SubTexture name="enemy_launcher_13" x="1829" y="173" rotated="true" width="38" height="39"/>
+    <SubTexture name="enemy_launcher_14" x="1829" y="213" rotated="true" width="38" height="39"/>
+    <SubTexture name="enemy_launcher_21" x="1978" y="1404" rotated="true" width="48" height="49"/>
+    <SubTexture name="enemy_launcher_22" x="1991" y="1454" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_23" x="1991" y="1454" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_24" x="1991" y="1503" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_31" x="1973" y="1552" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_32" x="1965" y="1601" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_33" x="1965" y="1601" width="49" height="48"/>
+    <SubTexture name="enemy_launcher_34" x="1965" y="1650" width="49" height="48"/>
+    <SubTexture name="enemy_macrofag_acid1" x="255" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_acid2" x="300" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_acid3" x="345" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_acid4" x="390" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_acid5" x="435" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_acid6" x="480" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_b_exp1" x="525" y="2009" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_b_exp2" x="1323" y="1005" rotated="true" width="38" height="44"/>
+    <SubTexture name="enemy_macrofag_b_exp3" x="1508" y="404" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_b_exp4" x="1513" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_b_exp5" x="1508" y="404" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_b_exp6" x="1323" y="1005" rotated="true" width="38" height="44"/>
+    <SubTexture name="enemy_macrofag_blood1" x="1558" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_blood2" x="1603" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_blood3" x="1648" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_blood4" x="1693" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_blood5" x="1738" y="92" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_blood6" x="1483" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental1" x="1528" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental2" x="1573" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental3" x="1618" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental4" x="1663" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental5" x="1618" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_macrofag_experimental6" x="1573" y="1718" width="44" height="38"/>
+    <SubTexture name="enemy_moth_alpha1" x="345" y="1230" width="140" height="216"/>
+    <SubTexture name="enemy_moth_alpha2" x="345" y="1447" width="140" height="216"/>
+    <SubTexture name="enemy_moth_alpha3" x="486" y="1175" width="140" height="216"/>
+    <SubTexture name="enemy_moth_alpha4" x="493" y="910" width="140" height="216"/>
+    <SubTexture name="enemy_moth_baby1" x="1355" y="232" rotated="true" width="61" height="50"/>
+    <SubTexture name="enemy_moth_baby2" x="872" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby3" x="942" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby4" x="1012" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby5" x="1082" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby6 copy" x="1152" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby7" x="1222" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_baby8" x="1222" y="232" rotated="true" width="69" height="50"/>
+    <SubTexture name="enemy_moth_black1" x="1599" y="443" width="33" height="35"/>
+    <SubTexture name="enemy_moth_black2" x="1599" y="479" width="33" height="35"/>
+    <SubTexture name="enemy_moth_black3" x="1599" y="515" width="33" height="35"/>
+    <SubTexture name="enemy_moth_blood1" x="1708" y="1718" rotated="true" width="40" height="38"/>
+    <SubTexture name="enemy_moth_blood2" x="1829" y="92" width="38" height="40"/>
+    <SubTexture name="enemy_moth_blood3" x="1783" y="92" rotated="true" width="40" height="38"/>
+    <SubTexture name="enemy_moth_dire_evil1" x="1337" y="904" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_evil2" x="1394" y="904" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_evil3" x="1395" y="718" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_evil4" x="1349" y="561" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_invasion1" x="536" y="1127" rotated="true" width="28" height="47"/>
+    <SubTexture name="enemy_moth_dire_invasion2" x="565" y="1127" rotated="true" width="28" height="47"/>
+    <SubTexture name="enemy_moth_dire_invasion3" x="594" y="1127" rotated="true" width="28" height="47"/>
+    <SubTexture name="enemy_moth_dire_invasion4" x="623" y="1127" rotated="true" width="28" height="47"/>
+    <SubTexture name="enemy_moth_dire_large1" x="1406" y="561" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_large2" x="1452" y="718" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_large3" x="1408" y="443" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_large4" x="1425" y="311" rotated="true" width="56" height="94"/>
+    <SubTexture name="enemy_moth_dire_small1" x="999" y="102" width="47" height="28"/>
+    <SubTexture name="enemy_moth_dire_small2" x="1047" y="102" width="47" height="28"/>
+    <SubTexture name="enemy_moth_dire_small3" x="1095" y="102" width="47" height="28"/>
+    <SubTexture name="enemy_moth_dire_small4" x="1143" y="102" width="47" height="28"/>
+    <SubTexture name="enemy_moth_exp_queen1" x="1" y="1230" width="171" height="264"/>
+    <SubTexture name="enemy_moth_exp_queen2" x="1" y="1495" width="171" height="264"/>
+    <SubTexture name="enemy_moth_exp_queen3" x="1" y="1760" width="171" height="264"/>
+    <SubTexture name="enemy_moth_exp_queen4" x="173" y="1230" width="171" height="264"/>
+    <SubTexture name="enemy_moth_fire1" x="1242" y="1515" rotated="true" width="44" height="41"/>
+    <SubTexture name="enemy_moth_fire2" x="1287" y="1515" rotated="true" width="44" height="41"/>
+    <SubTexture name="enemy_moth_fire3" x="1072" y="1008" rotated="true" width="44" height="41"/>
+    <SubTexture name="enemy_moth_ice_baby1" x="1457" y="406" width="50" height="36"/>
+    <SubTexture name="enemy_moth_ice_baby2" x="1509" y="717" rotated="true" width="36" height="50"/>
+    <SubTexture name="enemy_moth_ice_baby3" x="1725" y="1158" width="50" height="36"/>
+    <SubTexture name="enemy_moth_ice_baby4" x="1509" y="717" rotated="true" width="36" height="50"/>
+    <SubTexture name="enemy_moth_ice_mature1" x="1335" y="443" rotated="true" width="72" height="100"/>
+    <SubTexture name="enemy_moth_ice_mature2" x="1264" y="904" rotated="true" width="72" height="100"/>
+    <SubTexture name="enemy_moth_ice_mature3" x="1292" y="718" rotated="true" width="72" height="100"/>
+    <SubTexture name="enemy_moth_ice_mature4" x="1264" y="904" rotated="true" width="72" height="100"/>
+    <SubTexture name="enemy_moth_invasion1" x="342" y="834" rotated="true" width="105" height="75"/>
+    <SubTexture name="enemy_moth_invasion2" x="448" y="834" rotated="true" width="105" height="75"/>
+    <SubTexture name="enemy_moth_invasion3" x="342" y="834" rotated="true" width="105" height="75"/>
+    <SubTexture name="enemy_moth_invasion4" x="554" y="834" rotated="true" width="105" height="75"/>
+    <SubTexture name="enemy_moth_invasion5" x="660" y="834" rotated="true" width="105" height="75"/>
+    <SubTexture name="enemy_moth_invasion6" x="995" y="1557" width="75" height="105"/>
+    <SubTexture name="enemy_moth_invasion7" x="1071" y="1557" width="75" height="105"/>
+    <SubTexture name="enemy_moth_invasion8" x="1071" y="1557" width="75" height="105"/>
+    <SubTexture name="enemy_moth_locust_egg1" x="1110" y="1914" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_egg2" x="1135" y="1914" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_egg3" x="1160" y="1914" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_egg4" x="797" y="1073" rotated="true" width="16" height="24"/>
+    <SubTexture name="enemy_moth_locust_gen1" x="821" y="701" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_gen2" x="846" y="701" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_gen3" x="871" y="701" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_gen4" x="896" y="701" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_yellow1" x="921" y="701" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_yellow2" x="1336" y="544" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_yellow3" x="1300" y="1151" width="24" height="16"/>
+    <SubTexture name="enemy_moth_locust_yellow4" x="1361" y="544" width="24" height="16"/>
+    <SubTexture name="enemy_moth_mature1" x="953" y="1174" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature2" x="1094" y="1386" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature3" x="953" y="1174" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature4" x="1211" y="1759" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature5" x="1312" y="1757" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature6" x="771" y="1" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature7" x="771" y="142" width="100" height="140"/>
+    <SubTexture name="enemy_moth_mature8" x="771" y="142" width="100" height="140"/>
+    <SubTexture name="enemy_moth_queen1" x="321" y="910" width="171" height="264"/>
+    <SubTexture name="enemy_moth_queen2" x="342" y="569" width="171" height="264"/>
+    <SubTexture name="enemy_moth_queen3" x="514" y="569" width="171" height="264"/>
+    <SubTexture name="enemy_moth_queen4" x="173" y="1495" width="171" height="264"/>
+    <SubTexture name="enemy_moth_servus1" x="1122" y="311" width="100" height="100"/>
+    <SubTexture name="enemy_moth_servus2" x="1175" y="131" width="100" height="100"/>
+    <SubTexture name="enemy_moth_servus3" x="1201" y="1" width="100" height="100"/>
+    <SubTexture name="enemy_moth_servus4" x="1276" y="131" width="100" height="100"/>
+    <SubTexture name="enemy_moth_servus5" x="1302" y="1" width="100" height="100"/>
+    <SubTexture name="enemy_nether_blob1" x="1599" y="908" width="50" height="50"/>
+    <SubTexture name="enemy_nether_blob2" x="1650" y="908" width="50" height="50"/>
+    <SubTexture name="enemy_nether_blob3" x="1965" y="895" width="50" height="50"/>
+    <SubTexture name="enemy_nether_blob4" x="1965" y="946" width="50" height="50"/>
+    <SubTexture name="enemy_nether_blob5" x="1965" y="997" width="50" height="50"/>
+    <SubTexture name="enemy_nexar_a1" x="1599" y="1298" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_a2" x="1554" y="1050" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_a3" x="1610" y="985" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_a4" x="1615" y="1046" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_b1" x="1603" y="1161" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_b2" x="1649" y="1222" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_b3" x="1664" y="1160" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_b4" x="1413" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_c1" x="1477" y="1657" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_c2" x="1413" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_c3" x="1474" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_c4" x="1474" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_d1" x="1538" y="1657" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_d2" x="1557" y="1555" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_d3" x="1618" y="1555" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_d4" x="1633" y="1432" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_e1" x="1646" y="1493" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_e2" x="1646" y="1359" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_e3" x="1694" y="1420" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_e4" x="1660" y="1283" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_f1" x="1710" y="1221" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_f2" x="1707" y="1344" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_f3" x="1721" y="1282" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_f4" x="1535" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_g1" x="1599" y="1657" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_g2" x="1535" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_g3" x="1573" y="1909" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_g4" x="1573" y="1970" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_h1" x="1596" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_h2" x="1660" y="1657" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_h3" x="1596" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_h4" x="1679" y="1554" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_i1" x="1707" y="1481" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_i2" x="1740" y="1542" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_i3" x="1755" y="1405" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_i4" x="1768" y="1343" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_j1" x="1768" y="1466" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_j2" x="1816" y="1404" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_j3" x="1634" y="1909" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_j4" x="1634" y="1970" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_k1" x="1657" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_k2" x="1657" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_k3" x="1721" y="1656" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_k4" x="1801" y="1527" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_l1" x="1829" y="1465" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_l2" x="1695" y="1909" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_l3" x="1695" y="1970" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_l4" x="1718" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_m1" x="1782" y="1656" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_m2" x="1718" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_m3" x="1822" y="1588" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_m4" x="1862" y="1526" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_n1" x="1756" y="1909" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_n2" x="1756" y="1970" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_n3" x="1779" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_n4" x="1779" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_o1" x="1817" y="1909" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_o2" x="1817" y="1970" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_o3" x="1840" y="1757" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_o4" x="1840" y="1818" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_p1" x="1843" y="1649" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_p2" x="1883" y="1587" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_p3" x="1904" y="1648" width="60" height="60"/>
+    <SubTexture name="enemy_nexar_p4" x="1965" y="1" width="60" height="60"/>
+    <SubTexture name="enemy_ossakel" x="1013" y="819" width="100" height="87"/>
+    <SubTexture name="enemy_pirate" x="1389" y="102" width="30" height="28"/>
+    <SubTexture name="enemy_plankton_blood1" x="1877" y="372" width="45" height="32"/>
+    <SubTexture name="enemy_plankton_blood2" x="1877" y="405" width="45" height="32"/>
+    <SubTexture name="enemy_plankton_blood3" x="1725" y="459" width="45" height="32"/>
+    <SubTexture name="enemy_plankton_exp1" x="1328" y="412" width="42" height="30"/>
+    <SubTexture name="enemy_plankton_exp2" x="1371" y="412" width="42" height="30"/>
+    <SubTexture name="enemy_plankton_exp3" x="1414" y="412" width="42" height="30"/>
+    <SubTexture name="enemy_plankton_n1" x="1406" y="1131" width="42" height="30"/>
+    <SubTexture name="enemy_plankton_n2" x="1449" y="1131" width="42" height="30"/>
+    <SubTexture name="enemy_plankton_n3" x="1492" y="1130" width="42" height="30"/>
+    <SubTexture name="enemy_renegade_science_vessel" x="1517" y="374" width="30" height="29"/>
+    <SubTexture name="enemy_repair_probe1" x="1699" y="283" rotated="true" width="25" height="42"/>
+    <SubTexture name="enemy_repair_probe2" x="1699" y="326" rotated="true" width="25" height="42"/>
+    <SubTexture name="enemy_repair_probe3" x="1556" y="443" width="42" height="25"/>
+    <SubTexture name="enemy_repair_probe4" x="1556" y="469" width="42" height="25"/>
+    <SubTexture name="enemy_repair_probe5" x="1556" y="495" width="42" height="25"/>
+    <SubTexture name="enemy_slaver" x="1" y="2025" rotated="true" width="29" height="22"/>
+    <SubTexture name="enemy_slug_11" x="464" y="1988" width="20" height="20"/>
+    <SubTexture name="enemy_slug_21" x="31" y="2025" width="22" height="22"/>
+    <SubTexture name="enemy_slug_31" x="1775" y="1195" width="24" height="24"/>
+    <SubTexture name="enemy_space_algea1" x="1472" y="1515" rotated="true" width="50" height="40"/>
+    <SubTexture name="enemy_space_algea2" x="1523" y="1514" rotated="true" width="50" height="40"/>
+    <SubTexture name="enemy_space_algea3" x="1571" y="1616" rotated="true" width="50" height="40"/>
+    <SubTexture name="enemy_space_algea4" x="1622" y="1616" rotated="true" width="50" height="40"/>
+    <SubTexture name="enemy_space_squid1" x="1200" y="819" width="84" height="84"/>
+    <SubTexture name="enemy_space_squid2" x="1285" y="819" width="84" height="84"/>
+    <SubTexture name="enemy_space_squid3" x="1200" y="819" width="84" height="84"/>
+    <SubTexture name="enemy_space_squid4" x="1370" y="819" width="84" height="84"/>
+    <SubTexture name="enemy_stalker_11" x="1693" y="959" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_12" x="1733" y="1107" width="37" height="48"/>
+    <SubTexture name="enemy_stalker_13" x="1693" y="959" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_14" x="1848" y="772" width="37" height="48"/>
+    <SubTexture name="enemy_stalker_21" x="1848" y="821" width="37" height="48"/>
+    <SubTexture name="enemy_stalker_22" x="1660" y="870" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_23" x="1848" y="821" width="37" height="48"/>
+    <SubTexture name="enemy_stalker_24" x="1709" y="870" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_31" x="1676" y="829" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_32" x="1848" y="870" width="37" height="48"/>
+    <SubTexture name="enemy_stalker_33" x="1676" y="829" rotated="true" width="48" height="37"/>
+    <SubTexture name="enemy_stalker_34" x="1848" y="919" width="37" height="48"/>
+    <SubTexture name="enemy_the_blob_electro1" x="1965" y="1048" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_electro2" x="1965" y="1099" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_electro3" x="1965" y="1150" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_electro4" x="1965" y="1201" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_electro5" x="1965" y="1252" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_normal1" x="1965" y="1303" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_normal2" x="1858" y="1302" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_normal3" x="1682" y="1107" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_normal4" x="1776" y="1140" width="50" height="50"/>
+    <SubTexture name="enemy_the_blob_normal5" x="1789" y="1083" width="50" height="50"/>
+    <SubTexture name="enemy_thorn_blade" x="1725" y="656" width="40" height="40"/>
+    <SubTexture name="enemy_thorn_blade_2" x="1433" y="1909" rotated="true" width="139" height="136"/>
+    <SubTexture name="enemy_thorn_jagged_star_blood1" x="1046" y="668" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_jagged_star_blood2" x="1097" y="668" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_jagged_star_blood3" x="1574" y="1111" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_jagged_star_n1" x="1829" y="1354" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_jagged_star_n2" x="1725" y="820" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_jagged_star_n3" x="1776" y="820" rotated="true" width="50" height="49"/>
+    <SubTexture name="enemy_thorn_zappler1" x="1613" y="1512" width="32" height="42"/>
+    <SubTexture name="enemy_thorn_zappler2" x="1633" y="407" rotated="true" width="42" height="32"/>
+    <SubTexture name="enemy_thorn_zappler3" x="1633" y="440" rotated="true" width="42" height="32"/>
+    <SubTexture name="enemy_thorn_zappler4" x="1633" y="473" rotated="true" width="42" height="32"/>
+    <SubTexture name="enemy_triad_11" x="1890" y="663" width="30" height="30"/>
+    <SubTexture name="enemy_triad_12" x="1890" y="694" width="30" height="30"/>
+    <SubTexture name="enemy_triad_13" x="1645" y="819" width="30" height="30"/>
+    <SubTexture name="enemy_triad_14" x="2017" y="672" width="30" height="30"/>
+    <SubTexture name="enemy_triad_15" x="1645" y="819" width="30" height="30"/>
+    <SubTexture name="enemy_triad_16" x="1890" y="694" width="30" height="30"/>
+    <SubTexture name="enemy_triad_21" x="1811" y="1046" width="36" height="36"/>
+    <SubTexture name="enemy_triad_22" x="1848" y="968" width="36" height="36"/>
+    <SubTexture name="enemy_triad_31" x="1633" y="717" width="40" height="40"/>
+    <SubTexture name="enemy_triad_32" x="1923" y="580" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_11" x="1923" y="621" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_12" x="1923" y="662" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_13" x="1725" y="697" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_14" x="1725" y="738" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_21" x="1725" y="779" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_22" x="1923" y="703" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_23" x="1923" y="744" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_24" x="1923" y="785" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_31" x="1923" y="826" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_32" x="1923" y="867" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_33" x="1923" y="908" width="40" height="40"/>
+    <SubTexture name="enemy_tricombo_34" x="1923" y="949" width="40" height="40"/>
+    <SubTexture name="enemy_zapper_2" x="1373" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_3" x="1373" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_11" x="1301" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_12" x="1325" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_13" x="1349" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_14" x="1349" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_21" x="1397" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_22" x="1421" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_23" x="1445" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_24" x="1445" y="283" width="23" height="27"/>
+    <SubTexture name="enemy_zapper_31" x="1749" y="1717" rotated="true" width="46" height="39"/>
+    <SubTexture name="enemy_zapper_32" x="1796" y="1717" rotated="true" width="46" height="39"/>
+    <SubTexture name="enemy_zapper_33" x="1843" y="1710" width="39" height="46"/>
+    <SubTexture name="enemy_zapper_34" x="1843" y="1710" width="39" height="46"/>
+    <SubTexture name="enemy_zlat_11" x="1358" y="1146" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_12" x="1374" y="1146" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_13" x="1390" y="1146" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_14" x="1499" y="886" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_21" x="1515" y="886" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_22" x="1554" y="1111" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_23" x="1413" y="1879" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_24" x="1573" y="2031" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_31" x="1589" y="2031" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_32" x="1605" y="2031" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_33" x="1621" y="2031" rotated="true" width="15" height="16"/>
+    <SubTexture name="enemy_zlat_34" x="1637" y="2031" rotated="true" width="15" height="16"/>
+    <SubTexture name="enginePart" x="157" y="2025" rotated="true" width="19" height="22"/>
+    <SubTexture name="executor_mini" x="932" y="826" width="80" height="80"/>
+    <SubTexture name="fangs" x="847" y="1572" rotated="true" width="6" height="24"/>
+    <SubTexture name="fluff" x="1923" y="990" width="40" height="40"/>
+    <SubTexture name="fluff2" x="1316" y="1898" rotated="true" width="34" height="11"/>
+    <SubTexture name="fluff3" x="1923" y="1031" width="40" height="40"/>
+    <SubTexture name="fluff4" x="1923" y="1072" width="40" height="40"/>
+    <SubTexture name="fluff5" x="1701" y="908" width="50" height="50"/>
+    <SubTexture name="fluff6" x="1923" y="1113" width="40" height="40"/>
+    <SubTexture name="fluff7" x="1923" y="1154" width="40" height="40"/>
+    <SubTexture name="fluff8" x="1401" y="1898" rotated="true" width="60" height="10"/>
+    <SubTexture name="fluff9" x="1276" y="1005" rotated="true" width="46" height="44"/>
+    <SubTexture name="flux" x="1053" y="545" rotated="true" width="18" height="20"/>
+    <SubTexture name="fusionCore" x="931" y="545" rotated="true" width="19" height="22"/>
+    <SubTexture name="health_pack" x="1089" y="2039" width="8" height="8"/>
+    <SubTexture name="health_pack_large" x="1239" y="545" width="25" height="18"/>
+    <SubTexture name="hydrogenCrystal" x="1351" y="1898" rotated="true" width="15" height="11"/>
+    <SubTexture name="hydrogenOscillator" x="951" y="545" rotated="true" width="19" height="22"/>
+    <SubTexture name="hydrogenSpill" x="971" y="545" rotated="true" width="19" height="22"/>
+    <SubTexture name="iridium" x="1379" y="1898" width="10" height="11"/>
+    <SubTexture name="line1" x="1094" y="1527" width="100" height="29"/>
+    <SubTexture name="line2" x="1365" y="718" rotated="true" width="29" height="100"/>
+    <SubTexture name="line3" x="1286" y="1050" rotated="true" width="29" height="100"/>
+    <SubTexture name="mandrom_mini" x="851" y="826" width="80" height="82"/>
+    <SubTexture name="mech_spawner_active11" x="989" y="718" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active12" x="1062" y="907" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active13" x="1185" y="1050" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active14" x="1046" y="567" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active15" x="1090" y="718" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active16" x="1163" y="906" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active21" x="1465" y="443" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active22" x="1478" y="131" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active23" x="1504" y="1" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active24" x="1595" y="1" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active25" x="1517" y="283" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active26" x="1569" y="131" width="90" height="90"/>
+    <SubTexture name="mech_spawner_active31" x="1133" y="444" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active32" x="1223" y="311" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active33" x="1133" y="444" width="100" height="100"/>
+    <SubTexture name="mech_spawner_active34" x="1147" y="565" width="100" height="100"/>
+    <SubTexture name="mech_spawner_dead11" x="1553" y="374" rotated="true" width="67" height="68"/>
+    <SubTexture name="mech_spawner_dead21" x="1553" y="374" rotated="true" width="67" height="68"/>
+    <SubTexture name="mech_spawner_dead31" x="1553" y="374" rotated="true" width="67" height="68"/>
+    <SubTexture name="mediumDataChip" x="1342" y="1146" width="15" height="16"/>
+    <SubTexture name="mother_brain_mini" x="1451" y="904" rotated="true" width="79" height="80"/>
+    <SubTexture name="nexar_m1" x="2017" y="703" width="30" height="30"/>
+    <SubTexture name="nexar_m2" x="2017" y="734" width="30" height="30"/>
+    <SubTexture name="nexar_m3" x="2016" y="765" width="30" height="30"/>
+    <SubTexture name="nexar_m4" x="2016" y="796" width="30" height="30"/>
+    <SubTexture name="nexar_n1" x="2016" y="827" width="30" height="30"/>
+    <SubTexture name="nexar_n2" x="2016" y="858" width="30" height="30"/>
+    <SubTexture name="nexar_n3" x="2016" y="889" width="30" height="30"/>
+    <SubTexture name="nexar_n4" x="2016" y="920" width="30" height="30"/>
+    <SubTexture name="nexar_projection" x="1124" y="545" width="25" height="19"/>
+    <SubTexture name="nexar_shadow_projection" x="1150" y="545" width="25" height="19"/>
+    <SubTexture name="nexar_spawner_active11" x="1965" y="62" width="60" height="60"/>
+    <SubTexture name="nexar_spawner_active12" x="1965" y="123" width="60" height="60"/>
+    <SubTexture name="nexar_spawner_active13" x="1965" y="184" width="60" height="60"/>
+    <SubTexture name="nexar_spawner_active14" x="1965" y="245" width="60" height="60"/>
+    <SubTexture name="nexar_spawner_dead11" x="1553" y="374" rotated="true" width="67" height="68"/>
+    <SubTexture name="nexar_turret1" x="1965" y="306" width="60" height="60"/>
+    <SubTexture name="nexar_turret2" x="1965" y="367" width="60" height="60"/>
+    <SubTexture name="nexar_turret3" x="1829" y="467" width="60" height="60"/>
+    <SubTexture name="nexar_turret4" x="1965" y="428" width="60" height="60"/>
+    <SubTexture name="organic_boss_blob1" x="1851" y="1185" rotated="true" width="50" height="49"/>
+    <SubTexture name="organic_boss_blob2" x="1923" y="1506" width="49" height="50"/>
+    <SubTexture name="organic_boss_blob3" x="1973" y="1354" rotated="true" width="50" height="49"/>
+    <SubTexture name="organic_boss_blob4" x="1928" y="1404" width="49" height="50"/>
+    <SubTexture name="organic_boss_blob5" x="1941" y="1455" width="49" height="50"/>
+    <SubTexture name="organic_boss_wax_spawner_active1" x="634" y="910" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_active2" x="486" y="1392" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_active3" x="627" y="1175" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_active4" x="486" y="1392" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_active5" x="634" y="910" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_active6" x="649" y="1390" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_boss_wax_spawner_dead1" x="790" y="1175" rotated="true" width="162" height="210"/>
+    <SubTexture name="organic_spawner_active11" x="1923" y="413" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_active12" x="1633" y="506" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_active13" x="1558" y="521" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_active21" x="1347" y="665" width="56" height="52"/>
+    <SubTexture name="organic_spawner_active22" x="1625" y="1107" width="56" height="52"/>
+    <SubTexture name="organic_spawner_active23" x="1765" y="1603" width="56" height="52"/>
+    <SubTexture name="organic_spawner_active31" x="1490" y="813" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_active32" x="1531" y="886" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_active33" x="1325" y="1381" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_active41" x="1185" y="1914" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_active42" x="919" y="1050" width="132" height="123"/>
+    <SubTexture name="organic_spawner_active43" x="1309" y="1913" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_dead11" x="54" y="2025" width="22" height="22"/>
+    <SubTexture name="organic_spawner_dead21" x="1599" y="689" width="32" height="32"/>
+    <SubTexture name="organic_spawner_dead31" x="1878" y="1909" width="48" height="48"/>
+    <SubTexture name="organic_spawner_dead41" x="1545" y="985" width="64" height="64"/>
+    <SubTexture name="organic_spawner_egg_active1" x="1771" y="235" width="56" height="52"/>
+    <SubTexture name="organic_spawner_egg_active2" x="1771" y="288" width="56" height="52"/>
+    <SubTexture name="organic_spawner_egg_active3" x="1771" y="341" width="56" height="52"/>
+    <SubTexture name="organic_spawner_egg_active4" x="1771" y="288" width="56" height="52"/>
+    <SubTexture name="organic_spawner_egg_dead1" x="1599" y="689" width="32" height="32"/>
+    <SubTexture name="organic_spawner_egg_inactive1" x="1771" y="235" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive11" x="1463" y="572" width="43" height="40"/>
+    <SubTexture name="organic_spawner_inactive12" x="1725" y="492" width="43" height="40"/>
+    <SubTexture name="organic_spawner_inactive13" x="1633" y="550" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_inactive14" x="1558" y="565" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_inactive15" x="1463" y="613" width="43" height="40"/>
+    <SubTexture name="organic_spawner_inactive16" x="1558" y="609" rotated="true" width="40" height="43"/>
+    <SubTexture name="organic_spawner_inactive17" x="1463" y="654" width="43" height="40"/>
+    <SubTexture name="organic_spawner_inactive21" x="1771" y="394" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive22" x="1771" y="447" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive23" x="1771" y="500" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive24" x="1771" y="553" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive25" x="1771" y="606" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive26" x="1546" y="694" rotated="true" width="52" height="56"/>
+    <SubTexture name="organic_spawner_inactive27" x="1771" y="659" width="56" height="52"/>
+    <SubTexture name="organic_spawner_inactive31" x="1350" y="1557" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive32" x="1393" y="1381" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive33" x="1396" y="1307" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive34" x="1464" y="1162" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive35" x="1409" y="1657" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive36" x="1418" y="1557" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive37" x="1461" y="1380" rotated="true" width="67" height="72"/>
+    <SubTexture name="organic_spawner_inactive41" x="796" y="311" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_inactive42" x="798" y="444" width="132" height="123"/>
+    <SubTexture name="organic_spawner_inactive43" x="821" y="568" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_inactive44" x="938" y="907" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_inactive45" x="1052" y="1050" width="132" height="123"/>
+    <SubTexture name="organic_spawner_inactive46" x="1054" y="1174" rotated="true" width="123" height="132"/>
+    <SubTexture name="organic_spawner_inactive47" x="1178" y="1174" rotated="true" width="123" height="132"/>
+    <SubTexture name="phase_crystal" x="485" y="1988" width="20" height="20"/>
+    <SubTexture name="plasmaFluids" x="976" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="player_abstract_circle1" x="1887" y="890" width="35" height="35"/>
+    <SubTexture name="player_abstract_circle2" x="1887" y="926" width="35" height="35"/>
+    <SubTexture name="player_abstract_circle3" x="1887" y="962" width="35" height="35"/>
+    <SubTexture name="player_aerodeck1" x="1829" y="253" rotated="true" width="38" height="37"/>
+    <SubTexture name="player_aerodeck2" x="1782" y="1303" width="37" height="38"/>
+    <SubTexture name="player_aerodeck3" x="1820" y="1303" width="37" height="38"/>
+    <SubTexture name="player_aerodeck4" x="1782" y="1303" width="37" height="38"/>
+    <SubTexture name="player_aerodeck11" x="1829" y="291" rotated="true" width="38" height="37"/>
+    <SubTexture name="player_aerodeck12" x="1829" y="329" rotated="true" width="38" height="37"/>
+    <SubTexture name="player_aerodeck13" x="1470" y="534" rotated="true" width="38" height="37"/>
+    <SubTexture name="player_aerodeck14" x="1829" y="329" rotated="true" width="38" height="37"/>
+    <SubTexture name="player_agent1" x="1462" y="1879" width="30" height="29"/>
+    <SubTexture name="player_agent2" x="1540" y="1627" width="30" height="29"/>
+    <SubTexture name="player_agent3" x="1493" y="1879" width="30" height="29"/>
+    <SubTexture name="player_agent4" x="1540" y="1627" width="30" height="29"/>
+    <SubTexture name="player_assassin1" x="1923" y="1195" width="40" height="40"/>
+    <SubTexture name="player_assassin2" x="1923" y="1236" width="40" height="40"/>
+    <SubTexture name="player_assassin3" x="1923" y="1277" width="40" height="40"/>
+    <SubTexture name="player_assassin4" x="1923" y="1318" width="40" height="40"/>
+    <SubTexture name="player_asteroids1" x="1890" y="590" rotated="true" width="30" height="36"/>
+    <SubTexture name="player_c8_melee1" x="1191" y="718" width="100" height="100"/>
+    <SubTexture name="player_c8_melee2" x="1234" y="444" width="100" height="100"/>
+    <SubTexture name="player_c8_melee3" x="1234" y="444" width="100" height="100"/>
+    <SubTexture name="player_c8_melee4" x="1234" y="444" width="100" height="100"/>
+    <SubTexture name="player_c8_normal1" x="1234" y="444" width="100" height="100"/>
+    <SubTexture name="player_c8_normal2" x="1234" y="444" width="100" height="100"/>
+    <SubTexture name="player_c8_normal3" x="1191" y="718" width="100" height="100"/>
+    <SubTexture name="player_c8_normal4" x="1191" y="718" width="100" height="100"/>
+    <SubTexture name="player_cargo1" x="1524" y="1879" width="30" height="29"/>
+    <SubTexture name="player_cargo2" x="1555" y="1879" width="30" height="29"/>
+    <SubTexture name="player_cargo3" x="1586" y="1879" width="30" height="29"/>
+    <SubTexture name="player_cargo4" x="1555" y="1879" width="30" height="29"/>
+    <SubTexture name="player_carrier1" x="1771" y="764" width="51" height="34"/>
+    <SubTexture name="player_carrier2" x="1965" y="672" width="51" height="34"/>
+    <SubTexture name="player_carrier3" x="1965" y="707" width="51" height="34"/>
+    <SubTexture name="player_chicken1" x="920" y="412" width="50" height="31"/>
+    <SubTexture name="player_chicken2" x="971" y="412" width="50" height="31"/>
+    <SubTexture name="player_chicken3" x="1022" y="412" width="50" height="31"/>
+    <SubTexture name="player_chicken4" x="1073" y="412" width="50" height="31"/>
+    <SubTexture name="player_chrono1" x="1617" y="1879" width="30" height="29"/>
+    <SubTexture name="player_chrono2" x="1648" y="1879" width="30" height="29"/>
+    <SubTexture name="player_chrono3" x="1679" y="1879" width="30" height="29"/>
+    <SubTexture name="player_chrono4" x="1710" y="1879" width="30" height="29"/>
+    <SubTexture name="player_cogo1" x="1420" y="102" width="30" height="28"/>
+    <SubTexture name="player_cogo2" x="1451" y="102" width="30" height="28"/>
+    <SubTexture name="player_cogo3" x="1482" y="102" width="30" height="28"/>
+    <SubTexture name="player_cogo4" x="1451" y="102" width="30" height="28"/>
+    <SubTexture name="player_creampuff1" x="1741" y="1879" width="30" height="29"/>
+    <SubTexture name="player_creampuff2" x="1741" y="1879" width="30" height="29"/>
+    <SubTexture name="player_creampuff3" x="1741" y="1879" width="30" height="29"/>
+    <SubTexture name="player_creampuff4" x="1741" y="1879" width="30" height="29"/>
+    <SubTexture name="player_crystal1" x="493" y="1127" width="42" height="47"/>
+    <SubTexture name="player_dmat1" x="1717" y="1083" width="23" height="23"/>
+    <SubTexture name="player_dmat2" x="1741" y="1083" width="23" height="23"/>
+    <SubTexture name="player_dmat3" x="1765" y="1083" width="23" height="23"/>
+    <SubTexture name="player_dmat4" x="1823" y="772" width="23" height="23"/>
+    <SubTexture name="player_dmat5" x="1765" y="1083" width="23" height="23"/>
+    <SubTexture name="player_dmat6" x="1823" y="796" width="23" height="23"/>
+    <SubTexture name="player_eagle1" x="901" y="283" width="31" height="27"/>
+    <SubTexture name="player_eagle2" x="933" y="283" width="31" height="27"/>
+    <SubTexture name="player_eagle3" x="965" y="283" width="31" height="27"/>
+    <SubTexture name="player_eagle4" x="933" y="283" width="31" height="27"/>
+    <SubTexture name="player_explorer1" x="1158" y="1008" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_explorer2" x="1158" y="1008" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_explorer3" x="1158" y="1008" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_explorer4" x="1158" y="1008" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_flyfish1" x="812" y="1572" rotated="true" width="34" height="28"/>
+    <SubTexture name="player_flyfish2" x="1191" y="102" rotated="true" width="34" height="28"/>
+    <SubTexture name="player_flyfish3" x="1226" y="102" rotated="true" width="34" height="28"/>
+    <SubTexture name="player_flyfish4" x="1261" y="102" rotated="true" width="34" height="28"/>
+    <SubTexture name="player_gold1" x="736" y="1121" width="78" height="53"/>
+    <SubTexture name="player_golden1" x="1220" y="283" rotated="true" width="26" height="27"/>
+    <SubTexture name="player_golden2" x="1247" y="283" rotated="true" width="26" height="27"/>
+    <SubTexture name="player_golden3" x="1274" y="283" rotated="true" width="26" height="27"/>
+    <SubTexture name="player_golden4" x="1247" y="283" rotated="true" width="26" height="27"/>
+    <SubTexture name="player_hattrick1" x="1607" y="751" rotated="true" width="25" height="29"/>
+    <SubTexture name="player_hattrick2" x="1646" y="758" rotated="true" width="25" height="29"/>
+    <SubTexture name="player_hattrick3" x="1619" y="812" rotated="true" width="25" height="29"/>
+    <SubTexture name="player_hattrick4" x="1646" y="758" rotated="true" width="25" height="29"/>
+    <SubTexture name="player_hellbat_1" x="1686" y="1" width="90" height="90"/>
+    <SubTexture name="player_hellbat_2" x="1608" y="283" width="90" height="90"/>
+    <SubTexture name="player_hellbat_3" x="1660" y="131" width="90" height="90"/>
+    <SubTexture name="player_hellbat_4" x="1777" y="1" width="90" height="90"/>
+    <SubTexture name="player_judicator1" x="1923" y="369" width="40" height="43"/>
+    <SubTexture name="player_jupiter1" x="771" y="283" width="51" height="27"/>
+    <SubTexture name="player_medic1" x="1599" y="551" width="33" height="34"/>
+    <SubTexture name="player_military1" x="997" y="283" width="31" height="27"/>
+    <SubTexture name="player_military2" x="1029" y="283" width="31" height="27"/>
+    <SubTexture name="player_military3" x="1061" y="283" width="31" height="27"/>
+    <SubTexture name="player_military4" x="1029" y="283" width="31" height="27"/>
+    <SubTexture name="player_mini_carrier1" x="1301" y="412" rotated="true" width="26" height="31"/>
+    <SubTexture name="player_nyan1" x="1772" y="1879" width="30" height="29"/>
+    <SubTexture name="player_nyan2" x="1803" y="1879" width="30" height="29"/>
+    <SubTexture name="player_nyan3" x="1834" y="1879" width="30" height="29"/>
+    <SubTexture name="player_nyan4" x="1803" y="1879" width="30" height="29"/>
+    <SubTexture name="player_orbiter_1" x="1878" y="1958" width="48" height="48"/>
+    <SubTexture name="player_orbiter_2" x="1901" y="1797" width="48" height="48"/>
+    <SubTexture name="player_orbiter_3" x="1901" y="1846" width="48" height="48"/>
+    <SubTexture name="player_orbiter_4" x="1950" y="1797" width="48" height="48"/>
+    <SubTexture name="player_pirate_basic1" x="1865" y="1879" width="30" height="29"/>
+    <SubTexture name="player_pirate_basic2" x="1646" y="788" rotated="true" width="29" height="30"/>
+    <SubTexture name="player_pirate_basic3" x="2016" y="951" width="30" height="29"/>
+    <SubTexture name="player_pirate_basic4" x="2016" y="981" width="30" height="29"/>
+    <SubTexture name="player_pirate_elite1" x="1124" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_pirate_elite2" x="1154" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_pirate_elite3" x="1184" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_pirate_elite4" x="1214" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_pixi1" x="1676" y="1072" rotated="true" width="40" height="34"/>
+    <SubTexture name="player_pixi2" x="1742" y="962" rotated="true" width="40" height="34"/>
+    <SubTexture name="player_pixi3" x="1887" y="1034" width="34" height="40"/>
+    <SubTexture name="player_pixi4" x="1887" y="1075" width="34" height="40"/>
+    <SubTexture name="player_police_basic1" x="2016" y="1011" width="30" height="29"/>
+    <SubTexture name="player_police_basic2" x="2016" y="1041" width="30" height="29"/>
+    <SubTexture name="player_police_basic3" x="2016" y="1071" width="30" height="29"/>
+    <SubTexture name="player_police_basic4" x="2016" y="1041" width="30" height="29"/>
+    <SubTexture name="player_police_elite1" x="1535" y="1130" rotated="true" width="38" height="30"/>
+    <SubTexture name="player_police_elite2" x="1507" y="686" rotated="true" width="38" height="30"/>
+    <SubTexture name="player_police_elite3" x="1607" y="781" rotated="true" width="38" height="30"/>
+    <SubTexture name="player_police_elite4" x="1507" y="686" rotated="true" width="38" height="30"/>
+    <SubTexture name="player_portal1" x="1450" y="1730" width="32" height="26"/>
+    <SubTexture name="player_prophecy1" x="1244" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_prophecy2" x="1244" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_prophecy3" x="1244" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_prophecy4" x="1244" y="412" rotated="true" width="29" height="31"/>
+    <SubTexture name="player_proton1" x="1189" y="283" width="30" height="27"/>
+    <SubTexture name="player_pumpkin1" x="1193" y="1007" rotated="true" width="43" height="42"/>
+    <SubTexture name="player_queen_melee1" x="1110" y="1759" width="100" height="154"/>
+    <SubTexture name="player_queen_melee2" x="569" y="1" width="100" height="154"/>
+    <SubTexture name="player_queen_melee3" x="569" y="156" width="100" height="154"/>
+    <SubTexture name="player_queen_melee4" x="569" y="311" width="100" height="154"/>
+    <SubTexture name="player_queen_normal1" x="1110" y="1759" width="100" height="154"/>
+    <SubTexture name="player_queen_normal2" x="670" y="1" width="100" height="154"/>
+    <SubTexture name="player_queen_normal3" x="670" y="156" width="100" height="154"/>
+    <SubTexture name="player_queen_normal4" x="569" y="311" width="100" height="154"/>
+    <SubTexture name="player_rocket_sled1" x="1332" y="1515" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_rocket_sled2" x="1367" y="1515" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_rocket_sled3" x="1402" y="1515" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_rocket_sled4" x="1437" y="1515" rotated="true" width="34" height="41"/>
+    <SubTexture name="player_scull1" x="1890" y="555" width="32" height="34"/>
+    <SubTexture name="player_scull2" x="1599" y="619" width="32" height="34"/>
+    <SubTexture name="player_scull3" x="1599" y="654" width="32" height="34"/>
+    <SubTexture name="player_scull4" x="1599" y="619" width="32" height="34"/>
+    <SubTexture name="player_silver1" x="1115" y="1307" rotated="true" width="53" height="78"/>
+    <SubTexture name="player_snowball1" x="1752" y="908" width="50" height="50"/>
+    <SubTexture name="player_snowball2" x="1827" y="1134" width="50" height="50"/>
+    <SubTexture name="player_snowball3" x="1800" y="1191" width="50" height="50"/>
+    <SubTexture name="player_snowball4" x="1877" y="1404" width="50" height="50"/>
+    <SubTexture name="player_spy1" x="1093" y="283" rotated="true" width="31" height="27"/>
+    <SubTexture name="player_spy2" x="1125" y="283" rotated="true" width="31" height="27"/>
+    <SubTexture name="player_spy3" x="1157" y="283" rotated="true" width="31" height="27"/>
+    <SubTexture name="player_spy4" x="1125" y="283" rotated="true" width="31" height="27"/>
+    <SubTexture name="player_supporter11" x="1599" y="722" width="30" height="28"/>
+    <SubTexture name="player_supporter12" x="1771" y="1252" width="30" height="28"/>
+    <SubTexture name="player_supporter13" x="1771" y="1221" rotated="true" width="28" height="30"/>
+    <SubTexture name="player_supporter14" x="1771" y="1252" width="30" height="28"/>
+    <SubTexture name="player_supporter21" x="2016" y="1221" width="30" height="28"/>
+    <SubTexture name="player_supporter22" x="2016" y="1250" width="30" height="28"/>
+    <SubTexture name="player_supporter23" x="2016" y="1279" width="30" height="28"/>
+    <SubTexture name="player_supporter24" x="2016" y="1250" width="30" height="28"/>
+    <SubTexture name="player_supporter_reserve" x="2016" y="1308" width="30" height="28"/>
+    <SubTexture name="player_tanker1" x="669" y="1601" width="82" height="62"/>
+    <SubTexture name="player_tramsnitter1" x="1374" y="1630" rotated="true" width="40" height="26"/>
+    <SubTexture name="player_tramsnitter2" x="1415" y="1630" rotated="true" width="40" height="26"/>
+    <SubTexture name="player_tramsnitter3" x="1456" y="1630" rotated="true" width="40" height="26"/>
+    <SubTexture name="player_tramsnitter4" x="1409" y="1730" rotated="true" width="40" height="26"/>
+    <SubTexture name="player_traveller1" x="1619" y="842" rotated="true" width="25" height="29"/>
+    <SubTexture name="player_traveller2" x="1633" y="959" width="29" height="25"/>
+    <SubTexture name="player_traveller3" x="1663" y="959" width="29" height="25"/>
+    <SubTexture name="player_traveller4" x="1676" y="1046" width="29" height="25"/>
+    <SubTexture name="player_v_a1" x="1538" y="1657" width="60" height="60"/>
+    <SubTexture name="player_v_a2" x="1557" y="1555" width="60" height="60"/>
+    <SubTexture name="player_v_a3" x="1618" y="1555" width="60" height="60"/>
+    <SubTexture name="player_v_a4" x="1633" y="1432" width="60" height="60"/>
+    <SubTexture name="player_v_b1" x="1965" y="489" width="60" height="60"/>
+    <SubTexture name="player_v_b2" x="1829" y="528" width="60" height="60"/>
+    <SubTexture name="player_v_b3" x="1829" y="589" width="60" height="60"/>
+    <SubTexture name="player_v_b4" x="1546" y="751" width="60" height="60"/>
+    <SubTexture name="player_v_c1" x="1646" y="1493" width="60" height="60"/>
+    <SubTexture name="player_v_c2" x="1646" y="1359" width="60" height="60"/>
+    <SubTexture name="player_v_c3" x="1694" y="1420" width="60" height="60"/>
+    <SubTexture name="player_v_c4" x="1660" y="1283" width="60" height="60"/>
+    <SubTexture name="player_v_d1" x="1707" y="1481" width="60" height="60"/>
+    <SubTexture name="player_v_d2" x="1740" y="1542" width="60" height="60"/>
+    <SubTexture name="player_v_d3" x="1755" y="1405" width="60" height="60"/>
+    <SubTexture name="player_v_d4" x="1768" y="1343" width="60" height="60"/>
+    <SubTexture name="player_v_e1" x="1596" y="1757" width="60" height="60"/>
+    <SubTexture name="player_v_e2" x="1660" y="1657" width="60" height="60"/>
+    <SubTexture name="player_v_e3" x="1596" y="1818" width="60" height="60"/>
+    <SubTexture name="player_v_e4" x="1679" y="1554" width="60" height="60"/>
+    <SubTexture name="player_v_f2" x="1558" y="812" width="60" height="60"/>
+    <SubTexture name="player_v_f3" x="1965" y="550" width="60" height="60"/>
+    <SubTexture name="player_v_f4" x="1965" y="611" width="60" height="60"/>
+    <SubTexture name="player_v_f6" x="1829" y="650" width="60" height="60"/>
+    <SubTexture name="player_v_g1" x="1324" y="311" width="100" height="100"/>
+    <SubTexture name="player_v_g2" x="1377" y="131" width="100" height="100"/>
+    <SubTexture name="player_v_g3" x="1403" y="1" width="100" height="100"/>
+    <SubTexture name="player_v_g4" x="1248" y="564" width="100" height="100"/>
+    <SubTexture name="player_vanquisher1" x="1473" y="1235" rotated="true" width="55" height="69"/>
+    <SubTexture name="player_vanquisher2" x="1529" y="1235" rotated="true" width="55" height="69"/>
+    <SubTexture name="player_vanquisher3" x="1473" y="1235" rotated="true" width="55" height="69"/>
+    <SubTexture name="player_vanquisher4" x="1529" y="1376" rotated="true" width="55" height="69"/>
+    <SubTexture name="player_winger_basic1" x="2016" y="1101" width="30" height="29"/>
+    <SubTexture name="player_winger_basic2" x="2016" y="1131" width="30" height="29"/>
+    <SubTexture name="player_winger_basic3" x="2016" y="1161" width="30" height="29"/>
+    <SubTexture name="player_winger_basic4" x="2016" y="1191" width="30" height="29"/>
+    <SubTexture name="polyhedricFabric" x="991" y="545" rotated="true" width="19" height="22"/>
+    <SubTexture name="pro_goldj" x="1211" y="1900" width="57" height="13"/>
+    <SubTexture name="proj_acid_mine_active1" x="1116" y="2039" width="7" height="7"/>
+    <SubTexture name="proj_acid_mine_active2" x="1124" y="2039" width="7" height="7"/>
+    <SubTexture name="proj_acid_mine_active3" x="1132" y="2039" width="7" height="7"/>
+    <SubTexture name="proj_acid_mine_active4" x="1140" y="2039" width="7" height="7"/>
+    <SubTexture name="proj_acid_mine_disabled" x="1148" y="2039" width="7" height="7"/>
+    <SubTexture name="proj_agent_bomb" x="971" y="1557" width="21" height="11"/>
+    <SubTexture name="proj_asteroids" x="1156" y="2039" width="6" height="6"/>
+    <SubTexture name="proj_astrolance1" x="638" y="1386" width="45" height="3"/>
+    <SubTexture name="proj_astrolance2" x="684" y="1386" width="45" height="3"/>
+    <SubTexture name="proj_astrolance3" x="730" y="1386" width="45" height="3"/>
+    <SubTexture name="proj_blade" x="590" y="1988" width="96" height="56"/>
+    <SubTexture name="proj_blaster" x="747" y="1956" width="18" height="3"/>
+    <SubTexture name="proj_blaster3" x="766" y="1956" width="18" height="3"/>
+    <SubTexture name="proj_blaster6" x="822" y="1386" width="18" height="3"/>
+    <SubTexture name="proj_boomerang" x="1890" y="438" rotated="true" width="32" height="38"/>
+    <SubTexture name="proj_boomerang2" x="1890" y="477" rotated="true" width="32" height="38"/>
+    <SubTexture name="proj_boomerang3" x="1890" y="516" rotated="true" width="32" height="38"/>
+    <SubTexture name="proj_boss_missile" x="1386" y="544" width="24" height="16"/>
+    <SubTexture name="proj_boss_missile_claw" x="960" y="1931" rotated="true" width="10" height="20"/>
+    <SubTexture name="proj_bullet" x="173" y="2009" rotated="true" width="3" height="5"/>
+    <SubTexture name="proj_bullet2" x="173" y="2015" rotated="true" width="2" height="8"/>
+    <SubTexture name="proj_bullet_large" x="634" y="1121" width="10" height="5"/>
+    <SubTexture name="proj_crystal" x="645" y="1121" width="8" height="5"/>
+    <SubTexture name="proj_delayed_missile" x="1870" y="2031" width="24" height="15"/>
+    <SubTexture name="proj_egg" x="1072" y="545" width="25" height="19"/>
+    <SubTexture name="proj_fireworks" x="1317" y="545" width="18" height="18"/>
+    <SubTexture name="proj_fish1" x="318" y="1988" width="40" height="20"/>
+    <SubTexture name="proj_fish2" x="359" y="1988" width="40" height="20"/>
+    <SubTexture name="proj_gift" x="570" y="2009" rotated="true" width="19" height="25"/>
+    <SubTexture name="proj_golden_torpedo" x="1176" y="545" rotated="true" width="10" height="19"/>
+    <SubTexture name="proj_heal" x="1451" y="985" width="10" height="10"/>
+    <SubTexture name="proj_horror_nuke" x="1850" y="1277" width="36" height="24"/>
+    <SubTexture name="proj_hunter" x="1076" y="2039" width="12" height="8"/>
+    <SubTexture name="proj_infested_missile" x="1411" y="538" width="24" height="16"/>
+    <SubTexture name="proj_laser_blue" x="776" y="1386" width="45" height="3"/>
+    <SubTexture name="proj_laser_yellow" x="747" y="1952" width="45" height="3"/>
+    <SubTexture name="proj_locust_1" x="992" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="proj_locust_2" x="1008" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="proj_locust_3" x="1024" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="proj_m2_missilel" x="938" y="1040" width="18" height="9"/>
+    <SubTexture name="proj_mine_active1" x="506" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active2" x="527" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active3" x="548" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active4" x="569" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active5" x="548" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active6" x="527" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_active7" x="506" y="1988" width="20" height="20"/>
+    <SubTexture name="proj_mine_disabled" x="939" y="1931" width="20" height="20"/>
+    <SubTexture name="proj_missile" x="1031" y="545" rotated="true" width="10" height="21"/>
+    <SubTexture name="proj_missile3" x="1042" y="545" rotated="true" width="10" height="21"/>
+    <SubTexture name="proj_missile6" x="1185" y="1151" rotated="true" width="10" height="21"/>
+    <SubTexture name="proj_missile_small" x="957" y="1040" width="18" height="9"/>
+    <SubTexture name="proj_neutron" x="1163" y="2039" width="6" height="6"/>
+    <SubTexture name="proj_nezerian_nuke" x="1531" y="959" width="50" height="25"/>
+    <SubTexture name="proj_noxium_bullet" x="1751" y="131" width="15" height="15"/>
+    <SubTexture name="proj_nuke" x="1582" y="959" width="50" height="25"/>
+    <SubTexture name="proj_plasma" x="954" y="1557" width="16" height="12"/>
+    <SubTexture name="proj_plasma3" x="1269" y="1900" width="16" height="12"/>
+    <SubTexture name="proj_plasma6" x="1286" y="1900" width="16" height="12"/>
+    <SubTexture name="proj_pumpkin_seed" x="923" y="1557" rotated="true" width="10" height="14"/>
+    <SubTexture name="proj_shrapnel" x="1436" y="538" width="16" height="16"/>
+    <SubTexture name="proj_shrapnel_g" x="1453" y="538" width="16" height="16"/>
+    <SubTexture name="proj_silver" x="1455" y="893" width="43" height="10"/>
+    <SubTexture name="proj_slug" x="934" y="1557" rotated="true" width="6" height="14"/>
+    <SubTexture name="proj_snowball" x="1890" y="1455" width="50" height="50"/>
+    <SubTexture name="proj_stalker_bullet" x="590" y="2045" width="10" height="2"/>
+    <SubTexture name="proj_sticky_bomb1" x="1585" y="1432" width="10" height="10"/>
+    <SubTexture name="proj_sticky_bomb2" x="1596" y="1432" width="10" height="10"/>
+    <SubTexture name="proj_sticky_bomb3" x="1607" y="1432" width="10" height="10"/>
+    <SubTexture name="proj_sticky_bomb4" x="1596" y="1432" width="10" height="10"/>
+    <SubTexture name="proj_thorn" x="627" y="1386" width="10" height="4"/>
+    <SubTexture name="proj_vulture_mine" x="1196" y="1151" width="20" height="20"/>
+    <SubTexture name="proj_yellow_locust_1" x="1040" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="proj_yellow_locust_2" x="1056" y="1040" rotated="true" width="15" height="9"/>
+    <SubTexture name="proj_yellow_locust_3" x="1062" y="1008" width="9" height="15"/>
+    <SubTexture name="proj_zapple" x="1062" y="1024" width="9" height="9"/>
+    <SubTexture name="qqq_mini" x="1302" y="1168" width="80" height="80"/>
+    <SubTexture name="quad_damage" x="1265" y="545" width="25" height="18"/>
+    <SubTexture name="quad_damage2" x="1887" y="998" width="35" height="35"/>
+    <SubTexture name="radiatedJunk" x="1011" y="545" rotated="true" width="19" height="22"/>
+    <SubTexture name="ribbon_trail" x="1180" y="1661" rotated="true" width="50" height="97"/>
+    <SubTexture name="ribbon_trail2" x="1482" y="311" rotated="true" width="34" height="92"/>
+    <SubTexture name="ribbon_trail3" x="1455" y="813" rotated="true" width="34" height="79"/>
+    <SubTexture name="rotator_mini" x="1383" y="1163" width="80" height="80"/>
+    <SubTexture name="scale_image" x="1618" y="1432" width="10" height="10"/>
+    <SubTexture name="scrap" x="1217" y="1151" width="20" height="20"/>
+    <SubTexture name="scrap2" x="1238" y="1151" width="20" height="20"/>
+    <SubTexture name="shield_pack" x="1098" y="2039" width="8" height="8"/>
+    <SubTexture name="shield_pack_large" x="1291" y="545" width="25" height="18"/>
+    <SubTexture name="shine" x="1302" y="1249" width="57" height="57"/>
+    <SubTexture name="simpleDataChip" x="1303" y="1900" width="12" height="12"/>
+    <SubTexture name="spaceJunk" x="1107" y="2039" width="8" height="8"/>
+    <SubTexture name="spaceJunkLarge" x="1325" y="1146" width="16" height="16"/>
+    <SubTexture name="splatter" x="1259" y="1151" width="20" height="20"/>
+    <SubTexture name="square" x="1880" y="1353" width="40" height="40"/>
+    <SubTexture name="star" x="1367" y="1898" width="11" height="11"/>
+    <SubTexture name="steel" x="1390" y="1898" rotated="true" width="10" height="11"/>
+    <SubTexture name="tefat" x="747" y="1760" width="191" height="191"/>
+    <SubTexture name="tefat_mini" x="1405" y="1050" width="80" height="80"/>
+    <SubTexture name="tefat_missile_turret" x="400" y="1988" width="21" height="20"/>
+    <SubTexture name="the_cleaner_mini" x="1464" y="985" width="80" height="64"/>
+    <SubTexture name="three_emperors_mini" x="1034" y="1315" width="80" height="70"/>
+    <SubTexture name="toxicWaste" x="797" y="1050" width="17" height="22"/>
+    <SubTexture name="transparent" x="652" y="1127" width="1" height="1"/>
+    <SubTexture name="triangle" x="864" y="283" width="36" height="27"/>
+    <SubTexture name="turret_blaster_1" x="1469" y="283" rotated="true" width="23" height="27"/>
+    <SubTexture name="turret_blaster_2" x="1493" y="283" rotated="true" width="23" height="27"/>
+    <SubTexture name="turret_blaster_3" x="1350" y="1630" rotated="true" width="23" height="27"/>
+    <SubTexture name="turret_locust1" x="793" y="1952" width="88" height="95"/>
+    <SubTexture name="turret_locust2" x="882" y="1952" width="88" height="95"/>
+    <SubTexture name="turret_locust3" x="913" y="1664" width="88" height="95"/>
+    <SubTexture name="turret_locust4" x="1002" y="1663" width="88" height="95"/>
+    <SubTexture name="turret_locust5" x="1091" y="1663" width="88" height="95"/>
+    <SubTexture name="turret_locust6" x="1231" y="1661" width="88" height="95"/>
+    <SubTexture name="turret_locust7" x="1320" y="1658" width="88" height="95"/>
+    <SubTexture name="turret_locust8" x="1316" y="1050" width="88" height="95"/>
+    <SubTexture name="turret_nova1" x="1751" y="1195" rotated="true" width="23" height="25"/>
+    <SubTexture name="turret_nova2" x="1802" y="1277" rotated="true" width="23" height="25"/>
+    <SubTexture name="turret_nova3" x="1826" y="1277" rotated="true" width="23" height="25"/>
+    <SubTexture name="turret_nova4" x="1802" y="1277" rotated="true" width="23" height="25"/>
+    <SubTexture name="turret_sniper_3" x="1887" y="1116" width="34" height="23"/>
+    <SubTexture name="venom_v301" x="1829" y="711" width="60" height="60"/>
+</TextureAtlas>

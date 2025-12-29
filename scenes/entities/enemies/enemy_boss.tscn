@@ -1,0 +1,50 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/enemy_ship.gd" id="1_enemy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_boss"]
+radius = 50.0
+
+[node name="EnemyBoss" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 3
+script = ExtResource("1_enemy")
+aggro_range = 800.0
+chase_range = 1500.0
+aim_skill = 1.0
+flee_threshold = 0.0
+can_flee = false
+stop_when_close = false
+max_speed = 180.0
+acceleration = 0.3
+rotation_speed = 80.0
+collision_radius = 50.0
+hp_max = 500.0
+shield_max = 200.0
+shield_regen = 10.0
+xp_value = 250
+
+[node name="ShipBody" type="Polygon2D" parent="."]
+color = Color(0.8, 0.1, 0.1, 1)
+polygon = PackedVector2Array(50, 0, 30, -25, -10, -40, -40, -35, -45, 0, -40, 35, -10, 40, 30, 25)
+
+[node name="Outline" type="Line2D" parent="."]
+points = PackedVector2Array(50, 0, 30, -25, -10, -40, -40, -35, -45, 0, -40, 35, -10, 40, 30, 25, 50, 0)
+width = 3.0
+default_color = Color(1, 0.3, 0.3, 1)
+
+[node name="Core" type="Polygon2D" parent="."]
+color = Color(1, 0.5, 0, 1)
+polygon = PackedVector2Array(20, 0, 0, -12, -15, 0, 0, 12)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_boss")
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -50.0
+offset_top = -70.0
+offset_right = 50.0
+offset_bottom = -60.0
+max_value = 500.0
+value = 500.0
+show_percentage = false

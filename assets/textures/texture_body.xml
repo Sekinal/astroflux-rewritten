@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with TexturePacker http://www.codeandweb.com/texturepacker-->
+<!-- $TexturePacker:SmartUpdate:0970a217118e090fc93b2859d250cf51:94638ec0b89e425dd211fb79602e78c1:5e4c853d56ea29b59c1f8730fb1bdc22$ -->
+<TextureAtlas imagePath="texture_body.png" width="1857" height="1015">
+    <SubTexture name="black_hole" x="636" y="718" width="177" height="174"/>
+    <SubTexture name="cantina" x="987" y="706" width="174" height="166" frameX="0" frameY="-2" frameWidth="174" frameHeight="168"/>
+    <SubTexture name="comet" x="788" y="364" width="44" height="44" frameX="-2" frameY="0" frameWidth="46" frameHeight="44"/>
+    <SubTexture name="earth" x="1470" y="453" width="185" height="186"/>
+    <SubTexture name="hangar" x="636" y="516" width="200" height="200"/>
+    <SubTexture name="junkYard" x="1497" y="641" width="152" height="160"/>
+    <SubTexture name="moon" x="291" y="906" width="78" height="74"/>
+    <SubTexture name="new_erath" x="815" y="718" width="170" height="170"/>
+    <SubTexture name="paint_job" x="1497" y="803" width="146" height="138" frameX="-10" frameY="-18" frameWidth="175" frameHeight="160"/>
+    <SubTexture name="piratebay" x="987" y="874" width="143" height="135" frameX="0" frameY="-11" frameWidth="143" frameHeight="146"/>
+    <SubTexture name="planet" x="2" y="504" width="400" height="400"/>
+    <SubTexture name="planet2" x="2" y="2" width="500" height="500"/>
+    <SubTexture name="planet3" x="866" y="2" width="300" height="300"/>
+    <SubTexture name="planet4" x="504" y="2" width="360" height="360"/>
+    <SubTexture name="planet5" x="1469" y="2" width="250" height="250"/>
+    <SubTexture name="planet6" x="866" y="304" width="200" height="200"/>
+    <SubTexture name="planet7" x="404" y="516" width="230" height="230"/>
+    <SubTexture name="planet8" x="1068" y="304" width="200" height="200"/>
+    <SubTexture name="planet9" x="1663" y="265" width="187" height="192" frameX="-9" frameY="-4" frameWidth="200" frameHeight="200"/>
+    <SubTexture name="planet10" x="1168" y="2" width="299" height="300" frameX="-1" frameY="0" frameWidth="300" frameHeight="300"/>
+    <SubTexture name="planet11" x="1038" y="506" width="196" height="197"/>
+    <SubTexture name="planet12" x="1236" y="506" width="180" height="181"/>
+    <SubTexture name="planet13" x="1330" y="856" width="140" height="141"/>
+    <SubTexture name="planet14" x="1270" y="304" width="198" height="198"/>
+    <SubTexture name="planet15" x="1470" y="254" width="191" height="197" frameX="-5" frameY="0" frameWidth="196" frameHeight="197"/>
+    <SubTexture name="planet16" x="838" y="506" width="198" height="198"/>
+    <SubTexture name="planet17" x="105" y="906" width="102" height="102" frameX="-5" frameY="-5" frameWidth="113" frameHeight="113"/>
+    <SubTexture name="planet_aureus" x="1163" y="705" width="165" height="165"/>
+    <SubTexture name="planet_dead_aureus" x="1330" y="689" width="165" height="165"/>
+    <SubTexture name="planet_organic_1" x="1163" y="872" width="140" height="141"/>
+    <SubTexture name="planet_organic_2" x="1657" y="459" width="181" height="185"/>
+    <SubTexture name="planet_organic_3" x="404" y="748" width="203" height="207"/>
+    <SubTexture name="planet_organic_withered" x="209" y="906" width="80" height="82"/>
+    <SubTexture name="planet_organic_withered_2" x="2" y="906" width="101" height="104"/>
+    <SubTexture name="planet_organic_withered_3" x="1721" y="2" width="134" height="138"/>
+    <SubTexture name="research" x="1645" y="808" width="171" height="155" frameX="-4" frameY="-5" frameWidth="175" frameHeight="160"/>
+    <SubTexture name="satellite" x="1721" y="142" width="134" height="121"/>
+    <SubTexture name="shop" x="1651" y="646" width="175" height="160"/>
+    <SubTexture name="warpGate" x="504" y="364" width="282" height="150"/>
+</TextureAtlas>

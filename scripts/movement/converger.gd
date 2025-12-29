@@ -87,11 +87,13 @@ func update_heading(h: Heading, server_time: float) -> void:
 		_update_ai_rotation(h, dt)
 	else:
 		# Player rotation (direct input)
+		# rotation_speed is in degrees/sec, convert to radians
+		var rot_delta: float = deg_to_rad(_get_rotation_speed()) * 0.001 * dt
 		if h.rotate_left:
-			h.rotation -= 0.001 * _get_rotation_speed() * dt
+			h.rotation -= rot_delta
 			h.rotation = GameConstantsClass.clamp_radians(h.rotation)
 		if h.rotate_right:
-			h.rotation += 0.001 * _get_rotation_speed() * dt
+			h.rotation += rot_delta
 			h.rotation = GameConstantsClass.clamp_radians(h.rotation)
 
 	# --- ACCELERATION ---
@@ -292,7 +294,8 @@ func _update_ai_rotation(h: Heading, dt: float) -> void:
 	)
 
 	var angle_diff: float = GameConstantsClass.angle_difference(current_rot, target_angle + PI)
-	var rot_speed: float = 0.001 * _get_rotation_speed() * dt
+	# rotation_speed is in degrees/sec, convert to radians
+	var rot_speed: float = deg_to_rad(_get_rotation_speed()) * 0.001 * dt
 	var is_facing_away: bool = angle_diff > 0.5 * PI or angle_diff < -0.5 * PI
 
 	if not is_facing_away:
@@ -336,12 +339,6 @@ func _update_enemy_roll(h: Heading, dt: float) -> void:
 	else:
 		h.speed.x -= 0.02 * h.speed.x
 		h.speed.y -= 0.02 * h.speed.y
-
-## Apply gravity from nearby suns
-func _apply_gravity(h: Heading, dt: float) -> void:
-	# This would iterate through bodies and apply gravitational pull
-	# For now, this is a placeholder that can be implemented when BodyManager exists
-	pass
 
 # =============================================================================
 # SHIP PROPERTY ACCESSORS (override these or use signals)
@@ -406,3 +403,28 @@ func _get_roll_mod() -> float:
 	if ship != null and ship.has_method("get_roll_mod"):
 		return ship.get_roll_mod()
 	return 1.0
+
+# =============================================================================
+# GRAVITY
+# =============================================================================
+
+## Apply gravity from all suns to the heading (only for player ships)
+func _apply_gravity(h: Heading, dt: float) -> void:
+	# Get gravity from BodyManager autoload
+	var main_loop = Engine.get_main_loop()
+	if main_loop == null:
+		return
+
+	var root = main_loop.root
+	if root == null:
+		return
+
+	var body_manager = root.get_node_or_null("BodyManager")
+	if body_manager == null:
+		return
+
+	var gravity: Vector2 = body_manager.get_gravity_at(h.pos)
+	if gravity != Vector2.ZERO:
+		# Apply gravity acceleration (scaled by dt in milliseconds)
+		h.speed.x += gravity.x * dt * 0.001
+		h.speed.y += gravity.y * dt * 0.001

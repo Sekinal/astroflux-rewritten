@@ -6,9 +6,10 @@ extends Node2D
 # NODES
 # =============================================================================
 
-@onready var player_ship: PlayerShip = $PlayerShip
+@onready var player_ship: CharacterBody2D = $PlayerShip
 @onready var camera: Camera2D = $Camera2D
 @onready var starfield: Node2D = $Starfield
+@onready var bodies_container: Node2D = $Bodies
 
 # =============================================================================
 # STATE
@@ -23,6 +24,12 @@ var game_start_time: float = 0.0
 
 func _ready() -> void:
 	print("[Game] Initializing...")
+
+	# Initialize projectile manager with this scene as container
+	ProjectileManager.initialize(self)
+
+	# Initialize body manager with bodies container
+	BodyManager.initialize(bodies_container)
 
 	# Wait for network connection
 	if NetworkManager.use_local_server:
@@ -48,6 +55,16 @@ func _on_disconnected() -> void:
 
 func _on_init_solar_system(msg: Message) -> void:
 	print("[Game] Solar system initialized: ", msg.get_string(1))
+
+	# Load Hyperion solar system from JSON data
+	BodyManager.load_hyperion()
+
+	# Move player to safe starting position (near Endarion planet)
+	if player_ship != null:
+		# Position player near Endarion (friendly planet) which is at orbit around sun
+		player_ship.converger.course.pos = Vector2(4000, 0)
+		player_ship.global_position = Vector2(4000, 0)
+
 	# Request game data
 	NetworkManager.send("initGame")
 
