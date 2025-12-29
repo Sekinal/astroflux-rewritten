@@ -269,6 +269,26 @@ func _setup_default_weapon() -> void:
 	cluster.set_owner(self)
 	weapons.append(cluster)
 
+	# Weapon 5: Beam
+	var BeamWeaponClass = preload("res://scripts/combat/weapons/beam_weapon.gd")
+	var beam = BeamWeaponClass.new()
+	beam.init_from_config({
+		"type": "beam",
+		"damage": 3.0,  # Per tick
+		"damageType": DamageClass.Type.ENERGY,
+		"reloadTime": 50.0,  # Fast ticks
+		"range": 600.0,
+		"beamThickness": 3.0,
+		"beamAmplitude": 2.0,
+		"beamNodes": 8,
+		"beamAlpha": 0.9,
+		"nrTargets": 1,
+		"heatCost": 0.001,  # Low per-tick cost
+		"positionOffsetX": 30.0,
+	})
+	beam.set_owner(self)
+	weapons.append(beam)
+
 func _physics_process(delta: float) -> void:
 	if is_dead:
 		return
@@ -335,6 +355,8 @@ func _process_input() -> void:
 		switch_weapon(2)
 	elif Input.is_action_just_pressed("weapon_4"):
 		switch_weapon(3)
+	elif Input.is_action_just_pressed("weapon_5"):
+		switch_weapon(4)
 
 	# Get input state
 	var accelerating := Input.is_action_pressed("accelerate")
@@ -368,9 +390,13 @@ func _process_input() -> void:
 		_send_movement_command()
 
 	# Handle weapon firing
+	var was_firing := _is_firing
 	_is_firing = firing
 	if _is_firing:
 		_try_fire_weapon()
+	elif was_firing and not _is_firing:
+		# Fire button released - stop beam weapons
+		_on_stop_firing()
 
 func _send_movement_command() -> void:
 	var heading := converger.course
@@ -402,6 +428,9 @@ func _on_player_course(msg: Message) -> void:
 # WEAPONS
 # =============================================================================
 
+# Beam visual
+var _beam_line: Line2D = null
+
 func _try_fire_weapon() -> void:
 	if weapons.is_empty():
 		return
@@ -412,23 +441,112 @@ func _try_fire_weapon() -> void:
 	# Check heat first - can't fire if locked out or not enough energy
 	if heat != null:
 		if heat.is_locked_out(current_time):
+			_stop_beam_if_active(weapon)
 			return
 		if not heat.can_fire(weapon.heat_cost, _using_boost, 0.5):
+			_stop_beam_if_active(weapon)
 			return
 
-	if weapon.can_fire(current_time):
-		# Calculate velocity vector from speed and rotation
-		var owner_velocity := Vector2.RIGHT.rotated(converger.course.rotation) * converger.course.speed
-		var projectile_data: Array = weapon.fire(
-			current_time,
-			global_position,
-			rotation,
-			owner_velocity
-		)
+	# Check if this is a beam weapon (has is_firing method)
+	if weapon.has_method("is_firing"):
+		_fire_beam_weapon(weapon, current_time)
+	elif weapon.can_fire(current_time):
+		_fire_projectile_weapon(weapon, current_time)
 
-		# Spawn projectiles through manager
-		for data in projectile_data:
-			ProjectileManager.spawn(data)
+func _fire_projectile_weapon(weapon, current_time: float) -> void:
+	# Calculate velocity vector from speed and rotation
+	var owner_velocity := Vector2.RIGHT.rotated(converger.course.rotation) * converger.course.speed
+	var projectile_data: Array = weapon.fire(
+		current_time,
+		global_position,
+		rotation,
+		owner_velocity
+	)
+
+	# Spawn projectiles through manager
+	for data in projectile_data:
+		ProjectileManager.spawn(data)
+
+func _fire_beam_weapon(weapon, current_time: float) -> void:
+	# Start firing if not already
+	if not weapon.is_firing():
+		weapon.start_fire()
+		_create_beam_line()
+
+	# Update beam each frame
+	var result: Dictionary = weapon.update(
+		Engine.get_physics_interpolation_fraction(),
+		current_time,
+		global_position,
+		rotation
+	)
+
+	# Update beam visual
+	if result.firing and _beam_line != null:
+		_update_beam_visual(result.start_pos, result.end_pos, weapon)
+
+	# Apply heat cost per tick
+	if result.targets_hit.size() > 0:
+		if heat != null:
+			heat.add_heat(weapon.heat_cost)
+
+func _stop_beam_if_active(weapon) -> void:
+	if weapon.has_method("is_firing") and weapon.is_firing():
+		weapon.stop_fire()
+		_hide_beam_line()
+
+func _on_stop_firing() -> void:
+	# Called when fire button released
+	var weapon = get_active_weapon()
+	if weapon and weapon.has_method("is_firing"):
+		weapon.stop_fire()
+		_hide_beam_line()
+
+func _create_beam_line() -> void:
+	if _beam_line == null:
+		_beam_line = Line2D.new()
+		_beam_line.width = 3.0
+		_beam_line.default_color = Color(1.0, 0.3, 0.3, 0.9)
+		_beam_line.begin_cap_mode = Line2D.LINE_CAP_ROUND
+		_beam_line.end_cap_mode = Line2D.LINE_CAP_ROUND
+		get_tree().current_scene.add_child(_beam_line)
+	_beam_line.visible = true
+
+func _hide_beam_line() -> void:
+	if _beam_line != null:
+		_beam_line.visible = false
+
+func _update_beam_visual(start_pos: Vector2, end_pos: Vector2, weapon) -> void:
+	if _beam_line == null:
+		return
+
+	# Get visual data from weapon
+	var visual: Dictionary = weapon.get_beam_visual_data(start_pos, end_pos)
+
+	# Update line properties
+	_beam_line.width = visual.thickness
+	_beam_line.default_color = visual.color
+	_beam_line.default_color.a = visual.alpha
+
+	# Generate beam points with slight waviness
+	var points: PackedVector2Array = []
+	var direction := (end_pos - start_pos).normalized()
+	var length := start_pos.distance_to(end_pos)
+	var segments: int = visual.nodes
+
+	for i in range(segments + 1):
+		var t := float(i) / float(segments)
+		var point := start_pos.lerp(end_pos, t)
+
+		# Add waviness (except for endpoints)
+		if i > 0 and i < segments:
+			var perpendicular: Vector2 = Vector2(-direction.y, direction.x)
+			var wave: float = sin(t * PI * 4 + NetworkManager.server_time * 0.01) * visual.amplitude
+			point += perpendicular * wave
+
+		points.append(point)
+
+	_beam_line.points = points
 
 func get_active_weapon() -> Variant:
 	if weapons.is_empty():
@@ -437,6 +555,11 @@ func get_active_weapon() -> Variant:
 
 func switch_weapon(index: int) -> void:
 	if index >= 0 and index < weapons.size():
+		# Stop beam if switching away from beam weapon
+		var current_weapon = get_active_weapon()
+		if current_weapon and current_weapon.has_method("is_firing"):
+			current_weapon.stop_fire()
+			_hide_beam_line()
 		active_weapon_index = index
 
 # =============================================================================

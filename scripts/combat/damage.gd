@@ -231,6 +231,11 @@ func duplicate_damage() -> RefCounted:
 	d.damage_base = damage_base.duplicate()
 	return d
 
+## Multiply all damage values by a factor
+func multiply(factor: float) -> void:
+	for i in range(damage.size()):
+		damage[i] *= factor
+
 func reset() -> void:
 	for i in range(damage.size()):
 		damage[i] = 0.0
