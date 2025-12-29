@@ -3,6 +3,9 @@ extends Area2D
 ## Projectile - Individual projectile entity
 ## Ported from core/projectile/Projectile.as
 
+# Preload to avoid circular dependency
+const ProjectileBehaviorClass = preload("res://scripts/combat/projectile_behavior.gd")
+
 # =============================================================================
 # SIGNALS
 # =============================================================================
@@ -36,6 +39,13 @@ var dmg_radius: int = 0
 var number_of_hits: int = 1
 var _hits_remaining: int = 1
 var debuffs: Array = []  # WeaponDebuff objects
+
+# =============================================================================
+# BEHAVIOR (AI state)
+# =============================================================================
+
+var behavior = null  # ProjectileBehavior instance (untyped to avoid loading issues)
+var is_enemy: bool = false
 
 # =============================================================================
 # OWNERSHIP
@@ -96,8 +106,14 @@ func _physics_process(delta: float) -> void:
 		destroy(false)
 		return
 
-	# Apply acceleration
-	if acceleration != 0:
+	# Update behavior (homing, boomerang, cluster, etc.)
+	if behavior != null:
+		if not behavior.update(delta, NetworkManager.server_time):
+			destroy(true)
+			return
+
+	# Apply acceleration (only if no special behavior or behavior allows it)
+	if acceleration != 0 and (behavior == null or behavior.behavior_type != ProjectileBehaviorClass.Type.MINE):
 		var accel_vec: Vector2 = Vector2.RIGHT.rotated(rotation) * acceleration
 		velocity += accel_vec * delta
 
@@ -167,11 +183,19 @@ func activate(data: Dictionary) -> void:
 	# Set collision mask based on owner type
 	# Player projectiles hit enemies (layer 3 = value 4)
 	# Enemy projectiles hit player (layer 2 = value 2)
-	var is_enemy: bool = data.get("is_enemy", false)
+	is_enemy = data.get("is_enemy", false)
 	if is_enemy:
 		collision_mask = 3  # Detect layers 1 and 2 (player)
 	else:
 		collision_mask = 5  # Detect layers 1 and 3 (enemies)
+
+	# Initialize behavior from config
+	var behavior_type: int = data.get("behavior_type", ProjectileBehaviorClass.Type.BULLET)
+	if behavior_type != ProjectileBehaviorClass.Type.BULLET or data.has("ai"):
+		behavior = ProjectileBehaviorClass.create_from_config(self, data)
+		behavior.enter(NetworkManager.server_time)
+	else:
+		behavior = null  # Simple bullet, no special behavior
 
 	# Activate
 	alive = true
@@ -219,6 +243,8 @@ func deactivate() -> void:
 	owner_node = null
 	weapon_ref = null
 	debuffs.clear()
+	behavior = null
+	is_enemy = false
 
 # =============================================================================
 # COLLISION

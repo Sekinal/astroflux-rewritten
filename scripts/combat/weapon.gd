@@ -137,6 +137,19 @@ var rotation_speed: float = 0.0
 var _current_rotation: float = 0.0
 
 # =============================================================================
+# PROJECTILE BEHAVIOR (AI)
+# =============================================================================
+
+var ai_type: String = ""  # bullet, homingMissile, boomerang, cluster, mine
+var boomerang_return_time: float = 500.0
+var cluster_nr_of_projectiles: int = 3
+var cluster_angle: float = 15.0
+var cluster_nr_of_splits: int = 1
+var ai_delayed_acceleration: bool = false
+var ai_delayed_acceleration_time: float = 0.0
+var ai_delay: float = 5000.0  # For mines
+
+# =============================================================================
 # STATE
 # =============================================================================
 
@@ -215,6 +228,16 @@ func init_from_config(config: Dictionary, wpn_level: int = 1) -> void:
 	# Aiming
 	aim_arc = config.get("aimArc", 0.0)
 	rotation_speed = config.get("rotationSpeed", 0.0)
+
+	# Projectile behavior (AI)
+	ai_type = config.get("ai", "")
+	boomerang_return_time = config.get("boomerangReturnTime", 500.0)
+	cluster_nr_of_projectiles = config.get("clusterNrOfProjectiles", 3)
+	cluster_angle = config.get("clusterAngle", 15.0)
+	cluster_nr_of_splits = config.get("clusterNrOfSplits", 1)
+	ai_delayed_acceleration = config.get("aiDelayedAcceleration", false)
+	ai_delayed_acceleration_time = config.get("aiDelayedAccelerationTime", 0.0)
+	ai_delay = config.get("aiDelay", 5000.0)
 
 	# Parse debuffs from config (from original Weapon.as)
 	_parse_debuffs(config)
@@ -419,6 +442,16 @@ func _fire_single(owner_pos: Vector2, owner_rotation: float, owner_velocity: Vec
 			"debuffs": debuffs.duplicate(),
 			"owner": _owner,
 			"weapon": self,
+			# Projectile behavior (AI) config
+			"ai": ai_type,
+			"rotationSpeed": rotation_speed,
+			"boomerangReturnTime": boomerang_return_time,
+			"clusterNrOfProjectiles": cluster_nr_of_projectiles,
+			"clusterAngle": cluster_angle,
+			"clusterNrOfSplits": cluster_nr_of_splits,
+			"aiDelayedAcceleration": ai_delayed_acceleration,
+			"aiDelayedAccelerationTime": ai_delayed_acceleration_time,
+			"aiDelay": ai_delay,
 		}
 
 		projectiles.append(proj_data)

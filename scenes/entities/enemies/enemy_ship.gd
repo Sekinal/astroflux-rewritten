@@ -353,11 +353,13 @@ func try_fire_weapons() -> void:
 	for i in range(weapons.size()):
 		var weapon = weapons[i]
 		if weapon.can_fire(current_time):
+			# Calculate velocity vector from speed and rotation
+			var owner_velocity := Vector2.RIGHT.rotated(converger.course.rotation) * converger.course.speed
 			var projectile_data: Array = weapon.fire(
 				current_time,
 				global_position,
 				converger.course.rotation,
-				converger.course.speed
+				owner_velocity
 			)
 
 			# Spawn projectiles through manager

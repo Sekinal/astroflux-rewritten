@@ -191,8 +191,9 @@ func _setup_default_weapon() -> void:
 	var WeaponClass = preload("res://scripts/combat/weapon.gd")
 	var DamageClass = preload("res://scripts/combat/damage.gd")
 
-	var weapon = WeaponClass.new()
-	weapon.init_from_config({
+	# Weapon 1: Basic Blaster
+	var blaster = WeaponClass.new()
+	blaster.init_from_config({
 		"type": "blaster",
 		"damage": 15.0,
 		"damageType": DamageClass.Type.ENERGY,
@@ -202,10 +203,71 @@ func _setup_default_weapon() -> void:
 		"range": 600.0,
 		"projectileSprite": "proj_blaster",
 		"positionOffsetX": 30.0,
-		"heatCost": 0.05,  # 5% heat cost per shot
+		"heatCost": 0.05,
 	})
-	weapon.set_owner(self)
-	weapons.append(weapon)
+	blaster.set_owner(self)
+	weapons.append(blaster)
+
+	# Weapon 2: Homing Missile
+	var missile = WeaponClass.new()
+	missile.init_from_config({
+		"type": "missile",
+		"damage": 25.0,
+		"damageType": DamageClass.Type.KINETIC,
+		"reloadTime": 800.0,
+		"speed": 400.0,
+		"acceleration": 200.0,
+		"ttl": 3000,
+		"range": 800.0,
+		"projectileSprite": "proj_missile",
+		"positionOffsetX": 25.0,
+		"heatCost": 0.15,
+		"ai": "homingMissile",
+		"rotationSpeed": 3.5,
+	})
+	missile.set_owner(self)
+	weapons.append(missile)
+
+	# Weapon 3: Boomerang
+	var boomerang = WeaponClass.new()
+	boomerang.init_from_config({
+		"type": "boomerang",
+		"damage": 20.0,
+		"damageType": DamageClass.Type.ENERGY,
+		"reloadTime": 600.0,
+		"speed": 600.0,
+		"ttl": 4000,
+		"range": 500.0,
+		"projectileSprite": "proj_plasma",
+		"positionOffsetX": 30.0,
+		"heatCost": 0.10,
+		"ai": "boomerang",
+		"boomerangReturnTime": 800.0,
+		"rotationSpeed": 4.0,
+	})
+	boomerang.set_owner(self)
+	weapons.append(boomerang)
+
+	# Weapon 4: Cluster Bomb
+	var cluster = WeaponClass.new()
+	cluster.init_from_config({
+		"type": "cluster",
+		"damage": 10.0,
+		"damageType": DamageClass.Type.CORROSIVE,
+		"reloadTime": 1200.0,
+		"speed": 500.0,
+		"ttl": 800,
+		"range": 400.0,
+		"projectileSprite": "proj_bomb",
+		"positionOffsetX": 25.0,
+		"heatCost": 0.20,
+		"ai": "cluster",
+		"clusterNrOfProjectiles": 5,
+		"clusterAngle": 20.0,
+		"clusterNrOfSplits": 1,
+	})
+	cluster.set_owner(self)
+	weapons.append(cluster)
 
 func _physics_process(delta: float) -> void:
 	if is_dead:
@@ -263,6 +325,16 @@ func _process(delta: float) -> void:
 
 func _process_input() -> void:
 	var heading := converger.course
+
+	# Weapon switching with number keys
+	if Input.is_action_just_pressed("weapon_1"):
+		switch_weapon(0)
+	elif Input.is_action_just_pressed("weapon_2"):
+		switch_weapon(1)
+	elif Input.is_action_just_pressed("weapon_3"):
+		switch_weapon(2)
+	elif Input.is_action_just_pressed("weapon_4"):
+		switch_weapon(3)
 
 	# Get input state
 	var accelerating := Input.is_action_pressed("accelerate")
@@ -345,11 +417,13 @@ func _try_fire_weapon() -> void:
 			return
 
 	if weapon.can_fire(current_time):
+		# Calculate velocity vector from speed and rotation
+		var owner_velocity := Vector2.RIGHT.rotated(converger.course.rotation) * converger.course.speed
 		var projectile_data: Array = weapon.fire(
 			current_time,
 			global_position,
 			rotation,
-			converger.course.speed
+			owner_velocity
 		)
 
 		# Spawn projectiles through manager
