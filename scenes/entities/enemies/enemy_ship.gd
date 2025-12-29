@@ -86,6 +86,28 @@ var is_dead: bool = false
 var target: Node = null
 var spawner = null  # Reference to spawner (if spawner-bound)
 
+# =============================================================================
+# NETWORK (multiplayer-ready)
+# =============================================================================
+
+var net_id: int = -1
+static var _next_net_id: int = 1000000  # Start at 1M to avoid player ID conflicts
+
+static func _generate_net_id() -> int:
+	_next_net_id += 1
+	return _next_net_id
+
+# =============================================================================
+# DEBUFFS
+# =============================================================================
+
+var debuffs: Array = []  # Array of WeaponDebuff objects
+var _slow_multiplier: float = 1.0
+var _armor_reduction: float = 0.0
+var _resist_reduction: Array[float] = [0.0, 0.0, 0.0]  # kinetic, energy, corrosive
+var _damage_multiplier: float = 1.0
+var _regen_disabled: bool = false
+
 # AI State Machine
 var _current_state = null  # AIState instance
 var _states: Dictionary = {}  # String -> AIState
@@ -124,6 +146,7 @@ var _sprite_rotated: bool = false  # True if sprite is rotated in atlas
 # =============================================================================
 
 func _ready() -> void:
+	net_id = _generate_net_id()
 	converger = Converger.new(self)
 	hp = hp_max
 	shield = shield_max
@@ -272,8 +295,12 @@ func _physics_process(delta: float) -> void:
 	_current_pos = converger.course.pos
 	_current_rotation = converger.course.rotation
 
-	# Regenerate shield
-	_regenerate_shield(delta)
+	# Process debuffs
+	_process_debuffs(delta)
+
+	# Regenerate shield (if not disabled)
+	if not _regen_disabled:
+		_regenerate_shield(delta)
 
 func _process(delta: float) -> void:
 	if is_dead:
@@ -353,9 +380,20 @@ func take_damage(dmg: Variant, attacker: Node = null) -> void:
 
 	var damage_amount: float = 0.0
 
+	# Calculate effective resistances (base - debuff reductions)
+	var effective_resist: Array[float] = [
+		maxf(0.0, resistances[0] - _resist_reduction[0]),
+		maxf(0.0, resistances[1] - _resist_reduction[1]),
+		maxf(0.0, resistances[2] - _resist_reduction[2]),
+	]
+
 	# Handle both Damage object and raw float (duck typing)
 	if dmg != null and dmg is Object and dmg.has_method("calculate_resisted"):
-		damage_amount = dmg.calculate_resisted(resistances)
+		damage_amount = dmg.calculate_resisted(effective_resist)
+		# Apply armor reduction bonus damage
+		if _armor_reduction > 0 and damage_amount > 0:
+			var bonus := minf(_armor_reduction * 0.5, 50.0) / 100.0  # Up to 50% bonus damage
+			damage_amount *= (1.0 + bonus)
 	elif dmg is float or dmg is int:
 		damage_amount = float(dmg)
 	else:
@@ -455,20 +493,94 @@ func _generate_loot() -> Array:
 # DEBUFFS
 # =============================================================================
 
-func apply_debuff(debuff: Variant) -> void:
-	if debuff != null and debuff.get("type") == 2:  # DOT type = 2
-		_apply_dot(debuff)
+# Preload WeaponDebuff for type checking
+const WeaponDebuffClass = preload("res://scripts/combat/weapon_debuff.gd")
 
-func _apply_dot(debuff: Variant) -> void:
+## Apply a debuff to this enemy
+func apply_debuff(debuff: Variant) -> void:
 	if debuff == null:
 		return
-	var duration: float = debuff.get("duration") if debuff.get("duration") else 1000.0
-	var ticks: int = int(duration / 500.0)
-	for i in range(ticks):
-		await get_tree().create_timer(0.5).timeout
-		if is_instance_valid(self) and not is_dead:
-			var tick_dmg: float = debuff.get_tick_damage() if debuff.has_method("get_tick_damage") else 5.0
-			take_damage(tick_dmg)
+
+	# Check for existing debuff of same type to stack
+	for existing in debuffs:
+		if existing.type == debuff.type:
+			existing.try_stack()
+			return
+
+	# New debuff
+	debuff.source_net_id = debuff.source_net_id if debuff.get("source_net_id") else -1
+	debuffs.append(debuff)
+
+## Process all active debuffs (called from _physics_process)
+func _process_debuffs(delta: float) -> void:
+	if debuffs.is_empty():
+		_reset_debuff_effects()
+		return
+
+	var total_dot_damage: float = 0.0
+	var expired: Array = []
+
+	# Reset effect accumulators
+	_slow_multiplier = 1.0
+	_armor_reduction = 0.0
+	_resist_reduction = [0.0, 0.0, 0.0]
+	_damage_multiplier = 1.0
+	_regen_disabled = false
+
+	for debuff in debuffs:
+		# Update debuff timer and get tick damage
+		var tick_damage: float = debuff.update(delta, self)
+		total_dot_damage += tick_damage
+
+		# Accumulate effects based on type
+		match debuff.type:
+			WeaponDebuffClass.Type.SLOW_DOWN:
+				_slow_multiplier = minf(_slow_multiplier, debuff.get_slow_multiplier())
+			WeaponDebuffClass.Type.REDUCE_ARMOR:
+				_armor_reduction += debuff.get_armor_reduction()
+			WeaponDebuffClass.Type.REDUCED_KINETIC_RESIST:
+				_resist_reduction[0] += debuff.get_resist_reduction()
+			WeaponDebuffClass.Type.REDUCED_ENERGY_RESIST:
+				_resist_reduction[1] += debuff.get_resist_reduction()
+			WeaponDebuffClass.Type.REDUCED_CORROSIVE_RESIST:
+				_resist_reduction[2] += debuff.get_resist_reduction()
+			WeaponDebuffClass.Type.REDUCED_DAMAGE:
+				_damage_multiplier = minf(_damage_multiplier, debuff.get_damage_multiplier())
+			WeaponDebuffClass.Type.DISABLE_REGEN:
+				_regen_disabled = true
+
+		# Mark expired debuffs
+		if debuff.is_expired():
+			expired.append(debuff)
+
+	# Apply DOT damage
+	if total_dot_damage > 0 and not is_dead:
+		hp -= total_dot_damage
+		health_changed.emit(hp, hp_max)
+		_update_health_bar()
+		_spawn_damage_number(total_dot_damage)
+		if hp <= 0:
+			_die()
+
+	# Remove expired debuffs
+	for debuff in expired:
+		debuffs.erase(debuff)
+
+func _reset_debuff_effects() -> void:
+	_slow_multiplier = 1.0
+	_armor_reduction = 0.0
+	_resist_reduction = [0.0, 0.0, 0.0]
+	_damage_multiplier = 1.0
+	_regen_disabled = false
+
+func remove_debuff(debuff_type: int) -> void:
+	for i in range(debuffs.size() - 1, -1, -1):
+		if debuffs[i].type == debuff_type:
+			debuffs.remove_at(i)
+
+func clear_debuffs() -> void:
+	debuffs.clear()
+	_reset_debuff_effects()
 
 # =============================================================================
 # SHIP PROPERTY ACCESSORS (used by Converger)
@@ -493,10 +605,10 @@ func get_boost_bonus() -> float:
 	return 0.0
 
 func is_slowed(_server_time: float) -> bool:
-	return false
+	return _slow_multiplier < 1.0
 
 func get_slowdown() -> float:
-	return 0.0
+	return 1.0 - _slow_multiplier  # Convert multiplier to slowdown value
 
 # =============================================================================
 # CONFIGURATION

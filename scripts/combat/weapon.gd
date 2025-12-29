@@ -216,6 +216,9 @@ func init_from_config(config: Dictionary, wpn_level: int = 1) -> void:
 	aim_arc = config.get("aimArc", 0.0)
 	rotation_speed = config.get("rotationSpeed", 0.0)
 
+	# Parse debuffs from config (from original Weapon.as)
+	_parse_debuffs(config)
+
 	# Apply level scaling
 	_apply_level_scaling()
 
@@ -225,6 +228,78 @@ func _apply_level_scaling() -> void:
 
 	# Scale damage by 8% per level (matching DMGBONUS constant)
 	dmg.add_level_bonus(level - 1, GameConstants.DMGBONUS)
+
+# Preload WeaponDebuff class
+const WeaponDebuffClass = preload("res://scripts/combat/weapon_debuff.gd")
+
+## Parse debuffs from weapon config (from original Weapon.as lines 200-203)
+func _parse_debuffs(config: Dictionary) -> void:
+	debuffs.clear()
+
+	# Check for primary debuff config (original format)
+	if config.has("debuffType") and config.has("dot") and config.has("dotDamageType") and config.has("dotDuration"):
+		var debuff_type: int = config.get("debuffType", 0)
+		var dot_damage: float = config.get("dot", 0.0)
+		var dot_damage_type: int = config.get("dotDamageType", 0)
+		var dot_duration: float = config.get("dotDuration", 3.0)
+		var dot_effect: String = config.get("dotEffect", "")
+
+		var dot_dmg := DamageClass.new(dot_damage_type, dot_damage)
+		var debuff := WeaponDebuffClass.new(debuff_type, dot_duration, dot_dmg)
+		debuff.effect_name = dot_effect
+		debuffs.append(debuff)
+
+	# Check for slow debuff
+	if config.has("slowPercent") and config.get("slowPercent", 0.0) > 0:
+		var slow_percent: float = config.get("slowPercent", 0.0)
+		var slow_duration: float = config.get("slowDuration", 3.0)
+		var slow := WeaponDebuffClass.create_slow(slow_duration, slow_percent)
+		debuffs.append(slow)
+
+	# Check for armor reduction debuff
+	if config.has("armorReduction") and config.get("armorReduction", 0.0) > 0:
+		var armor_reduction: float = config.get("armorReduction", 0.0)
+		var armor_duration: float = config.get("armorDuration", 5.0)
+		var armor := WeaponDebuffClass.create_armor_reduction(armor_duration, armor_reduction)
+		debuffs.append(armor)
+
+	# Check for burn debuff
+	if config.has("burnDamage") and config.get("burnDamage", 0.0) > 0:
+		var burn_damage: float = config.get("burnDamage", 0.0)
+		var burn_duration: float = config.get("burnDuration", 4.0)
+		var burn_type: int = config.get("burnDamageType", DamageClass.Type.ENERGY)
+		var burn_dmg := DamageClass.new(burn_type, burn_damage)
+		var burn := WeaponDebuffClass.create_burn(burn_duration, burn_dmg)
+		debuffs.append(burn)
+
+	# Check for disable regen
+	if config.has("disableRegen") and config.get("disableRegen", false):
+		var regen_duration: float = config.get("disableRegenDuration", 3.0)
+		var disable_regen := WeaponDebuffClass.create_disable_regen(regen_duration)
+		debuffs.append(disable_regen)
+
+	# Check for disable heal
+	if config.has("disableHeal") and config.get("disableHeal", false):
+		var heal_duration: float = config.get("disableHealDuration", 3.0)
+		var disable_heal := WeaponDebuffClass.create_disable_heal(heal_duration)
+		debuffs.append(disable_heal)
+
+	# Check for resistance reduction
+	for resist_name in ["kinetic", "energy", "corrosive"]:
+		var key := "reduce%sResist" % resist_name.capitalize()
+		if config.has(key) and config.get(key, 0.0) > 0:
+			var reduction: float = config.get(key, 0.0)
+			var duration: float = config.get(key + "Duration", 5.0)
+			var resist_type: int = ["kinetic", "energy", "corrosive"].find(resist_name)
+			var resist_debuff := WeaponDebuffClass.create_reduced_resist(duration, resist_type, reduction)
+			debuffs.append(resist_debuff)
+
+	# Check for damage reduction debuff (weaken)
+	if config.has("weakenPercent") and config.get("weakenPercent", 0.0) > 0:
+		var weaken_percent: float = config.get("weakenPercent", 0.0)
+		var weaken_duration: float = config.get("weakenDuration", 5.0)
+		var weaken := WeaponDebuffClass.create_reduced_damage(weaken_duration, weaken_percent)
+		debuffs.append(weaken)
 
 # =============================================================================
 # FIRING

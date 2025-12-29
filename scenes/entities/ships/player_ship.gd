@@ -53,6 +53,12 @@ var active_weapon_index: int = 0
 var _is_firing: bool = false
 
 # =============================================================================
+# HEAT/ENERGY SYSTEM
+# =============================================================================
+
+var heat: Heat = null  ## Heat/energy system for weapons
+
+# =============================================================================
 # STATE
 # =============================================================================
 
@@ -60,8 +66,21 @@ var hp: float = 100.0
 var shield: float = 100.0
 var is_dead: bool = false
 var _using_boost: bool = false
-var _slowed_until: float = 0.0
-var _slowdown_amount: float = 0.0
+
+# =============================================================================
+# DEBUFFS (multiplayer-ready)
+# =============================================================================
+
+var debuffs: Array[WeaponDebuff] = []
+var net_id: int = -1  # For multiplayer entity identification
+
+# Cached debuff effects (recalculated each frame)
+var _slow_multiplier: float = 1.0
+var _armor_reduction: float = 0.0
+var _resist_reduction: Array[float] = [0.0, 0.0, 0.0]  # kinetic, energy, corrosive
+var _damage_multiplier: float = 1.0
+var _regen_disabled: bool = false
+var _heal_disabled: bool = false
 
 # =============================================================================
 # MOVEMENT
@@ -99,6 +118,9 @@ func _ready() -> void:
 	converger = Converger.new(self)
 	hp = hp_max
 	shield = shield_max
+
+	# Initialize heat system
+	heat = Heat.new()
 
 	# Initialize converger position from spawn position
 	converger.course.pos = global_position
@@ -180,6 +202,7 @@ func _setup_default_weapon() -> void:
 		"range": 600.0,
 		"projectileSprite": "proj_blaster",
 		"positionOffsetX": 30.0,
+		"heatCost": 0.05,  # 5% heat cost per shot
 	})
 	weapon.set_owner(self)
 	weapons.append(weapon)
@@ -190,6 +213,13 @@ func _physics_process(delta: float) -> void:
 
 	# Handle input
 	_process_input()
+
+	# Process active debuffs
+	_process_debuffs(delta)
+
+	# Update heat system
+	if heat != null:
+		heat.update(NetworkManager.server_time)
 
 	# Store previous state for interpolation
 	_prev_pos = _current_pos
@@ -206,8 +236,9 @@ func _physics_process(delta: float) -> void:
 	if engine_glow:
 		engine_glow.visible = converger.course.accelerate
 
-	# Regenerate shield
-	_regenerate_shield(delta)
+	# Regenerate shield (if not disabled by debuff)
+	if not _regen_disabled:
+		_regenerate_shield(delta)
 
 func _process(delta: float) -> void:
 	if is_dead:
@@ -306,6 +337,13 @@ func _try_fire_weapon() -> void:
 	var weapon = weapons[active_weapon_index]
 	var current_time: float = NetworkManager.server_time
 
+	# Check heat first - can't fire if locked out or not enough energy
+	if heat != null:
+		if heat.is_locked_out(current_time):
+			return
+		if not heat.can_fire(weapon.heat_cost, _using_boost, 0.5):
+			return
+
 	if weapon.can_fire(current_time):
 		var projectile_data: Array = weapon.fire(
 			current_time,
@@ -331,15 +369,29 @@ func switch_weapon(index: int) -> void:
 # COMBAT
 # =============================================================================
 
-func take_damage(dmg: Variant, attacker: Node = null) -> void:
+func take_damage(dmg: Variant, attacker: Node = null, apply_debuffs: bool = true) -> void:
 	if is_dead:
 		return
 
 	var damage_amount: float = 0.0
+	var weapon_debuffs: Array = []
 
 	# Handle both Damage object and raw float (duck typing)
 	if dmg != null and dmg is Object and dmg.has_method("calculate_resisted"):
-		damage_amount = dmg.calculate_resisted(resistances)
+		# Use effective resistances (after debuff reductions)
+		var effective_resist := get_effective_resistances()
+		damage_amount = dmg.calculate_resisted(effective_resist)
+
+		# Apply armor reduction bonus (negative armor = bonus damage)
+		var armor := get_armor_after_debuffs()
+		if armor < 0:
+			# Negative armor gives up to 50% bonus damage
+			var bonus := minf(0.5, absf(armor) / 100.0)
+			damage_amount *= (1.0 + bonus)
+
+		# Get debuffs from damage object if available
+		if apply_debuffs and dmg.has_method("get_debuffs"):
+			weapon_debuffs = dmg.get_debuffs()
 	elif dmg is float or dmg is int:
 		damage_amount = float(dmg)
 	else:
@@ -359,6 +411,11 @@ func take_damage(dmg: Variant, attacker: Node = null) -> void:
 
 		if hp <= 0:
 			_die()
+
+	# Apply debuffs from the weapon
+	for debuff_data in weapon_debuffs:
+		if debuff_data is WeaponDebuff:
+			apply_debuff(debuff_data)
 
 func _die() -> void:
 	is_dead = true
@@ -394,8 +451,144 @@ func is_using_boost() -> bool:
 func get_boost_bonus() -> float:
 	return boost_bonus
 
-func is_slowed(server_time: float) -> bool:
-	return _slowed_until > server_time
+func is_slowed(_server_time: float) -> bool:
+	return _slow_multiplier < 1.0
 
 func get_slowdown() -> float:
-	return _slowdown_amount
+	return 1.0 - _slow_multiplier
+
+# =============================================================================
+# DEBUFF SYSTEM
+# =============================================================================
+
+func _process_debuffs(delta: float) -> void:
+	## Process all active debuffs and update cached effects
+
+	# Reset cached effects
+	_slow_multiplier = 1.0
+	_armor_reduction = 0.0
+	_resist_reduction = [0.0, 0.0, 0.0]
+	_damage_multiplier = 1.0
+	_regen_disabled = false
+	_heal_disabled = false
+
+	var total_dot_damage := 0.0
+	var expired_indices: Array[int] = []
+
+	# Process each debuff
+	for i in range(debuffs.size()):
+		var debuff := debuffs[i]
+
+		# Update debuff and get DOT damage
+		var dot_damage := debuff.update(delta, self)
+		total_dot_damage += dot_damage
+
+		# Accumulate effects
+		match debuff.type:
+			WeaponDebuff.Type.SLOW_DOWN:
+				_slow_multiplier = minf(_slow_multiplier, debuff.get_slow_multiplier())
+			WeaponDebuff.Type.REDUCE_ARMOR:
+				_armor_reduction += debuff.get_armor_reduction()
+			WeaponDebuff.Type.REDUCED_KINETIC_RESIST:
+				_resist_reduction[0] += debuff.get_resist_reduction()
+			WeaponDebuff.Type.REDUCED_ENERGY_RESIST:
+				_resist_reduction[1] += debuff.get_resist_reduction()
+			WeaponDebuff.Type.REDUCED_CORROSIVE_RESIST:
+				_resist_reduction[2] += debuff.get_resist_reduction()
+			WeaponDebuff.Type.REDUCED_DAMAGE:
+				_damage_multiplier *= debuff.get_damage_multiplier()
+			WeaponDebuff.Type.DISABLE_REGEN:
+				_regen_disabled = debuff.disables_regen() or _regen_disabled
+			WeaponDebuff.Type.DISABLE_HEAL:
+				_heal_disabled = debuff.disables_heal() or _heal_disabled
+
+		# Mark expired
+		if debuff.is_expired():
+			expired_indices.append(i)
+
+	# Remove expired debuffs (reverse order to maintain indices)
+	for i in range(expired_indices.size() - 1, -1, -1):
+		debuffs.remove_at(expired_indices[i])
+
+	# Apply DOT damage
+	if total_dot_damage > 0:
+		_apply_dot_damage(total_dot_damage)
+
+func _apply_dot_damage(amount: float) -> void:
+	## Apply DOT damage directly to health (bypasses shield)
+	if _heal_disabled and amount < 0:
+		return  # Can't heal while heal disabled
+
+	hp -= amount
+	health_changed.emit(hp, hp_max)
+
+	if hp <= 0:
+		_die()
+
+func apply_debuff(debuff: WeaponDebuff) -> void:
+	## Apply a debuff to this ship (multiplayer-ready)
+	## In multiplayer, this should be called via server message
+
+	# Check for existing debuff of same type to stack
+	for existing in debuffs:
+		if existing.type == debuff.type:
+			existing.try_stack()
+			return
+
+	# Add new debuff
+	debuffs.append(debuff)
+
+func remove_debuff(debuff_net_id: int) -> void:
+	## Remove a debuff by network ID
+	for i in range(debuffs.size()):
+		if debuffs[i].net_id == debuff_net_id:
+			debuffs.remove_at(i)
+			return
+
+func clear_debuffs() -> void:
+	## Clear all debuffs (e.g., on respawn)
+	debuffs.clear()
+
+func get_effective_resistances() -> Array[float]:
+	## Get resistances after debuff reductions
+	return [
+		maxf(0.0, resistances[0] - _resist_reduction[0]),
+		maxf(0.0, resistances[1] - _resist_reduction[1]),
+		maxf(0.0, resistances[2] - _resist_reduction[2])
+	]
+
+func get_armor_after_debuffs() -> float:
+	## Get armor after reduction (can go negative for bonus damage)
+	return armor_threshold - _armor_reduction
+
+# =============================================================================
+# NETWORK SYNC (multiplayer-ready)
+# =============================================================================
+
+func to_sync_data() -> Dictionary:
+	## Serialize state for network sync
+	return {
+		"net_id": net_id,
+		"pos": [global_position.x, global_position.y],
+		"rot": rotation,
+		"hp": hp,
+		"shield": shield,
+		"debuffs": debuffs.map(func(d): return d.to_array())
+	}
+
+func from_sync_data(data: Dictionary) -> void:
+	## Apply state from network sync
+	if data.has("pos"):
+		global_position = Vector2(data.pos[0], data.pos[1])
+	if data.has("rot"):
+		rotation = data.rot
+	if data.has("hp"):
+		hp = data.hp
+		health_changed.emit(hp, hp_max)
+	if data.has("shield"):
+		shield = data.shield
+		shield_changed.emit(shield, shield_max)
+	if data.has("debuffs"):
+		debuffs.clear()
+		for d_arr in data.debuffs:
+			debuffs.append(WeaponDebuff.from_array(d_arr))

@@ -9,8 +9,10 @@ extends CanvasLayer
 
 @onready var health_bar: ProgressBar = $MarginContainer/VBoxContainer/HealthBar
 @onready var shield_bar: ProgressBar = $MarginContainer/VBoxContainer/ShieldBar
+@onready var heat_bar: ProgressBar = $MarginContainer/VBoxContainer/HeatBar
 @onready var health_label: Label = $MarginContainer/VBoxContainer/HealthBar/Label
 @onready var shield_label: Label = $MarginContainer/VBoxContainer/ShieldBar/Label
+@onready var heat_label: Label = $MarginContainer/VBoxContainer/HeatBar/Label
 @onready var weapon_label: Label = $MarginContainer/VBoxContainer/WeaponInfo
 
 # =============================================================================
@@ -74,6 +76,26 @@ func _process(_delta: float) -> void:
 	if weapon and weapon_label:
 		var reload_pct: float = weapon.get_reload_progress(NetworkManager.server_time) * 100
 		weapon_label.text = "%s [%.0f%%]" % [weapon.weapon_type.to_upper(), reload_pct]
+
+	# Update heat bar
+	var player_heat = _player.get("heat")
+	if player_heat and heat_bar:
+		var heat_pct: float = player_heat.get_heat_percent()
+		heat_bar.value = heat_pct
+		if heat_label:
+			# Show lockout status if applicable
+			var current_time: float = NetworkManager.server_time
+			if player_heat.is_locked_out(current_time):
+				var remaining: float = player_heat.get_lockout_remaining(current_time)
+				heat_label.text = "LOCKED [%.1fs]" % remaining
+				heat_label.modulate = Color.RED
+			else:
+				heat_label.text = "ENERGY: %d%%" % int(heat_pct * 100)
+				# Color based on energy level
+				if heat_pct < 0.25:
+					heat_label.modulate = Color.ORANGE
+				else:
+					heat_label.modulate = Color.WHITE
 
 # =============================================================================
 # SIGNAL HANDLERS
