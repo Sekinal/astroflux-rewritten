@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=7 format=3]
 
 [ext_resource type="Script" path="res://scenes/game/game.gd" id="1_game"]
 [ext_resource type="PackedScene" path="res://scenes/entities/ships/player_ship.tscn" id="2_player"]
 [ext_resource type="Script" path="res://scripts/effects/starfield.gd" id="3_starfield"]
 [ext_resource type="PackedScene" path="res://scenes/ui/hud.tscn" id="4_hud"]
 [ext_resource type="PackedScene" path="res://scenes/entities/enemies/target_dummy.tscn" id="5_dummy"]
+[ext_resource type="PackedScene" path="res://scenes/ui/minimap.tscn" id="6_minimap"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_game")
@@ -59,3 +60,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 
 [node name="HUD" parent="." instance=ExtResource("4_hud")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Minimap" parent="CanvasLayer" instance=ExtResource("6_minimap")]

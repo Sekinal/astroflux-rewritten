@@ -10,6 +10,7 @@ extends Node2D
 @onready var camera: Camera2D = $Camera2D
 @onready var starfield: Node2D = $Starfield
 @onready var bodies_container: Node2D = $Bodies
+@onready var minimap: Control = $CanvasLayer/Minimap
 
 # =============================================================================
 # STATE
@@ -58,6 +59,16 @@ func _on_init_solar_system(msg: Message) -> void:
 
 	# Load Hyperion solar system from JSON data
 	BodyManager.load_hyperion()
+
+	# Set up nebula tint from solar system (Antor System blue tint)
+	# nebulaTint from Hyperion data: 1055231 = 0x101AFF (blueish)
+	if starfield != null:
+		var tint_color := Color(0.06, 0.08, 0.15, 1.0)  # Dark blue Antor tint
+		starfield.set_nebula_tint(tint_color)
+
+	# Initialize minimap with player reference
+	if minimap != null:
+		minimap.set_player(player_ship)
 
 	# Move player to safe starting position (near Endarion planet)
 	if player_ship != null:
