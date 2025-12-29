@@ -10,43 +10,48 @@ extends Control
 signal closed
 
 # =============================================================================
-# CONFIGURATION
+# CONFIGURATION (from original Map.as)
 # =============================================================================
 
-const MAP_SCALE_BASE: float = 0.08  ## Base scale for world to map
-const MAP_WIDTH: float = 760.0
-const MAP_HEIGHT: float = 600.0
+var SCALE: float = 0.1  ## Dynamic scale based on orbit sizes
+const WIDTH: float = 698.0
+const HEIGHT: float = 538.0
+const CORNER: float = 10.0
 const PADDING: float = 31.0
 
 # =============================================================================
-# COLORS
+# COLORS (from Style.as)
 # =============================================================================
 
-const COLOR_PLAYER := Color(0.2, 0.9, 1.0, 1.0)  # Cyan
-const COLOR_SUN := Color(1.0, 0.85, 0.2, 1.0)  # Yellow
-const COLOR_PLANET := Color(1.0, 0.4, 0.4, 1.0)  # Red-ish (like original)
-const COLOR_STATION := Color(0.3, 0.5, 1.0, 1.0)  # Blue
-const COLOR_WARP_GATE := Color(0.13, 0.66, 0.4, 1.0)  # Teal green
-const COLOR_ENEMY := Color(1.0, 0.3, 0.3, 0.8)  # Red
-const COLOR_SPAWNER := Color(0.9, 0.5, 0.1, 0.7)  # Orange
-const COLOR_ORBIT := Color(0.3, 0.35, 0.4, 0.4)  # Gray
-const COLOR_TEXT := Color(0.99, 0.85, 0.53, 0.8)  # Gold
-const COLOR_COORDS := Color(0.55, 0.55, 0.55, 1.0)  # Gray
+const COLOR_MAP_PLANET: int = 0xFF6663  # Red-ish for planets
+const COLOR_FRIENDLY: int = 0x22FF66  # Green
+const COLOR_HOSTILE: int = 0xFF4444  # Red
+const COLOR_WARP_GATE: int = 0x22A966  # Teal
+const COLOR_SHOP: int = 0x4444FF  # Blue
+const COLOR_RESEARCH: int = 0x662222  # Dark red
+const COLOR_BYLINE: int = 0x888888  # Gray
+const COLOR_ORBIT: int = 0x00BFFF  # Cyan orbit lines
 
 # =============================================================================
 # STATE
 # =============================================================================
 
 var player_ship: Node = null
-var map_scale: float = MAP_SCALE_BASE
-var _background_texture: AtlasTexture = null
 var _is_open: bool = false
+var _map_offset: Vector2 = Vector2.ZERO  # Offset to center on player
+
+# Textures
+var _tex_background: AtlasTexture = null
+var _tex_sun: AtlasTexture = null
+var _tex_spawner: AtlasTexture = null
+var _tex_warpgate: AtlasTexture = null
+var _tex_shop: AtlasTexture = null
+var _tex_research: AtlasTexture = null
 
 # =============================================================================
 # NODES
 # =============================================================================
 
-@onready var map_container: Control = $MapContainer
 @onready var system_name_label: Label = $MapContainer/SystemName
 @onready var coords_label: Label = $MapContainer/Coordinates
 @onready var close_button: Button = $MapContainer/CloseButton
@@ -58,7 +63,7 @@ var _is_open: bool = false
 func _ready() -> void:
 	visible = false
 
-	# Load map background texture
+	# Load textures
 	if TextureManager.is_loaded():
 		_load_textures()
 	else:
@@ -69,7 +74,12 @@ func _ready() -> void:
 		close_button.pressed.connect(_on_close_pressed)
 
 func _load_textures() -> void:
-	_background_texture = TextureManager.get_sprite("map_bgr")
+	_tex_background = TextureManager.get_sprite("map_bgr")
+	_tex_sun = TextureManager.get_sprite("map_sun")
+	_tex_spawner = TextureManager.get_sprite("map_spawner")
+	_tex_warpgate = TextureManager.get_sprite("map_warpgate")
+	_tex_shop = TextureManager.get_sprite("map_shop")
+	_tex_research = TextureManager.get_sprite("map_research")
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
@@ -82,8 +92,8 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _process(_delta: float) -> void:
 	if _is_open:
+		_update_map()
 		queue_redraw()
-		_update_labels()
 
 # =============================================================================
 # MAP CONTROL
@@ -99,44 +109,41 @@ func open_map() -> void:
 	_is_open = true
 	visible = true
 	_calculate_scale()
-
-	# Pause game while map is open
 	get_tree().paused = true
 
 func close_map() -> void:
 	_is_open = false
 	visible = false
 	closed.emit()
-
-	# Unpause game
 	get_tree().paused = false
 
 func _on_close_pressed() -> void:
 	close_map()
 
 func _calculate_scale() -> void:
-	# Find the maximum orbit radius to scale the map
+	# Find the maximum orbit radius to scale the map (like original)
 	var max_radius: float = 200.0
+	SCALE = 0.1
 
 	for body in BodyManager.bodies:
 		if not is_instance_valid(body):
 			continue
+		# Skip comets
+		if body.body_type == 6:  # COMET
+			continue
 		if body.get("orbit_radius") != null and body.orbit_radius > 0:
-			if body.orbit_radius * MAP_SCALE_BASE > max_radius:
-				map_scale = max_radius / body.orbit_radius
+			if body.orbit_radius * SCALE > max_radius:
+				SCALE = max_radius / body.orbit_radius
 
-	# Clamp scale
-	map_scale = clampf(map_scale, 0.01, 0.2)
-
-func _update_labels() -> void:
-	# Update system name
+func _update_map() -> void:
+	# Update labels
 	if system_name_label:
 		system_name_label.text = BodyManager.current_system_name
 
-	# Update player coordinates
+	# Update coordinates based on player position
 	if coords_label and player_ship != null and is_instance_valid(player_ship):
 		var pos: Vector2 = player_ship.global_position
-		coords_label.text = "Position: %d, %d" % [int(pos.x), int(pos.y)]
+		coords_label.text = "Current position: %d, %d" % [int(pos.x), int(pos.y)]
 
 # =============================================================================
 # DRAWING
@@ -146,108 +153,178 @@ func _draw() -> void:
 	if not _is_open:
 		return
 
-	var map_center := size / 2
+	var screen_center := size / 2
+	var map_rect := Rect2(
+		screen_center - Vector2(WIDTH, HEIGHT) / 2,
+		Vector2(WIDTH, HEIGHT)
+	)
+	var map_center := screen_center
 
-	# Draw dark overlay
-	draw_rect(Rect2(Vector2.ZERO, size), Color(0, 0, 0, 0.85))
+	# Draw dark background
+	draw_rect(Rect2(Vector2.ZERO, size), Color(0, 0, 0, 0.9))
 
-	# Draw map background
-	if _background_texture != null:
-		var bg_size := Vector2(_background_texture.get_width(), _background_texture.get_height())
-		var bg_pos := map_center - bg_size / 2
-		draw_texture(_background_texture, bg_pos)
+	# Draw map background texture or fallback
+	if _tex_background != null:
+		var bg_pos := map_center - Vector2(_tex_background.get_width(), _tex_background.get_height()) / 2
+		draw_texture(_tex_background, bg_pos)
 	else:
-		# Fallback: draw rectangle
-		var map_rect := Rect2(map_center - Vector2(MAP_WIDTH, MAP_HEIGHT) / 2, Vector2(MAP_WIDTH, MAP_HEIGHT))
-		draw_rect(map_rect, Color(0.05, 0.08, 0.12, 0.95))
-		draw_rect(map_rect, Color(0.3, 0.4, 0.5, 0.5), false, 2.0)
+		draw_rect(map_rect, Color(0.02, 0.04, 0.08, 0.95))
+		draw_rect(map_rect, Color(0.2, 0.3, 0.4, 0.5), false, 2.0)
 
-	# Get player position for centering
-	var player_pos := Vector2.ZERO
+	# Get player world position
+	var player_world_pos := Vector2.ZERO
 	if player_ship != null and is_instance_valid(player_ship):
-		player_pos = player_ship.global_position
+		player_world_pos = player_ship.global_position
 
-	# Draw orbit rings first (behind everything)
-	_draw_orbits(map_center, player_pos)
+	# Calculate map offset to center on player (like original: mapContainer.x = WIDTH/2 - player.x)
+	_map_offset = map_center - player_world_pos * SCALE
+
+	# Create clipping rect
+	var clip_rect := Rect2(
+		map_center - Vector2(WIDTH, HEIGHT) / 2 + Vector2(PADDING, PADDING),
+		Vector2(WIDTH, HEIGHT) - Vector2(PADDING * 2, PADDING * 2)
+	)
+
+	# Draw orbit rings first (suns draw their children's orbits)
+	_draw_orbits(clip_rect)
+
+	# Draw suns
+	_draw_suns(clip_rect)
+
+	# Draw stations (warp gates, shops, research)
+	_draw_stations(clip_rect)
+
+	# Draw planets
+	_draw_planets(clip_rect)
 
 	# Draw spawners
-	_draw_spawners(map_center, player_pos)
-
-	# Draw bodies
-	_draw_bodies(map_center, player_pos)
-
-	# Draw enemies
-	_draw_enemies(map_center, player_pos)
+	_draw_spawners(clip_rect)
 
 	# Draw player
-	_draw_player(map_center, player_pos)
+	_draw_player(clip_rect)
 
-func _draw_orbits(map_center: Vector2, player_pos: Vector2) -> void:
+func _world_to_map(world_pos: Vector2) -> Vector2:
+	return _map_offset + world_pos * SCALE
+
+func _is_in_clip_rect(pos: Vector2, clip_rect: Rect2, margin: float = 50.0) -> bool:
+	var expanded := clip_rect.grow(margin)
+	return expanded.has_point(pos)
+
+func _draw_orbits(clip_rect: Rect2) -> void:
+	# Draw orbit circles for each body's children
+	for body in BodyManager.bodies:
+		if not is_instance_valid(body):
+			continue
+		if not body.get("children"):
+			continue
+
+		var body_map_pos := _world_to_map(body.global_position)
+
+		for child in body.children:
+			if not is_instance_valid(child):
+				continue
+			# Skip comets, hidden, boss, warning
+			if child.body_type in [6, 8, 13, 14]:  # COMET, BOSS, HIDDEN, WARNING
+				continue
+
+			var orbit_radius_scaled: float = child.orbit_radius * SCALE
+			if orbit_radius_scaled > 3 and orbit_radius_scaled < 500:
+				draw_arc(body_map_pos, orbit_radius_scaled, 0, TAU, 64,
+					Color(0.0, 0.75, 1.0, 0.3), 1.5)
+
+func _draw_suns(clip_rect: Rect2) -> void:
+	for body in BodyManager.bodies:
+		if not is_instance_valid(body):
+			continue
+		if body.body_type != 0:  # Not SUN
+			continue
+
+		var map_pos := _world_to_map(body.global_position)
+		if not _is_in_clip_rect(map_pos, clip_rect):
+			continue
+
+		if _tex_sun != null:
+			var tex_size := Vector2(_tex_sun.get_width(), _tex_sun.get_height())
+			# Check for black hole (special color)
+			var color := Color.WHITE
+			if body.body_name == "Black Hole":
+				color = Color(0.4, 0.4, 0.6)
+			draw_texture(_tex_sun, map_pos - tex_size / 2, color)
+		else:
+			# Fallback: draw circle
+			draw_circle(map_pos, 20.0, Color(1.0, 0.85, 0.2))
+
+func _draw_stations(clip_rect: Rect2) -> void:
 	for body in BodyManager.bodies:
 		if not is_instance_valid(body):
 			continue
 
-		if body.get("orbit_radius") == null or body.orbit_radius <= 0:
-			continue
-		if body.get("parent_body") == null:
-			continue
-
-		var parent_world_pos: Vector2 = body.parent_body.global_position
-		var parent_map_pos: Vector2 = _world_to_map(parent_world_pos, map_center, player_pos)
-		var orbit_radius_scaled: float = body.orbit_radius * map_scale
-
-		# Only draw if orbit is visible
-		if orbit_radius_scaled > 5 and orbit_radius_scaled < 400:
-			draw_arc(parent_map_pos, orbit_radius_scaled, 0, TAU, 64, COLOR_ORBIT, 1.0)
-
-func _draw_bodies(map_center: Vector2, player_pos: Vector2) -> void:
-	for body in BodyManager.bodies:
-		if not is_instance_valid(body):
+		# Skip non-station types
+		if body.body_type not in [2, 3, 4, 5, 9, 10, 11]:  # WARP, SHOP, RESEARCH, JUNK, HANGAR, CANTINA, PAINT
 			continue
 
-		var body_pos: Vector2 = body.global_position
-		var map_pos := _world_to_map(body_pos, map_center, player_pos)
-
-		# Skip if way off screen
-		if map_pos.x < -50 or map_pos.x > size.x + 50:
-			continue
-		if map_pos.y < -50 or map_pos.y > size.y + 50:
+		var map_pos := _world_to_map(body.global_position)
+		if not _is_in_clip_rect(map_pos, clip_rect):
 			continue
 
-		var color := COLOR_PLANET
-		var radius := 6.0
-		var draw_name := true
+		var tex: AtlasTexture = null
+		var color := Color.WHITE
 
 		match body.body_type:
-			0:  # SUN
-				color = COLOR_SUN
-				radius = 15.0
-			1:  # PLANET
-				color = COLOR_PLANET
-				radius = 8.0
 			2:  # WARP_GATE
-				color = COLOR_WARP_GATE
-				radius = 6.0
-			3, 4, 5, 9, 10, 11:  # Stations
-				color = COLOR_STATION
-				radius = 5.0
+				tex = _tex_warpgate
+				color = Color.from_string("#22A966", Color.GREEN)
+			3:  # SHOP
+				tex = _tex_shop
+				color = Color.from_string("#4444FF", Color.BLUE)
+			4:  # RESEARCH
+				tex = _tex_research
+				color = Color.from_string("#662222", Color.DARK_RED)
 			_:
-				draw_name = false
-				radius = 4.0
+				tex = _tex_shop
+				color = Color.from_string("#88AA66", Color.OLIVE)
+
+		if tex != null:
+			var tex_size := Vector2(tex.get_width(), tex.get_height())
+			draw_texture(tex, map_pos - tex_size / 2, color)
+		else:
+			draw_circle(map_pos, 8.0, color)
+
+		# Draw name
+		if body.get("body_name"):
+			var font := ThemeDB.fallback_font
+			var text_pos := map_pos + Vector2(-30, 12)
+			draw_string(font, text_pos, body.body_name, HORIZONTAL_ALIGNMENT_CENTER, 60, 11, color)
+
+func _draw_planets(clip_rect: Rect2) -> void:
+	for body in BodyManager.bodies:
+		if not is_instance_valid(body):
+			continue
+		if body.body_type != 1:  # Not PLANET
+			continue
+
+		var map_pos := _world_to_map(body.global_position)
+		if not _is_in_clip_rect(map_pos, clip_rect):
+			continue
+
+		# Draw planet as colored circle (scaled from original texture)
+		var planet_scale: float = SCALE * 1.5
+		var radius: float = max(4.0, body.radius * planet_scale * 0.5)
+
+		# Planet color
+		var color := Color.from_string("#FF6663", Color.RED)
 
 		# Draw glow
 		draw_circle(map_pos, radius + 3, Color(color.r, color.g, color.b, 0.3))
-		# Draw body
 		draw_circle(map_pos, radius, color)
 
 		# Draw name
-		if draw_name and body.get("body_name") != null:
+		if body.get("body_name") and body.get("landable"):
 			var font := ThemeDB.fallback_font
-			var font_size := 12
-			var text_pos := map_pos + Vector2(-30, radius + 14)
-			draw_string(font, text_pos, body.body_name, HORIZONTAL_ALIGNMENT_CENTER, 60, font_size, COLOR_TEXT)
+			var text_pos := map_pos + Vector2(-30, radius + 12)
+			draw_string(font, text_pos, body.body_name, HORIZONTAL_ALIGNMENT_CENTER, 60, 11, color)
 
-func _draw_spawners(map_center: Vector2, player_pos: Vector2) -> void:
+func _draw_spawners(clip_rect: Rect2) -> void:
 	for body in BodyManager.bodies:
 		if not is_instance_valid(body):
 			continue
@@ -258,51 +335,42 @@ func _draw_spawners(map_center: Vector2, player_pos: Vector2) -> void:
 			if not is_instance_valid(spawner):
 				continue
 
-			var spawner_pos: Vector2 = spawner.global_position
-			var map_pos := _world_to_map(spawner_pos, map_center, player_pos)
+			var map_pos := _world_to_map(spawner.global_position)
+			if not _is_in_clip_rect(map_pos, clip_rect):
+				continue
 
-			# Draw spawner indicator
-			draw_circle(map_pos, 3.0, COLOR_SPAWNER)
+			# Color: orange for hostile spawners
+			var color := Color.from_string("#C83444", Color.ORANGE_RED)
 
-func _draw_enemies(map_center: Vector2, player_pos: Vector2) -> void:
-	var enemies := get_tree().get_nodes_in_group("enemies")
+			if _tex_spawner != null:
+				var tex_size := Vector2(_tex_spawner.get_width(), _tex_spawner.get_height())
+				draw_texture(_tex_spawner, map_pos - tex_size / 2, color)
+			else:
+				draw_circle(map_pos, 3.0, color)
 
-	for enemy in enemies:
-		if not is_instance_valid(enemy):
-			continue
+func _draw_player(clip_rect: Rect2) -> void:
+	if player_ship == null or not is_instance_valid(player_ship):
+		return
 
-		var enemy_pos: Vector2 = enemy.global_position
-		var map_pos := _world_to_map(enemy_pos, map_center, player_pos)
+	var map_pos := _world_to_map(player_ship.global_position)
+	var player_rot: float = player_ship.rotation
 
-		# Draw enemy dot
-		draw_circle(map_pos, 3.0, COLOR_ENEMY)
+	# Draw player ship (scaled sprite or triangle)
+	var ship_scale: float = 0.35
 
-func _draw_player(map_center: Vector2, player_pos: Vector2) -> void:
-	var map_pos := _world_to_map(player_pos, map_center, player_pos)
+	# Draw glow
+	draw_circle(map_pos, 15, Color(1.0, 1.0, 1.0, 0.2))
 
-	# Get rotation
-	var player_rot := 0.0
-	if player_ship != null and is_instance_valid(player_ship):
-		player_rot = player_ship.rotation
-
-	# Draw player glow
-	draw_circle(map_pos, 10, Color(COLOR_PLAYER.r, COLOR_PLAYER.g, COLOR_PLAYER.b, 0.3))
-
-	# Draw player triangle
-	var tri_size := 8.0
+	# Draw ship as rotated triangle
+	var tri_size: float = 12.0
 	var points := PackedVector2Array([
 		map_pos + Vector2(tri_size, 0).rotated(player_rot),
 		map_pos + Vector2(-tri_size * 0.7, tri_size * 0.6).rotated(player_rot),
 		map_pos + Vector2(-tri_size * 0.7, -tri_size * 0.6).rotated(player_rot),
 	])
 
-	draw_colored_polygon(points, COLOR_PLAYER)
-	draw_polyline(points + PackedVector2Array([points[0]]), Color.WHITE, 1.5)
-
-func _world_to_map(world_pos: Vector2, map_center: Vector2, player_pos: Vector2) -> Vector2:
-	# Center map on player
-	var relative := (world_pos - player_pos) * map_scale
-	return map_center + relative
+	draw_colored_polygon(points, Color.WHITE)
+	draw_polyline(points + PackedVector2Array([points[0]]), Color(0.2, 0.8, 1.0), 2.0)
 
 # =============================================================================
 # PUBLIC API
