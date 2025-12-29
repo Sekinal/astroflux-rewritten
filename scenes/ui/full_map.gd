@@ -71,7 +71,7 @@ func _ready() -> void:
 func _load_textures() -> void:
 	_background_texture = TextureManager.get_sprite("map_bgr")
 
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventKey and event.pressed:
 		if event.keycode == KEY_M:
 			toggle_map()
