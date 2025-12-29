@@ -25,7 +25,7 @@ const BYTEARRAY: int = 0x10         # Byte array with length
 
 ## Serialize a Message to binary format
 static func serialize_message(msg: Message) -> PackedByteArray:
-	var result := PackedByteArray()
+	var result: PackedByteArray = PackedByteArray()
 
 	# Serialize arg count
 	result.append_array(_serialize_value(msg.args.size()))
@@ -41,14 +41,15 @@ static func serialize_message(msg: Message) -> PackedByteArray:
 
 ## Serialize a single value
 static func _serialize_value(value: Variant) -> PackedByteArray:
-	var result := PackedByteArray()
+	var result: PackedByteArray = PackedByteArray()
 
 	if value is String:
-		var encoded := value.to_utf8_buffer()
+		var str_value: String = value as String
+		var encoded: PackedByteArray = str_value.to_utf8_buffer()
 		if encoded.size() < 64:
 			result.append(SHORT_STRING | encoded.size())
 		else:
-			var len_bytes := _get_uint_bytes(encoded.size())
+			var len_bytes: PackedByteArray = _get_uint_bytes(encoded.size())
 			result.append(STRING | (len_bytes.size() - 1))
 			result.append_array(len_bytes)
 		result.append_array(encoded)
@@ -57,47 +58,50 @@ static func _serialize_value(value: Variant) -> PackedByteArray:
 		result.append(TRUE if value else FALSE)
 
 	elif value is int:
-		if value >= 0 and value < 64:
-			result.append(SHORT_UINT | value)
-		elif value >= 0:
-			var uint_bytes := _get_uint_bytes(value)
+		var int_value: int = value as int
+		if int_value >= 0 and int_value < 64:
+			result.append(SHORT_UINT | int_value)
+		elif int_value >= 0:
+			var uint_bytes: PackedByteArray = _get_uint_bytes(int_value)
 			result.append(UINT | (uint_bytes.size() - 1))
 			result.append_array(uint_bytes)
 		else:
-			var int_bytes := _get_int_bytes(value)
+			var int_bytes: PackedByteArray = _get_int_bytes(int_value)
 			result.append(INT | (int_bytes.size() - 1))
 			result.append_array(int_bytes)
 
 	elif value is float:
+		var float_value: float = value as float
 		# Try float first, use double if needed for precision
-		var float_buf := PackedByteArray()
+		var float_buf: PackedByteArray = PackedByteArray()
 		float_buf.resize(4)
-		float_buf.encode_float(0, value)
-		var test := float_buf.decode_float(0)
-		if is_equal_approx(test, value):
+		float_buf.encode_float(0, float_value)
+		var test: float = float_buf.decode_float(0)
+		if is_equal_approx(test, float_value):
 			result.append(FLOAT)
 			result.append_array(float_buf)
 		else:
-			var double_buf := PackedByteArray()
+			var double_buf: PackedByteArray = PackedByteArray()
 			double_buf.resize(8)
-			double_buf.encode_double(0, value)
+			double_buf.encode_double(0, float_value)
 			result.append(DOUBLE)
 			result.append_array(double_buf)
 
 	elif value is PackedByteArray:
-		if value.size() < 64:
-			result.append(SHORT_BYTEARRAY | value.size())
+		var byte_value: PackedByteArray = value as PackedByteArray
+		if byte_value.size() < 64:
+			result.append(SHORT_BYTEARRAY | byte_value.size())
 		else:
-			var len_bytes := _get_uint_bytes(value.size())
+			var len_bytes: PackedByteArray = _get_uint_bytes(byte_value.size())
 			result.append(BYTEARRAY | (len_bytes.size() - 1))
 			result.append_array(len_bytes)
-		result.append_array(value)
+		result.append_array(byte_value)
 
 	return result
 
 ## Get unsigned int as minimal bytes (big-endian)
 static func _get_uint_bytes(value: int) -> PackedByteArray:
-	var result := PackedByteArray()
+	var result: PackedByteArray = PackedByteArray()
 	result.resize(4)
 	result.encode_u32(0, value)
 	# Reverse for big-endian
@@ -109,7 +113,7 @@ static func _get_uint_bytes(value: int) -> PackedByteArray:
 
 ## Get signed int as minimal bytes (big-endian)
 static func _get_int_bytes(value: int) -> PackedByteArray:
-	var result := PackedByteArray()
+	var result: PackedByteArray = PackedByteArray()
 	result.resize(4)
 	result.encode_s32(0, value)
 	# Reverse for big-endian
@@ -129,13 +133,13 @@ static func _get_int_bytes(value: int) -> PackedByteArray:
 
 ## Deserialize a Message from binary data
 static func deserialize_message(data: PackedByteArray) -> Message:
-	var reader := ByteReader.new(data)
+	var reader: ByteReader = ByteReader.new(data)
 
 	# Read arg count
-	var arg_count: int = reader.read_value()
+	var arg_count: int = reader.read_value() as int
 
 	# Read message type
-	var msg_type: String = reader.read_value()
+	var msg_type: String = reader.read_value() as String
 
 	# Read arguments
 	var args: Array = []
@@ -155,83 +159,83 @@ class ByteReader:
 	func read_byte() -> int:
 		if pos >= data.size():
 			return 0
-		var b := data[pos]
+		var b: int = data[pos]
 		pos += 1
 		return b
 
 	func read_bytes(count: int) -> PackedByteArray:
-		var result := data.slice(pos, pos + count)
+		var result: PackedByteArray = data.slice(pos, pos + count)
 		pos += count
 		return result
 
 	func read_value() -> Variant:
-		var type_byte := read_byte()
+		var type_byte: int = read_byte()
 
 		# Boolean
-		if type_byte == TRUE:
+		if type_byte == NetworkProtocol.TRUE:
 			return true
-		elif type_byte == FALSE:
+		elif type_byte == NetworkProtocol.FALSE:
 			return false
 
 		# Float
-		elif type_byte == FLOAT:
-			var buf := read_bytes(4)
+		elif type_byte == NetworkProtocol.FLOAT:
+			var buf: PackedByteArray = read_bytes(4)
 			return buf.decode_float(0)
 
 		# Double
-		elif type_byte == DOUBLE:
-			var buf := read_bytes(8)
+		elif type_byte == NetworkProtocol.DOUBLE:
+			var buf: PackedByteArray = read_bytes(8)
 			return buf.decode_double(0)
 
 		# Short string
-		elif (type_byte & 0xC0) == SHORT_STRING:
-			var length := type_byte & 0x3F
+		elif (type_byte & 0xC0) == NetworkProtocol.SHORT_STRING:
+			var length: int = type_byte & 0x3F
 			return read_bytes(length).get_string_from_utf8()
 
 		# Long string
-		elif (type_byte & 0x0F) == STRING:
-			var byte_count := (type_byte & 0x03) + 1
-			var length := _read_uint(byte_count)
+		elif (type_byte & 0x0F) == NetworkProtocol.STRING:
+			var byte_count: int = (type_byte & 0x03) + 1
+			var length: int = _read_uint(byte_count)
 			return read_bytes(length).get_string_from_utf8()
 
 		# Short unsigned int
-		elif (type_byte & 0xC0) == SHORT_UINT:
+		elif (type_byte & 0xC0) == NetworkProtocol.SHORT_UINT:
 			return type_byte & 0x3F
 
 		# Unsigned int
-		elif (type_byte & 0x0F) == UINT:
-			var byte_count := (type_byte & 0x03) + 1
+		elif (type_byte & 0x0F) == NetworkProtocol.UINT:
+			var byte_count: int = (type_byte & 0x03) + 1
 			return _read_uint(byte_count)
 
 		# Signed int
-		elif (type_byte & 0x0F) == INT:
-			var byte_count := (type_byte & 0x03) + 1
+		elif (type_byte & 0x0F) == NetworkProtocol.INT:
+			var byte_count: int = (type_byte & 0x03) + 1
 			return _read_int(byte_count)
 
 		# Short byte array
-		elif (type_byte & 0xC0) == SHORT_BYTEARRAY:
-			var length := type_byte & 0x3F
+		elif (type_byte & 0xC0) == NetworkProtocol.SHORT_BYTEARRAY:
+			var length: int = type_byte & 0x3F
 			return read_bytes(length)
 
 		# Long byte array
-		elif (type_byte & 0x0F) == BYTEARRAY:
-			var byte_count := (type_byte & 0x03) + 1
-			var length := _read_uint(byte_count)
+		elif (type_byte & 0x0F) == NetworkProtocol.BYTEARRAY:
+			var byte_count: int = (type_byte & 0x03) + 1
+			var length: int = _read_uint(byte_count)
 			return read_bytes(length)
 
 		return null
 
 	func _read_uint(byte_count: int) -> int:
-		var bytes := read_bytes(byte_count)
+		var bytes: PackedByteArray = read_bytes(byte_count)
 		var result: int = 0
 		for b in bytes:
 			result = (result << 8) | b
 		return result
 
 	func _read_int(byte_count: int) -> int:
-		var bytes := read_bytes(byte_count)
+		var bytes: PackedByteArray = read_bytes(byte_count)
 		var result: int = 0
-		var is_negative := (bytes[0] & 0x80) != 0
+		var is_negative: bool = (bytes[0] & 0x80) != 0
 		for b in bytes:
 			result = (result << 8) | b
 		if is_negative:
