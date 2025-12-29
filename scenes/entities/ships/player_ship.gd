@@ -50,6 +50,12 @@ var converger: Converger
 var _last_command_time: float = 0.0
 var _pending_commands: Array[Dictionary] = []
 
+# Interpolation state for smooth rendering
+var _prev_pos: Vector2 = Vector2.ZERO
+var _prev_rotation: float = 0.0
+var _current_pos: Vector2 = Vector2.ZERO
+var _current_rotation: float = 0.0
+
 # =============================================================================
 # NODES
 # =============================================================================
@@ -67,6 +73,12 @@ func _ready() -> void:
 	hp = hp_max
 	shield = shield_max
 
+	# Initialize interpolation state
+	_prev_pos = global_position
+	_current_pos = global_position
+	_prev_rotation = rotation
+	_current_rotation = rotation
+
 	# Register message handlers
 	NetworkManager.add_message_handler("playerCourse", _on_player_course)
 
@@ -77,12 +89,16 @@ func _physics_process(delta: float) -> void:
 	# Handle input
 	_process_input()
 
+	# Store previous state for interpolation
+	_prev_pos = _current_pos
+	_prev_rotation = _current_rotation
+
 	# Run physics through converger
 	converger.run(NetworkManager.server_time)
 
-	# Apply converger state to node
-	global_position = converger.course.pos
-	rotation = converger.course.rotation
+	# Store current physics state
+	_current_pos = converger.course.pos
+	_current_rotation = converger.course.rotation
 
 	# Update engine glow visibility
 	if engine_glow:
@@ -90,6 +106,18 @@ func _physics_process(delta: float) -> void:
 
 	# Regenerate shield
 	_regenerate_shield(delta)
+
+func _process(delta: float) -> void:
+	if is_dead:
+		return
+
+	# Interpolate visual position between physics frames for smooth rendering
+	var physics_fps := float(Engine.physics_ticks_per_second)
+	var interp_fraction := Engine.get_physics_interpolation_fraction()
+
+	# Lerp position and rotation
+	global_position = _prev_pos.lerp(_current_pos, interp_fraction)
+	rotation = lerp_angle(_prev_rotation, _current_rotation, interp_fraction)
 
 func _process_input() -> void:
 	var heading := converger.course

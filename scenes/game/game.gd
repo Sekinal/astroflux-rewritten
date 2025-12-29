@@ -8,7 +8,7 @@ extends Node2D
 
 @onready var player_ship: PlayerShip = $PlayerShip
 @onready var camera: Camera2D = $Camera2D
-@onready var background: ParallaxBackground = $ParallaxBackground
+@onready var starfield: Node2D = $Starfield
 
 # =============================================================================
 # STATE

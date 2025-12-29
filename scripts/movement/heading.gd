@@ -45,14 +45,14 @@ func parse_message(msg: Message, index: int) -> int:
 	rotate_right = msg.get_boolean(index + 9)
 	return index + NR_OF_VARS
 
-## Add heading data to a network message
+## Add heading data to a network message (scaled for network precision)
 func populate_message(msg: Message) -> Message:
 	msg.add(time)
-	msg.add(pos.x)
-	msg.add(pos.y)
-	msg.add(speed.x)
-	msg.add(speed.y)
-	msg.add(rotation)
+	msg.add(int(pos.x * 100))      # x100 for position precision
+	msg.add(int(pos.y * 100))
+	msg.add(int(speed.x * 100))    # x100 for speed precision
+	msg.add(int(speed.y * 100))
+	msg.add(int(rotation * 1000))  # x1000 for rotation precision
 	msg.add(accelerate)
 	msg.add(deaccelerate)
 	msg.add(rotate_left)
