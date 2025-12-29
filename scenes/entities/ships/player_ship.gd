@@ -219,7 +219,7 @@ func _setup_default_weapon() -> void:
 		"acceleration": 200.0,
 		"ttl": 3000,
 		"range": 800.0,
-		"projectileSprite": "proj_missile",
+		"projectileSprite": "proj_delayed_missile",
 		"positionOffsetX": 25.0,
 		"heatCost": 0.15,
 		"ai": "homingMissile",
@@ -238,7 +238,7 @@ func _setup_default_weapon() -> void:
 		"speed": 600.0,
 		"ttl": 4000,
 		"range": 500.0,
-		"projectileSprite": "proj_plasma",
+		"projectileSprite": "proj_boomerang",
 		"positionOffsetX": 30.0,
 		"heatCost": 0.10,
 		"ai": "boomerang",
@@ -258,7 +258,7 @@ func _setup_default_weapon() -> void:
 		"speed": 500.0,
 		"ttl": 800,
 		"range": 400.0,
-		"projectileSprite": "proj_bomb",
+		"projectileSprite": "proj_agent_bomb",
 		"positionOffsetX": 25.0,
 		"heatCost": 0.20,
 		"ai": "cluster",
@@ -509,7 +509,9 @@ func _create_beam_line() -> void:
 		_beam_line.default_color = Color(1.0, 0.3, 0.3, 0.9)
 		_beam_line.begin_cap_mode = Line2D.LINE_CAP_ROUND
 		_beam_line.end_cap_mode = Line2D.LINE_CAP_ROUND
-		get_tree().current_scene.add_child(_beam_line)
+		_beam_line.top_level = true  # Don't inherit parent transform
+		_beam_line.z_index = 10  # Render above other objects
+		add_child(_beam_line)
 	_beam_line.visible = true
 
 func _hide_beam_line() -> void:

@@ -227,7 +227,13 @@ func _find_target(start_pos: Vector2, owner_rotation: float) -> void:
 	if _owner == null:
 		return
 
-	var space_state: PhysicsDirectSpaceState2D = _owner.get_world_2d().direct_space_state
+	var world: World2D = _owner.get_world_2d()
+	if world == null:
+		return
+
+	var space_state: PhysicsDirectSpaceState2D = world.direct_space_state
+	if space_state == null:
+		return
 	var end_pos: Vector2 = start_pos + Vector2.RIGHT.rotated(owner_rotation) * range_max
 
 	var query: PhysicsRayQueryParameters2D = PhysicsRayQueryParameters2D.create(start_pos, end_pos)
