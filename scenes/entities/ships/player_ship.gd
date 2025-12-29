@@ -467,6 +467,31 @@ func _fire_projectile_weapon(weapon, current_time: float) -> void:
 	for data in projectile_data:
 		ProjectileManager.spawn(data)
 
+	# Spawn muzzle flash effect at fire position
+	if projectile_data.size() > 0:
+		var fire_pos: Vector2 = projectile_data[0].get("position", global_position)
+		var fire_angle: float = projectile_data[0].get("rotation", rotation)
+		var flash_color: Color = _get_weapon_flash_color(weapon)
+		EffectManager.spawn_muzzle_flash(fire_pos, fire_angle, flash_color)
+
+		# Consume heat when firing
+		if heat != null:
+			heat.consume(weapon.heat_cost)
+
+func _get_weapon_flash_color(weapon) -> Color:
+	if weapon.dmg == null:
+		return Color.WHITE
+	var dmg_type: int = weapon.dmg.type() if weapon.dmg.has_method("type") else 0
+	match dmg_type:
+		0:  # KINETIC
+			return Color(1.0, 0.9, 0.6)
+		1:  # ENERGY
+			return Color(0.4, 0.7, 1.0)
+		2:  # CORROSIVE
+			return Color(0.4, 1.0, 0.4)
+		_:
+			return Color.WHITE
+
 func _fire_beam_weapon(weapon, current_time: float) -> void:
 	# Start firing if not already
 	if not weapon.is_firing():
@@ -607,6 +632,9 @@ func take_damage(dmg: Variant, attacker: Node = null, apply_debuffs: bool = true
 	if damage_amount > 0:
 		hp -= damage_amount
 		health_changed.emit(hp, hp_max)
+
+		# Camera shake on damage
+		EffectManager.shake_on_damage(damage_amount, hp_max)
 
 		if hp <= 0:
 			_die()

@@ -381,6 +381,7 @@ func take_damage(dmg: Variant, attacker: Node = null) -> void:
 		return
 
 	var damage_amount: float = 0.0
+	var damage_type: int = 0  # Default to kinetic
 
 	# Calculate effective resistances (base - debuff reductions)
 	var effective_resist: Array[float] = [
@@ -392,6 +393,9 @@ func take_damage(dmg: Variant, attacker: Node = null) -> void:
 	# Handle both Damage object and raw float (duck typing)
 	if dmg != null and dmg is Object and dmg.has_method("calculate_resisted"):
 		damage_amount = dmg.calculate_resisted(effective_resist)
+		# Get damage type for color
+		if dmg.has_method("type"):
+			damage_type = dmg.type()
 		# Apply armor reduction bonus damage
 		if _armor_reduction > 0 and damage_amount > 0:
 			var bonus := minf(_armor_reduction * 0.5, 50.0) / 100.0  # Up to 50% bonus damage
@@ -415,7 +419,7 @@ func take_damage(dmg: Variant, attacker: Node = null) -> void:
 
 		# Visual feedback
 		_flash_damage()
-		_spawn_damage_number(damage_amount)
+		_spawn_damage_number(damage_amount, damage_type)
 
 		# Set attacker as target if we don't have one
 		if target == null and attacker != null:
@@ -436,18 +440,33 @@ func _flash_damage() -> void:
 		if is_instance_valid(sprite):
 			sprite.modulate = original_modulate
 
-func _spawn_damage_number(amount: float) -> void:
+func _spawn_damage_number(amount: float, damage_type: int = 0) -> void:
 	var label := Label.new()
 	label.text = str(int(amount))
 	label.add_theme_font_size_override("font_size", 16)
-	label.modulate = Color.ORANGE
-	label.position = Vector2(-15, -40)
+
+	# Color based on damage type
+	match damage_type:
+		-1:  # DOT (burn/poison)
+			label.modulate = Color(1.0, 0.3, 0.5)  # Red-purple for DoT
+		0:  # KINETIC
+			label.modulate = Color(1.0, 0.9, 0.6)  # Yellow-orange
+		1:  # ENERGY
+			label.modulate = Color(0.4, 0.8, 1.0)  # Blue
+		2:  # CORROSIVE
+			label.modulate = Color(0.4, 1.0, 0.4)  # Green
+		_:
+			label.modulate = Color.ORANGE
+
+	# Random horizontal offset for visual variety
+	var x_offset := randf_range(-20, 20)
+	label.position = Vector2(x_offset - 15, -40)
 	add_child(label)
 
 	var tween := create_tween()
 	tween.set_parallel(true)
-	tween.tween_property(label, "position:y", label.position.y - 40, 0.6)
-	tween.tween_property(label, "modulate:a", 0.0, 0.6)
+	tween.tween_property(label, "position:y", label.position.y - 50, 0.8)
+	tween.tween_property(label, "modulate:a", 0.0, 0.8)
 	tween.chain().tween_callback(label.queue_free)
 
 func _update_health_bar() -> void:
@@ -462,6 +481,10 @@ func _regenerate_shield(delta: float) -> void:
 func _die() -> void:
 	is_dead = true
 	destroyed.emit()
+
+	# Spawn death explosion effect
+	var explosion_size: float = 1.0 + (hp_max / 200.0)  # Scale with max health
+	EffectManager.spawn_death_explosion(global_position, explosion_size)
 
 	# Generate and drop loot
 	var loot := _generate_loot()
@@ -560,7 +583,7 @@ func _process_debuffs(delta: float) -> void:
 		hp -= total_dot_damage
 		health_changed.emit(hp, hp_max)
 		_update_health_bar()
-		_spawn_damage_number(total_dot_damage)
+		_spawn_damage_number(total_dot_damage, -1)  # -1 = DoT (special red/purple color)
 		if hp <= 0:
 			_die()
 

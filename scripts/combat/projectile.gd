@@ -280,10 +280,17 @@ func _apply_damage(target: Node) -> void:
 	if damage != null:
 		target.take_damage(damage, owner_node)
 		hit.emit(target, damage)
+
+		# Spawn impact particles at hit location
+		var damage_type: int = damage.type() if damage.has_method("type") else 0
+		EffectManager.spawn_impact(global_position, damage_type)
 	else:
 		# Default damage if none set
 		target.take_damage(10.0, owner_node)
 		hit.emit(target, null)
+
+		# Default impact effect
+		EffectManager.spawn_impact(global_position, 0)
 
 	# Apply debuffs
 	if target.has_method("apply_debuff"):

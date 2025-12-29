@@ -25,6 +25,7 @@ ProjectileManager="*res://autoload/projectile_manager.gd"
 BodyManager="*res://autoload/body_manager.gd"
 LootManager="*res://autoload/loot_manager.gd"
 TextureManager="*res://autoload/texture_manager.gd"
+EffectManager="*res://autoload/effect_manager.gd"
 
 [configuration]
 

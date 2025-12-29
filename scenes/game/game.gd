@@ -33,6 +33,10 @@ func _ready() -> void:
 	# Initialize body manager with bodies container
 	BodyManager.initialize(bodies_container)
 
+	# Initialize effect manager for visual effects
+	EffectManager.set_container(self)
+	EffectManager.set_camera(camera)
+
 	# Wait for network connection
 	if NetworkManager.use_local_server:
 		_on_connected()
