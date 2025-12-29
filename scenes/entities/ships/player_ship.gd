@@ -488,7 +488,7 @@ func _fire_beam_weapon(weapon, current_time: float) -> void:
 	# Apply heat cost per tick
 	if result.targets_hit.size() > 0:
 		if heat != null:
-			heat.add_heat(weapon.heat_cost)
+			heat.consume(weapon.heat_cost)
 
 func _stop_beam_if_active(weapon) -> void:
 	if weapon.has_method("is_firing") and weapon.is_firing():
