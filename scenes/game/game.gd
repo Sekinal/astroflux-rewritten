@@ -11,6 +11,7 @@ extends Node2D
 @onready var starfield: Node2D = $Starfield
 @onready var bodies_container: Node2D = $Bodies
 @onready var minimap: Control = $CanvasLayer/Minimap
+@onready var full_map: Control = $CanvasLayer/FullMap
 
 # =============================================================================
 # STATE
@@ -69,6 +70,10 @@ func _on_init_solar_system(msg: Message) -> void:
 	# Initialize minimap with player reference
 	if minimap != null:
 		minimap.set_player(player_ship)
+
+	# Initialize full map with player reference
+	if full_map != null:
+		full_map.set_player(player_ship)
 
 	# Move player to safe starting position (near Endarion planet)
 	if player_ship != null:
