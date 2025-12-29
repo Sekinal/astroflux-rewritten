@@ -1,0 +1,25 @@
+<svg height="128" width="128" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shipGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4080ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1040a0;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#80c0ff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#4080ff;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="128" height="128" fill="#0a0a20"/>
+  <!-- Glow -->
+  <circle cx="64" cy="64" r="50" fill="url(#glowGradient)"/>
+  <!-- Ship body -->
+  <polygon points="64,20 100,90 64,75 28,90" fill="url(#shipGradient)" stroke="#60a0ff" stroke-width="2"/>
+  <!-- Engine glow -->
+  <ellipse cx="64" cy="95" rx="15" ry="8" fill="#ff8040" opacity="0.8"/>
+  <!-- Stars -->
+  <circle cx="20" cy="25" r="1.5" fill="white"/>
+  <circle cx="110" cy="35" r="1" fill="white"/>
+  <circle cx="95" cy="100" r="1.5" fill="white"/>
+  <circle cx="15" cy="90" r="1" fill="white"/>
+</svg>

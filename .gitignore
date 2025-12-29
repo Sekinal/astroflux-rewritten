@@ -1,0 +1,45 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot-specific ignores
+*.translation
+
+# Imported textures and samples
+.import/
+.mono/
+
+# Export templates
+export_presets.cfg
+
+# Build output
+build/
+export/
+*.exe
+*.x86_64
+*.pck
+*.zip
+
+# IDE
+.vscode/
+*.code-workspace
+.idea/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor backup files
+*~
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Debug
+*.dmp
