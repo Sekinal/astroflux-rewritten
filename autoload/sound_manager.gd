@@ -61,7 +61,7 @@ const SFX_LASER5 := "res://assets/audio/weapons/laser5.mp3"
 const SFX_LASER6 := "res://assets/audio/weapons/laser6.mp3"
 const SFX_LASER7 := "res://assets/audio/weapons/laser7.mp3"
 const SFX_BEAM := "res://assets/audio/weapons/beam.mp3"
-const SFX_MISSILE := "res://assets/audio/weapons/rocket1.mp3"
+const SFX_MISSILE := "res://assets/audio/weapons/missile.mp3"
 const SFX_FIRE2 := "res://assets/audio/weapons/fire2.mp3"
 const SFX_FIRE3 := "res://assets/audio/weapons/fire3.mp3"
 
