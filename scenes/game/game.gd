@@ -93,6 +93,12 @@ func _on_init_complete(msg: Message) -> void:
 	game_started = true
 	game_start_time = NetworkManager.server_time
 
+	# Start background music for the solar system
+	SoundManager.play_system_theme("hyperion")
+
+	# Preload common sounds
+	SoundManager.preload_common_sounds()
+
 	# Start sync
 	NetworkManager.send("initSyncEnemies")
 

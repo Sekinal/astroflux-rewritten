@@ -134,6 +134,9 @@ func spawn_death_explosion(pos: Vector2, size: float = 1.0) -> void:
 	# Main explosion
 	spawn_explosion(pos, size * 1.5, Color(1.0, 0.6, 0.2))
 
+	# Play explosion sound
+	SoundManager.play_explosion(size)
+
 	# Secondary smaller explosions around it
 	for i in range(4):
 		var offset := Vector2.from_angle(randf() * TAU) * (30.0 * size)

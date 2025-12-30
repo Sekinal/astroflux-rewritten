@@ -474,9 +474,21 @@ func _fire_projectile_weapon(weapon, current_time: float) -> void:
 		var flash_color: Color = _get_weapon_flash_color(weapon)
 		EffectManager.spawn_muzzle_flash(fire_pos, fire_angle, flash_color)
 
+		# Play weapon fire sound based on weapon type
+		_play_weapon_sound(weapon)
+
 		# Consume heat when firing
 		if heat != null:
 			heat.consume(weapon.heat_cost)
+
+func _play_weapon_sound(weapon) -> void:
+	var ai_type: String = weapon.ai_type if "ai_type" in weapon else ""
+	match ai_type:
+		"homingMissile":
+			SoundManager.play_missile()
+		_:
+			# Default laser sound for projectile weapons
+			SoundManager.play_laser()
 
 func _get_weapon_flash_color(weapon) -> Color:
 	if weapon.dmg == null:
